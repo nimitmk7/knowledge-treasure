@@ -1,0 +1,1 @@
+The copula function **seeks to determine the dependence between two random variables**. 

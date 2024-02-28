@@ -1,0 +1,207 @@
+{
+  "main": {
+    "id": "1b462600efd485fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "7bb4fc66db4df263",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "37d7d19f0e3383e5",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Pasted image 20240227154449.png"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8a9ea2c169f4f2b2",
+    "type": "split",
+    "children": [
+      {
+        "id": "3a88bc116074e738",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb85ecab897dabe4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "626f73246e626896",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1f5f8812421e5e48",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "bc4d15d344121800",
+    "type": "split",
+    "children": [
+      {
+        "id": "118f42617922f84f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3678f421393a81b0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Pasted image 20240227154449.png",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "0a582091012cad90",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Pasted image 20240227154449.png",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e1ad7fa5bb299c81",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "06f7fe375021125c",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "ff8fdbdce92ad109",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Pasted image 20240227154449.png"
+              }
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 241.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "bb85ecab897dabe4",
+  "lastOpenFiles": [
+    "geospatial_map.png",
+    "Data Visualization/Images/Geospatial_layers.png",
+    "Data Visualization/Images/visualization.png",
+    "Data Visualization/Images/Untitled.md",
+    "Data Visualization/Images",
+    "Untitled 3.canvas",
+    "Data Visualization/Images/chloropleth.png.png",
+    "Data Visualization/Images/chloropleth_bad.png",
+    "Data Visualization/Images/cartogram.png",
+    "Data Visualization/Images/cartogram_heatmap.png",
+    "Data Visualization/Images/complex_cartogram.png.png",
+    "Data Visualization/Visualizing GeoSpatial Data.md",
+    "Data Visualization/Visualizing Time Series and Other Functions as an Independent Variable.md",
+    "Data Visualization/Temporal Data.md",
+    "Data Visualization/Data Visualization.md",
+    "Data Visualization/Figure Preparation.md",
+    "Data Visualization/How to Think about Data Visualization.md",
+    "Data Visualization/From Data to Visualization.md",
+    "Data Visualization/Grammar of Graphics.md",
+    "Data Visualization/Intro to Altair.md",
+    "Data Visualization/Introduction to Data Visualization.md",
+    "Data Visualization/Chart Decomposition.md",
+    "Deep Learning/Autoencoders/Autoencoders.md",
+    "Deep Learning/Convolutional Neural Networks.md",
+    "Deep Learning/Autoencoders/Autoencoder_example.png.png",
+    "Deep Learning/Autoencoders",
+    "Deep Learning/Deep Learning.md",
+    "Software Engineering/DevOps/Docker.md",
+    "Pasted image 20240227154449.png",
+    "Software Engineering/DevOps",
+    "Software Engineering",
+    "Deep Learning/Object Detection.md",
+    "Finance/VaR(Value at Risk).md",
+    "Finance/CVar.md",
+    "Finance/Finance.md",
+    "Statistics/Copula.md",
+    "Statistics/Statistics.md",
+    "Finance/Case Study paper terms to understand.md",
+    "Personal/To Read.md",
+    "Personal/To watch.md",
+    "Machine Learning/Applications",
+    "Deep Learning",
+    "Machine Learning/Metrics",
+    "Machine Learning/Hyperparameter Tuning",
+    "Machine Learning/Concepts",
+    "Untitled 1.canvas",
+    "Machine Learning/Algorithms",
+    "Untitled 2.canvas",
+    "Untitled.canvas"
+  ]
+}

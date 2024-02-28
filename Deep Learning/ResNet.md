@@ -24,7 +24,7 @@ The striking difference between ResNets and earlier architectures are the **skip
 
 ### Example
 
-![[Pasted image 20240224024632.png]]
+![[Resnet.png]]
 
 Each layer consists of a residual module $f_i$ and a skip connection bypassing $f_i$. Since layers in residual networks can comprise multiple convolutional layers, we refer to them as residual blocks. With $y_{i-1}$ as is input, the output of the i-th block is recursively defined as
 

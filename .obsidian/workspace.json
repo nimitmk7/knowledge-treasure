@@ -13,7 +13,7 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Pasted image 20240227154449.png"
+                "file": "Deep Learning/Images/Resnet.png"
               }
             }
           }
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pasted image 20240227154449.png",
+                "file": "Deep Learning/Images/Resnet.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pasted image 20240227154449.png",
+                "file": "Deep Learning/Images/Resnet.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pasted image 20240227154449.png"
+                "file": "Deep Learning/Images/Resnet.png"
               }
             }
           }
@@ -154,6 +154,11 @@
   },
   "active": "bb85ecab897dabe4",
   "lastOpenFiles": [
+    "Deep Learning/Images",
+    "Software Engineering/DevOps/Images/Docker_example.png",
+    "Pasted image 20240227153145.png",
+    "Pasted image 20240227153414.png",
+    "Software Engineering/DevOps/Images",
     "Data Visualization/Images/geospatial_map.png",
     "Data Visualization/Images/Geospatial_layers.png",
     "Data Visualization/Images/visualization.png",
@@ -164,7 +169,6 @@
     "Data Visualization/Images/chloropleth_bad.png",
     "Data Visualization/Images/cartogram.png",
     "Data Visualization/Images/cartogram_heatmap.png",
-    "Data Visualization/Images/complex_cartogram.png.png",
     "Data Visualization/Visualizing GeoSpatial Data.md",
     "Data Visualization/Visualizing Time Series and Other Functions as an Independent Variable.md",
     "Data Visualization/Temporal Data.md",
@@ -178,11 +182,9 @@
     "Data Visualization/Chart Decomposition.md",
     "Deep Learning/Autoencoders/Autoencoders.md",
     "Deep Learning/Convolutional Neural Networks.md",
-    "Deep Learning/Autoencoders/Autoencoder_example.png.png",
     "Deep Learning/Autoencoders",
     "Deep Learning/Deep Learning.md",
     "Software Engineering/DevOps/Docker.md",
-    "Pasted image 20240227154449.png",
     "Software Engineering/DevOps",
     "Software Engineering",
     "Deep Learning/Object Detection.md",
@@ -200,7 +202,6 @@
     "Machine Learning/Hyperparameter Tuning",
     "Machine Learning/Concepts",
     "Untitled 1.canvas",
-    "Machine Learning/Algorithms",
     "Untitled 2.canvas",
     "Untitled.canvas"
   ]

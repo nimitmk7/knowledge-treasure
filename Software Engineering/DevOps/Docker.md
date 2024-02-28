@@ -26,7 +26,7 @@ On new machine, when docker is called upon to bring up the app, Docker will auto
 download and run these dependencies inside an **isolated environment**, called
 a container.
 
-![[Pasted image 20240227154449.png]]
+![[Docker_example.png]]
 
 When we don't need an app, we can remove the app and its dependencies in one go.
 

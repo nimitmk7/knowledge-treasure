@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Finance/VaR(Value at Risk).md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Finance/VaR(Value at Risk).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Finance/VaR(Value at Risk).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Finance/VaR(Value at Risk).md"
               }
             }
           }
@@ -167,8 +167,9 @@
   },
   "active": "60a5a0f9b50433a8",
   "lastOpenFiles": [
-    "Deep Learning/Images/Resnet.png",
+    "Artificial Intelligence/A systems approach to AI.md",
     "README.md",
+    "Deep Learning/Images/Resnet.png",
     "Untitled 2.canvas",
     "Untitled 3.canvas",
     "Deep Learning/Images",

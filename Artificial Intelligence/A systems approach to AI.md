@@ -1,5 +1,6 @@
 > [!WARNING] This note is incomplete. 
-> 
+
+
 
 ## Agent-Environment Interface
 

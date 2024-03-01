@@ -1,5 +1,30 @@
 Many datasets contain info. linked to locations in the physical world. In all such cases, it can be helpful to visualize the data in their proper geospatial context,i.e., to show the data on a map or alternatively as a map-like diagram.
 
+## Types of Geographical Data
+
+1. **Spatial** : Have a spatial boundary and existence
+	- E.g. Counties, Regions, Buildings, Rivers, Lakes
+	- Shape, spatial extent matters
+	- Map is main object of interest
+	- **Types**: Regions(e.g. Country Borders), Locations(e.g. Lat-Long), Identifiers(e.g. Zip Code)![[Pasted image 20240229235724.png]]
+2. **Non-Spatial**: Individual objects that have relationship with spatial data
+	- E.g. Cars, People, Weather station
+	- Shape does not matter. Map is used as a reference, to track the relationship with spatial data(a.k.a locate)
+
+## When to use a Map ?
+### Limitation of Map:
+- Maps use space to represent space. Therefore, space cannot be used to encode other types of information. (Remember, space-X and Y coordinates is the most effective way to represent data). 
+- A bad example of unnecessarily using map to represent sales data:
+![[Pasted image 20240301000653.png]]
+
+### Relevance of Map
+1. Question is inherently spatial
+	- Question that correlates a phenomena to spatial location/objects.
+	- Question pertaining phenomenon for which spatial proximity or extend is relevant.
+2. When map helps find information needed.
+Example:
+![[Pasted image 20240301001111.png]]
+
 ## Projections
 Unique location on Earth: (Latitude, Longitude, Altitude)
 - Altitude not used in Data Visualization
@@ -48,5 +73,11 @@ A cartogram is a thematic map of a set of features, in which their geographic si
 ### Other complex cartograms
 ![[complex_cartogram.png.png]]
 
+## Implementation/Hands-on:
+
+### Geopandas tutorial
+
+
 ## References
 1. Chapter 15: https://clauswilke.com/dataviz/
+2. NYU's Data Visualization Course by Qingnan Zhou

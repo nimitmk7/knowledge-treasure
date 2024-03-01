@@ -37,6 +37,9 @@ An auto-encoder learns two functions:
 ### Dimensionality Reduction
 
 
+## Code
+https://github.com/nimitmk7/knowledge-treasure/blob/main/Deep%20Learning/Autoencoders/autoencoders_in_keras.ipynb
+
 ## References
 1. https://towardsdatascience.com/auto-encoder-what-is-it-and-what-is-it-used-for-part-1-3e5c6f017726
 2. 

@@ -21,6 +21,7 @@
 ## Algorithms
 [[Logistic Regression]]
 [[Fama Macbeth Regression]]
+[[Support Vector Machines]]
 
 ## Concepts
 [[Cross Validation Score]]

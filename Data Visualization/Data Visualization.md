@@ -9,7 +9,11 @@ Figures will typically carry the weight of your arguments. They need to be clear
 [[From Data to Visualization]]
 [[How to Think about Data Visualization]]
 [[Visualizing Data - Mapping Data to Aesthetics]]
+[[Grammar of Graphics]]
+[[Chart Taxonomy]]
+[[Chart Decomposition]]
 [[Coordinate System and Axes]]
+[[Temporal Data]]
 [[Visualizing Time Series and Other Functions as an Independent Variable]]
 [[Visualizing GeoSpatial Data]]
 

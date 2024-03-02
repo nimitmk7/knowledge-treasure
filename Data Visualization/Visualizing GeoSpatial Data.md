@@ -87,6 +87,11 @@ Unique location on Earth: (Latitude, Longitude, Altitude)
 ### Geopandas tutorial
 https://github.com/nimitmk7/knowledge-treasure/blob/main/Data%20Visualization/GeoPandas%20Intro.ipynb
 
+### Geopandas user guide
+https://geopandas.org/en/stable/docs/user_guide.html 
+
+### Case Studies
+
 
 
 ## References

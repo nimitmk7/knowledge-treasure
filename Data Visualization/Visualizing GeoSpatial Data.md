@@ -91,6 +91,8 @@ https://github.com/nimitmk7/knowledge-treasure/blob/main/Data%20Visualization/Ge
 https://geopandas.org/en/stable/docs/user_guide.html 
 
 ### Case Studies
+https://github.com/nimitmk7/knowledge-treasure/blob/main/Data%20Visualization/Case%20Study%20-%20New%20York%20Borough%20and%20Zip%20Boundaries%20(1).ipynb
+
 
 
 

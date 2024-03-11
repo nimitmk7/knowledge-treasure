@@ -85,19 +85,16 @@ Unique location on Earth: (Latitude, Longitude, Altitude)
 ## Implementation/Hands-on:
 
 ### Geopandas tutorial
-https://github.com/nimitmk7/knowledge-treasure/blob/main/Data%20Visualization/GeoPandas%20Intro.ipynb
+[Geopandas intro and examples](https://github.com/nimitmk7/knowledge-treasure/blob/main/Data%20Visualization/GeoPandas%20Intro.ipynb)
 
 ### Geopandas user guide
 https://geopandas.org/en/stable/docs/user_guide.html 
 
 ### Case Studies
-https://github.com/nimitmk7/knowledge-treasure/blob/main/Data%20Visualization/Case%20Study%20-%20New%20York%20Borough%20and%20Zip%20Boundaries%20(1).ipynb
-
-
-
+[New York Borough and Zip Code Boundaries](https://github.com/nimitmk7/knowledge-treasure/blob/main/Data%20Visualization/Case%20Study%20-%20New%20York%20Borough%20and%20Zip%20Boundaries%20(1).ipynb) 
+[NYC Subway](https://github.com/nimitmk7/knowledge-treasure/blob/f6b525058b374d975c39a76b250438b3612bbb8c/Data%20Visualization/Case%20Study%20-%20NYC%20Subway.ipynb)
 
 ## References
 1. Chapter 15: https://clauswilke.com/dataviz/
 2. NYU's Data Visualization Course by Qingnan Zhou
 3. https://www.scribbr.com/fallacies/base-rate-fallacy/#:~:text=Revised%20on%20September%204%2C%202023,distracted%20by%20less%20relevant%20information.
-4. 

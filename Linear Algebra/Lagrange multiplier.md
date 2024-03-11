@@ -1,4 +1,4 @@
-The "Lagrange multipliers" technique is a way to solve constrained optimization problems. 
+The Lagrange multipliers" technique is a way to solve constrained optimization problems. 
 
 - It helps you find the maximum or minimum of a multivariate function $f(x,y,...)$ when there is some constraint on the input values you are allowed to use.
 - This technique only applies to constraints that look like this: $$g(x,y,..) = c$$Here, $g$ is another multivariable function with the same input space as  $f$, and $c$ is some constant.

@@ -1,10 +1,10 @@
 
 
-## Methods
-
+## Dimensionality Reduction
 [[Eigen-value decomposition]]
 [[Singular Value Decomposition(SVD)]]
 [[Principal Component Analysis]]
-[[Lagrange multiplier]]
 
+## Optimization
+[[Lagrange multiplier]]
 

@@ -53,3 +53,12 @@ $$
 J(w) =  \Sigma_{i=1}^{n}[- y^{(i)}ln(\phi(z^{(i)}))-{(1-y^{(i)})ln((1-\phi(z^{(i)}))}]
 $$
 
+## Practical Considerations
+
+1. Logistic Regression's performance degrades when the algorithm is used on data having heavy class imbalance, as the estimate of the intercept term is very inaccurate.
+
+
+## Pros
+
+## Cons
+

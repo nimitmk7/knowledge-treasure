@@ -13,7 +13,6 @@
 
 - Orthogonal projection of the data onto a lower dimensional linear space, known as the *principal subspace*, such that the variance of the projected data is maximized.
 - Linear projection that minimizes the average projection cost, defined as the mean squared distance between the data points and projections.
-
 ## Premise
 
 Consider a dataset of observations {$x_n$} where $n = 1,2,3,..,N$, and $x_n$ is a euclidean variable with dimensionality D. 
@@ -23,17 +22,16 @@ The mean is zero, and the covariance matrix is
 $$
 S = \frac{1}{N} \Sigma^{N}_{n=1} x_nx_n^{T}
 $$
-We assume that there exists a low-dimensional compressed representation(code)
+We assume that there exists a low-dimensional compressed representation(code).
 $$
 z_n = B^T x_n \in R^M
-$$ of $x_n$ where we define the projection matrix:
+$$  
+ of $x_n$ where we define the projection matrix:
 $$
 B:= [b_1,...,b_M] \in R^{D \times M}
 $$
-
-We assume that columns of B are orthonormal so that $b_i^{\top}b_j=0$  if and only if $i\neq j$ and $b_i^{\top}b_i=1$.  
+We assume that columns of B are orthonormal so that $b_i^{\top}b_j=0$  if and only if $i\neq j$ and $b_i^{\top}b_i=1$. 
 ## Objective
-
 We seek an M-dimensional subspace $U\subseteq R^D$ , $dim(U) = M < D$ onto which we project the data, while maximizing the variance of the projected data. 
 
 We denote the projected data by $\bar x_n \in U$ and their co-ordinates(w.r.t to the basis vectors of U) by $z_n$.   

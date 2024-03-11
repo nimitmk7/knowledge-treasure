@@ -5,3 +5,6 @@
 [[Machine Learning]]
 [[Deep Learning]]
 
+
+## Hands-on
+[[Vector Embeddings]]

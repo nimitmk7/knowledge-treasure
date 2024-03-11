@@ -7,10 +7,13 @@
 
 ## Indicators
 [[Fundamental Indicators]]
-
+[[Alpha]]
 
 ## Miscellaneous
 [[Scenario Analysis]]
+
+## Instruments
+[[Bonds]]
 
 
 

@@ -16,6 +16,8 @@
 ## Models
 [[Random Walk]]
 [[Exponential Smoothing Models]]
+[[SARIMAX]]
+
 
 
 

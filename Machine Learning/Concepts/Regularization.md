@@ -1,5 +1,3 @@
-
-
 ## L1 Regularization
 $$
 Penalty = \lambda \Sigma^{n}_{i=1} |w_i|

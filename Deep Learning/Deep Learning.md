@@ -10,6 +10,6 @@
 [[Object Detection]]
 
 ## Architectures
-[[Convolutional Neural Networks]]
+[[Convolutional Neural Networks(CNNs)]]
 [[Autoencoders]]
 

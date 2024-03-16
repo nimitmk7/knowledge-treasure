@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"19b5bf390163bee7","type":"text","text":"Problem Type","x":-160,"y":-240,"width":250,"height":60},
+		{"id":"0e0ce937cc3bf7d9","type":"text","text":"Classification","x":50,"y":-40,"width":250,"height":60},
+		{"id":"4d0a7655f94aabe9","type":"text","text":"Regression","x":-380,"y":-40,"width":250,"height":60},
+		{"id":"0606f329deeef711","type":"file","file":"Machine Learning/Models/Support Vector Machines.md","x":420,"y":540,"width":240,"height":160},
+		{"id":"20518f370ea3a7fb","type":"text","text":"Time Series Data","x":-560,"y":140,"width":250,"height":60},
+		{"id":"27a73532d1e3d79e","type":"file","file":"Deep Learning/RNNs/Recurrent Neural Networks(RNNs).md","x":-860,"y":380,"width":425,"height":120},
+		{"id":"581a4142890e96ac","type":"text","text":"Lesser samples, High Dimension","x":300,"y":220,"width":280,"height":80},
+		{"id":"1e4515e37de5f1b8","type":"text","text":"Image Data","x":-38,"y":220,"width":175,"height":60},
+		{"id":"4fc12b758b5b293c","type":"file","file":"Deep Learning/CNNs/Convolutional Neural Networks(CNNs).md","x":-360,"y":456,"width":400,"height":169}
+	],
+	"edges":[
+		{"id":"7cc0fd597eb5902f","fromNode":"19b5bf390163bee7","fromSide":"bottom","toNode":"4d0a7655f94aabe9","toSide":"top"},
+		{"id":"ea8890f26ee4729c","fromNode":"19b5bf390163bee7","fromSide":"bottom","toNode":"0e0ce937cc3bf7d9","toSide":"top"},
+		{"id":"f7d639099026c580","fromNode":"0e0ce937cc3bf7d9","fromSide":"bottom","toNode":"581a4142890e96ac","toSide":"top"},
+		{"id":"73090d452dd0e05f","fromNode":"581a4142890e96ac","fromSide":"bottom","toNode":"0606f329deeef711","toSide":"top"},
+		{"id":"b6f4855ed949609f","fromNode":"4d0a7655f94aabe9","fromSide":"bottom","toNode":"20518f370ea3a7fb","toSide":"top"},
+		{"id":"1089a29655a63f58","fromNode":"20518f370ea3a7fb","fromSide":"bottom","toNode":"27a73532d1e3d79e","toSide":"top"},
+		{"id":"adefaadebf601b45","fromNode":"0e0ce937cc3bf7d9","fromSide":"bottom","toNode":"1e4515e37de5f1b8","toSide":"top"},
+		{"id":"3d6a0324b33b4e92","fromNode":"1e4515e37de5f1b8","fromSide":"bottom","toNode":"4fc12b758b5b293c","toSide":"top"}
+	]
+}

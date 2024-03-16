@@ -215,3 +215,6 @@ $$\begin{aligned} &b^*=y_3-x_3^{\top} w^*\\
 Watch this video:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OKFMZQyDROI?si=nyqxncoCGmHK1TjP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+## Use Cases
+- SVM works best for high-dimensional data with lesser no of samples. 
+- 

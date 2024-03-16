@@ -3,7 +3,6 @@
 3. The Departed
 4. The Devil wears Prada
 5. The Truman Show
-6. Crazy Rich Asians
 7. The Kings of Summer
 8. Rush
 9. Wall E

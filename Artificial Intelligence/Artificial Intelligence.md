@@ -1,4 +1,6 @@
 [[A systems approach to AI]]
+[[Intelligent Agents]]
+[[The Supervised Learning Problem]]
 
 
 ## Types of Artificial Intelligence

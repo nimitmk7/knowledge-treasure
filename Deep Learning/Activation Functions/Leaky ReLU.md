@@ -8,7 +8,7 @@ $$
 where $a$ is a small constant, typically set to value like 0.01.
 
 
-![[Pasted image 20240220065331.png]]
+![[Leaky_ReLU.png]]
 
 ## Intuition
 

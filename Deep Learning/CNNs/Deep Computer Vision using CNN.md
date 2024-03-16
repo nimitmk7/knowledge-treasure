@@ -10,7 +10,7 @@
 - Neurons in the 1st convolutional layer are not connected to every single pixel in the input image, but only pixels in their receptive fields.
 - In turn, each neuron in the 2nd convolutional layer is connected only to neurons located within a small rectangle in the 1st layer.
 
-![[Pasted image 20240223153441.png]]
+![[CNN_Receptive_fields.png]]
 
 The architecture allows the network to concentrate on small low-level features in the first hidden layer, and then assemble them into large higher-level features in the next hidden layer, and so on.
 
@@ -27,7 +27,7 @@ This hierarchical structure is common in real-world images, which is one of the 
 - Outputs of rows $i\times s_h$ to $i\times s_h + f_h - 1$, columns $j\times s_w$ to $j\times s_w + f_w -1$, where $s_h$ and $s_w$ are vertical and horizontal strides. 
 
 3. In order for a layer to have the same height and width as the previous layer, it is common to add zeros around the inputs, as shown in the diagram. This is called zero padding.
-![[Pasted image 20240223154743.png]]
+![[CNN_Strides.png]]
 
 ## Filters
 
@@ -35,6 +35,6 @@ A neuron’s weights can be represented as a small image the size of the recepti
 
 But we won’t have to define the filters manually: instead, during training the convolutional layer will automatically learn the most useful filters for its task, and the layers above will learn to combine them into more complex patterns.
 
-![[Pasted image 20240223161322.png]]
+![[CNN_filters.png]]
 ## Stacking Multiple Feature Maps
 

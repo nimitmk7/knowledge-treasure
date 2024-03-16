@@ -18,7 +18,7 @@ Exponential smoothing bases its forecasts on a weighted average of past observat
 
 The level is the average value around which the series varies over time. As you can observe in the figure below, the level is a smoothed version of the series(demand in the example).
 
-![[Pasted image 20240220123140.png]]
+![[exp_smoothing.png]]
 ### Update estimate of a level
 $$ L_t=αY_t+(1-α)L_{t-1} $$
 where $L_t$ is the level of the series at time t. This level is not observable and can only be estimated, it is where we think the series would be if there were no random noise. $Y_t$ is is the current observation and $L_{t-1}$ is the previous level.

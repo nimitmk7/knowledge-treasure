@@ -2,14 +2,14 @@
 
 In the convolutional layer, the first operation is to convolve a 3D image with a 3D filter, piece by piece.
 
-![[Pasted image 20240223220608.png]]
+![[CNN_layer.png]]
 
 
 When we convolve the filter over the full image, we get a activation map($28\times28\times1$  dimensional in above example). 
 
 We'll actually apply a full set of filters in the convolution layer. So for $n$ filters, we get $n$ activation maps.
 
-![[Pasted image 20240223221155.png]]
+![[CNN_activation_maps.png]]
 
 - **ConvNet** is a sequence of Convolutional Layers, interspersed with activation functions.
 
@@ -43,7 +43,7 @@ The pooling function is a form of non-linear function that further modifies the 
 A pooling layer typically works on every input channel independently, so the output depth is the same as the input depth. You may alternatively pool over the depth dimension, in which case the image’s spatial dimensions (height and width) remain unchanged, but the number of channels is reduced.
 
 ### Example
-![[Pasted image 20240223230351.png]]
+![[Max_Pool.png]]
 
 ### Downfall
 Despite receiving ample treatment in Ians Goodfellows’ book, pooling has fallen out of favor. Some reasons are:
@@ -60,10 +60,10 @@ Despite receiving ample treatment in Ians Goodfellows’ book, pooling has falle
 
 
 ## Preview of what's happening
-![[Pasted image 20240223221545.png]]
+![[CNN_Overview.png]]
 ## High-level View
 
-![[Pasted image 20240223221826.png]]
+![[CNN_example.png]]
 
 ## Why are CNNs preferred over other nets for image classification or segmentation?
 

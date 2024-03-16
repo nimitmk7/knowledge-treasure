@@ -4,7 +4,7 @@
 
 What happens when we continue stacking deeper layers on a "plain" convolutional neural network ?
 
-![[Pasted image 20240224023452.png]]
+![[ResNet results.png]]
 
 The deeper model performs worse on both training and test error, and obviously it is not due to overfitting. 
 
@@ -15,7 +15,7 @@ The deeper model should be able to perform at least as well as the shallow model
 ## Core Idea
 Use network layers to fit a residual mapping instead of directly tryin to fit a desired underlying mapping.
 
-![[Pasted image 20240224024036.png]]
+![[ResNet_explanation.png]]
 
 
 ## Formulation

@@ -11,7 +11,7 @@
 - Dot color and size can encode additional information
 
 ### Example
-![[Pasted image 20240301211854.png]]
+![[Data Visualization/Images/Spatial_example.png]]
 ## Heat Map
 - Used to visualize the continuous distribution of a quantity.
 - Typically use a "density estimation" method, which estimates a continuous density model from discrete data.
@@ -23,11 +23,11 @@
 
 > [!WARNING] DO NOT USE RAINBOW/JET COLOR SCHEME
 > Most common color map are Rainbow and Jet, but they are not very suitable. Converting them to B&W, we see that brightness does not decrease/increase monotonically, when we go from Left to Right. It is bot very helpful, because when we look at heat map, we tend to pick out light or dark regions right away.
-> ![[Pasted image 20240301212855.png]]
+> ![[Data Visualization/Images/Color_schemes.png]]
 >  
 
 #### Recommended ColorMaps
-![[Pasted image 20240301213258.png]]
+![[Color_schemes 1.png]]
 - **Viridis** and **Heat**: Light to Dark
 - **Cool Warm**: Dark to light to Dark (Bidirectional, so very useful to represent diverging data).
 - 
@@ -38,7 +38,7 @@
 - Binned map partition space into discrete bins. 
 - Color encodes aggregated quantity over each bin.
 ### Example
-![[Pasted image 20240301214240.png]]
+![[spatial_example_1.png]]
 
 ## Choropleth Map
 We frequently want to show how some quantity varies across locations. We can do so by coloring individual regions in a map according to the data dimension we want to display. Such maps are called **choropleth** maps.
@@ -48,9 +48,9 @@ We frequently want to show how some quantity varies across locations. We can do 
 ![[chloropleth.png.png]]
 2. Categorical information
 
-![[Pasted image 20240301215123.png]]
+![[spat_example.png]]
 3. Focus on the foreground
-![[Pasted image 20240301215216.png]]
+![[spatial_eg.png]]
 
 ## Symbol Map
 - Uses symbol in particular size to associate quantity associated with the region.
@@ -59,7 +59,7 @@ We frequently want to show how some quantity varies across locations. We can do 
 - Does not solve the spatial density problem.
 
 ### Example
-![[Pasted image 20240301215836.png]]
+![[spatial_eg1.png]]
 
 ## Cartograms
 Not every map-like visualization has to be geographically accurate to be useful. 

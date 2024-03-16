@@ -7,7 +7,7 @@ The Lagrange multipliers" technique is a way to solve constrained optimization p
 - The maximum/minimum would occur at at point when the 2 curves(function curve, constraint curve) barely touch each other. 
 
 ![[Pasted image 20240213153917.png]]
-![[Pasted image 20240228165911.png]]
+![[Lagrange_multiplier.png]]
 ## Mathematical Form
 
 $$

@@ -6,7 +6,7 @@ $$
 g(z) = max\{0,z\}
 $$
 
-![[Pasted image 20240216101652.png]]
+![[ReLU.png]]
 ## Intuition
 - The function **returns 0 if it receives any negative input, but for any positive value x it returns that value back**
 

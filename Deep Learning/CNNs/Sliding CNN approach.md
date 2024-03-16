@@ -3,7 +3,7 @@ Take a pre-trained CNN for classification and locate a single object centered in
 
 The CNN was generally trained to predict not only class probabilities and a bounding box, but also an objectness score: this is the estimated probability that the image does indeed contain an object centered near the middle. 
 	- This is a binary classification output; it can be produced by a dense output layer with a single unit, using the sigmoid activation function and trained using the binary cross-entropy loss.
-![[Pasted image 20240223150911.png]]
+![[sliding_CNN.png]]
 ### Non-max Suppression
 
 

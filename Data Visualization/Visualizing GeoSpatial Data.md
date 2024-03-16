@@ -6,7 +6,7 @@ Many datasets contain info. linked to locations in the physical world. In all su
 	- E.g. Counties, Regions, Buildings, Rivers, Lakes
 	- Shape, spatial extent matters
 	- Map is main object of interest
-	- **Types**: Regions(e.g. Country Borders), Locations(e.g. Lat-Long), Identifiers(e.g. Zip Code)![[Pasted image 20240229235724.png]]
+	- **Types**: Regions(e.g. Country Borders), Locations(e.g. Lat-Long), Identifiers(e.g. Zip Code)![[Geocoding_1.png]]
 2. **Non-Spatial**: Individual objects that have relationship with spatial data
 	- E.g. Cars, People, Weather station
 	- Shape does not matter. Map is used as a reference, to track the relationship with spatial data(a.k.a locate)
@@ -23,7 +23,7 @@ Many datasets contain info. linked to locations in the physical world. In all su
 	- Question pertaining phenomenon for which spatial proximity or extend is relevant.
 2. When map helps find information needed.
 Example:
-![[Pasted image 20240301001111.png]]
+![[Geo_example.png]]
 
 ## Layers
 To visualize geospatial data in the proper context, we usually create maps consisting of multiple layers showing different types of information.
@@ -49,7 +49,7 @@ To visualize geospatial data in the proper context, we usually create maps consi
 - Measurement should be normalized by the base rate to avoid bias.
 
 ### Example:
-![[Pasted image 20240301222241.png]]
+![[spa_vs_eg.png]]
 ### Insensitivity to Sample Size
 - Small sample size may lead to extreme results.
 - Insensitivity to sample size is a cognitive bias that occurs when people judge the probability of obtaining a sample statistic without respect to the sample size.

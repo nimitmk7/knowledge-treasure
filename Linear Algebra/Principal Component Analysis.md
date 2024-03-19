@@ -116,6 +116,13 @@ $$
 ### Generalizing to m co-ordinates
 
 
+## Pros
+1. Effective way of dimension reduction
+2. Easy to implement
+## Cons
+1. Hard to interpret semantics of the principal component
+2. Limited to linear projection
+
 ## References
 1. https://mml-book.github.io/book/mml-book.pdf 
 2. 

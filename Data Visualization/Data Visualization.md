@@ -17,6 +17,8 @@ Figures will typically carry the weight of your arguments. They need to be clear
 [[Visualizing Time Series and Other Functions as an Independent Variable]]
 [[Visualizing GeoSpatial Data]]
 [[Visualizing Network Data]]
+[[Visualizing High Dimensional Data]]
+
 
 
 

@@ -1,5 +1,7 @@
+## Motivation
 In the context of regression it is a statistical measure of how well the regression line approximates the actual data. It evaluates the scatter of the data points around the fitted regression line.
 
+## Formulation and Intuition
 **The question to be answered is**:
 
 How much of the variation in y is explained by the variation in the x or the line?
@@ -21,6 +23,13 @@ as 1 - unexplained/total = explained/total.
 
 - If line is a good fit, RSS is small. $R^2$ is close to 1.
 - If line is a bad fit, RSS is large, $R^2$ is close to 0.
+
+>[!WARN] 
+> $R^2$ should only be used for continuous variables. Prefer using other metrics like **[[Mutual Information]]** for categorical variables. 
+
+
+
+
 
 ## Range of values
 We should expect $R^2$ to be bounded between 0 and 1 only if a linear regression model is fit, and it is evaluated on the same data it is fitted on. 

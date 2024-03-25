@@ -62,3 +62,5 @@ $$
 
 ## Cons
 
+## Extensions
+[[SoftMax Regression]] 

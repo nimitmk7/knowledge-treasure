@@ -3,7 +3,19 @@ How much information can be shared among random events ?
 
 How much uncertainty will be reduced about a random event by knowing the outcome of a different random event ?
 
-This answer to these questions is given by mutual information.
+This answer to these questions is given by mutual information. 
+
+## Intuition
+It gives us a sense of how closely related 2 variables are, like $R^2$. 
+
+It quantifies the "amount of information" obtained about one random variable by observing the other random variable.
+
+It tells us the average surprise or change we see in one variable is related to the surprise in the another.
+
+Watch:
+
+: <iframe width="560" height="315" src="https://www.youtube.com/embed/eJIp_mgVLwE?si=i-VxcOOPxfoPTjL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 ## Formulation
 
@@ -22,9 +34,10 @@ $$\log\left(\frac{1}{p(x)}\right) - \log\left(\frac{1}{p(x|y)}\right)$$
 ### Mutual Information
 
 $$
-I(X;Y) = \sum_{x\in\mathcal X}\sum_{y\in\mathcal Y}\log\left(\frac{p(x,y)}{p(x)p(y)}\right)
+I(X;Y) =\sum_{x\in\mathcal X}\sum_{y\in\mathcal Y} p(x,y)\log\left(\frac{p(x,y)}{p(x)p(y)}\right)
 $$
-
+## Properties
+1. It is an invertible function. $I(X,Y) = I(Y,X)$
 ## Conditional Entropy
 
 $$

@@ -3,7 +3,7 @@
 		{"id":"19b5bf390163bee7","type":"text","text":"Problem Type","x":-160,"y":-240,"width":250,"height":60},
 		{"id":"0e0ce937cc3bf7d9","type":"text","text":"Classification","x":50,"y":-40,"width":250,"height":60},
 		{"id":"4d0a7655f94aabe9","type":"text","text":"Regression","x":-380,"y":-40,"width":250,"height":60},
-		{"id":"0606f329deeef711","type":"file","file":"Machine Learning/Models/Support Vector Machines.md","x":420,"y":540,"width":240,"height":160},
+		{"id":"0606f329deeef711","type":"file","file":"Machine Learning/Algorithms/Classification/Support Vector Machines.md","x":420,"y":540,"width":240,"height":160},
 		{"id":"20518f370ea3a7fb","type":"text","text":"Time Series Data","x":-560,"y":140,"width":250,"height":60},
 		{"id":"27a73532d1e3d79e","type":"file","file":"Deep Learning/RNNs/Recurrent Neural Networks(RNNs).md","x":-860,"y":380,"width":425,"height":120},
 		{"id":"581a4142890e96ac","type":"text","text":"Lesser samples, High Dimension","x":300,"y":220,"width":280,"height":80},

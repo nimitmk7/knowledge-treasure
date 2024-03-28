@@ -81,6 +81,11 @@ Refer documentation: [RandomizedSearchCV - Sci-kit learn](https://scikit-learn.o
 #### Implementation
 Let's tune the parameters of the baseline SVM classifier using randomized search.
 
+```Python
+from sklearn.svm import SVC
+baseline_svm = SVC()
+```
+
 We import the `RandomizedSearchCV` class and define `param_dist`, a much larger hyperparameter search space.
 ```python
 from sklearn.model_selection import RandomizedSearchCV
@@ -101,9 +106,6 @@ randomized_search = RandomizedSearchCV(estimator=baseline_svm, param_distributio
 
 randomized_search.fit(X_train, y_train)
 ```
-
-
-
 
 ## References
 1. [GridSearchCV for Beginners - Towards Data Science](https://towardsdatascience.com/gridsearchcv-for-beginners-db48a90114ee)

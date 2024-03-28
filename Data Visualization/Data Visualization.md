@@ -18,6 +18,7 @@ Figures will typically carry the weight of your arguments. They need to be clear
 [[Visualizing GeoSpatial Data]]
 [[Visualizing Network Data]]
 [[Visualizing High Dimensional Data]]
+[[Interactive Data Visualization]]
 
 
 

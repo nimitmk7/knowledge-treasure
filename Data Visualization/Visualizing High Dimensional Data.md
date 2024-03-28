@@ -60,7 +60,7 @@ https://syntagmatic.github.io/parallel-coordinates/
 Clustering of MNIST dataset using t-SNE algorithm
 
 ![[Pasted image 20240318174035.png]]
-##### [[K-Means algorithm]]
+##### [[K-Means clustering(Centroid model)]]
 
 But in order to use clustering algorithms, we need to reduce the data to a lower dimensional space using dimension reduction.
 ### Dimension Reduction

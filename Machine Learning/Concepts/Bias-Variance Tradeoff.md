@@ -4,10 +4,22 @@ Whenever we discuss model prediction, it’s important to understand prediction 
 ## What is Bias ?
 Bias is the difference between the average prediction of our model and the correct value which we are trying to predict. 
 
-Model with high bias pays very little attention to the training data and oversimplifies the model. It always leads to high error on training and test data
+Model with high bias pays very little attention to the training data and oversimplifies the model. It always leads to high error on training and test data.
+
+### Intuition
+Bias is the assumptions your model makes about the function that it is trying to learn. E.g. Assuming the data is linear when its actually quadratic. 
+
+More assumptions → High Bias. Therefore bias is the inability of the model to capture the true relationship between the target and features.
 
 ## What is Variance ?
 Variance is the variability of model prediction for a given data point or a value which tells us spread of our data. ==Model with high variance pays a lot of attention to training data and does not generalize on the data which it hasn’t seen before.== As a result, such models perform very well on training data but has high error rates on test data.
+
+### Intuition
+ Variance is the sensitivity of your model to small variations in the training dataset. Any model with too much freedom is likely to have high variance.
+
+Variance denotes the difference in fits between datasets. **So the predictions of high variance model are not consistent across datasets**. It will predict radically different values for the same data point in a slightly different dataset.
+
+For a low variance model, the predictions for a data point are consistent to each other across datasets even though they are consistently wrong. 
 
 ## Irreducible Error
 Irreducible error is the error that can’t be reduced by creating good models. It is a measure of the amount of noise in our data. Here it is important to understand that no matter how good we make our model, our data will have certain amount of noise or irreducible error that can not be removed.
@@ -78,6 +90,14 @@ Early in training the bias is large because the predictor output is far from the
 The variance is very small because the data has had little influence yet. Late in training the bias is small because the predictor has learned the underlying function. 
 
 However if train for too long then the predictor will also have learned the noise specific to the dataset (overfitting). In such case the variance will be large because the noise varies between training and test datasets.
+
+## Helpful Videos
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a6YH6EbM9xA?si=lvOzjuMaRyo3UjCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EuBBz3bI-aA?si=AvjPJsywPK7kJPkm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YIPsfEtJppE?si=zzseAtU6ECcngD85" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 
 ## References
 1. https://towardsdatascience.com/understanding-the-bias-variance-tradeoff-165e6942b229

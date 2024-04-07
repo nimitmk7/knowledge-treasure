@@ -35,40 +35,40 @@ Essentially, when using momentum, ==we push a ball down a hill==. The ball accum
 
 ## Python implementation
 
-``` python
+```python
 def stochastic_gradient_descent_with_momentum(learning_rate: float, momentum_param: float, epochs: int, w, x_train, y_train):
 
-M = w.shape[0]
-
-n = x_train.shape[0]
-
-# Initializing the momentum vector
-
-v = np.zeros(w.shape)
-
-epoch_loss = np.zeros(shape=(epochs, 1))
-
-for i in range(epochs):
-
-row_index = np.random.randint(0, n)
-
-x_sample = x_train[row_index, :]
-
-for j in range(M):
-
-y = y_train[j]
-
-y_hat = np.dot(w, x_train[j, :])
-
-gradient = (2 * (y_hat - y) * x_sample[j])
-
-v[j] = momentum_param * v[j] + learning_rate * gradient
-
-w[j] = w[j] - v[j]
-
-epoch_loss[i] = calculate_loss(x_train, y_train, w)
-
-return w, epoch_loss
+	M = w.shape[0]
+	
+	n = x_train.shape[0]
+	
+	# Initializing the momentum vector
+	
+	v = np.zeros(w.shape)
+	
+	epoch_loss = np.zeros(shape=(epochs, 1))
+	
+	for i in range(epochs):
+	
+	row_index = np.random.randint(0, n)
+	
+	x_sample = x_train[row_index, :]
+	
+	for j in range(M):
+	
+	y = y_train[j]
+	
+	y_hat = np.dot(w, x_train[j, :])
+	
+	gradient = (2 * (y_hat - y) * x_sample[j])
+	
+	v[j] = momentum_param * v[j] + learning_rate * gradient
+	
+	w[j] = w[j] - v[j]
+	
+	epoch_loss[i] = calculate_loss(x_train, y_train, w)
+	
+	return w, epoch_loss
 ```
 
 

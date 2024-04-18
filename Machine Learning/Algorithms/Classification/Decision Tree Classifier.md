@@ -34,7 +34,6 @@ However, when they differ, Gini impurity tends to isolate the most frequent clas
 1. It traverses the tree to find the leaf node for this instance
 2. It returns the ratio of training instances of class k in this node.
 
-
 ## Hands-on example
 
 

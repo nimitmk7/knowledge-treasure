@@ -9,4 +9,4 @@ Data visualization is part art and part science. The challenge is to get the art
 **Bad** : A figure that has problems related to perception; it may be unclear, confusing, overly complicated, or deceiving
 **Wrong**: A figure that has problems related to mathematics; it is objectively incorrect
 
-![[Pasted image 20240131103459.png]]
+![[ugly_bad_and_wrong_viz.png]]

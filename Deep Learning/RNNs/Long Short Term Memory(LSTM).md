@@ -24,9 +24,8 @@ $h_{(t)}$ → short-term state/memory
 At each time step, some memories are dropped, and some memories are added.
 
 ### Steps
-
 1. **Forget Gate** : Determine what % of the Long-Term memory is remembered.
-2. **Input Gate**: One block creates a potential long term memory from the short-term memory and the input,  and other block determines the % of the potential memory to add to the long term memory.
+2. **Input Gate**: One block creates a potential long term memory from the short-term memory and the input,  and other block determines the % of the potential long-term memory to add to the existing long term memory.
 3. **Output Gate**: Update the short-term memory with the help of the new long term memory. Called the **output gate**.
 #### Roles
 **Input Gate**: Learn to recognize an important input.

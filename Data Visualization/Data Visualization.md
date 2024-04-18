@@ -20,6 +20,7 @@ Figures will typically carry the weight of your arguments. They need to be clear
 [[Visualizing High Dimensional Data]]
 [[Interactive Data Visualization]]
 [[Human Perception]]
+[[Color Theory]]
 
 
 

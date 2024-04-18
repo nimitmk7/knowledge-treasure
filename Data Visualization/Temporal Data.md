@@ -6,7 +6,7 @@
 ## Representation of time
 
 ### ISO 8601 format(Most standard)
-![[Pasted image 20240215183436.png]]
+![[dt_representation.png]]
 
 ## Other forms
 Feb 28, 2022
@@ -23,9 +23,9 @@ Day 59(year day)
 
 ### 1. Can be Sequential or Cyclic 
 
-![[Pasted image 20240215183925.png]]
+![[seq_cyclic.png]]
 Example:
-![[Pasted image 20240215184007.png]]
+![[seq_cyclic_example.png]]
 ### 2. Time is hierarchical/multi-resolution
 
 ![[Pasted image 20240215184122.png]]

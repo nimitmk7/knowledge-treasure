@@ -4,6 +4,10 @@
 
 - Asymmetric cost is generally applicable when getting one class wrong is more costlier than the other class (spam detection, fraud detection).
 
+## Why is this a Problem ?
+Most machine learning algorithms assume data equally distributed. So when we have a class imbalance, ==the machine learning classifier tends to be more biased towards the majority class, causing bad classification of the minority class==.
+
+
 ## Training Classifiers with Imbalanced Data
 
 ### 1. Change Data
@@ -39,7 +43,8 @@ Importantly, the change to the class distribution is **only applied to the train
 
 ## References
 1. https://machinelearningmastery.com/random-oversampling-and-undersampling-for-imbalanced-classification/
-2. 
+2. https://towardsdatascience.com/class-imbalance-a-classification-headache-1939297ff4a4
+
 
 
 

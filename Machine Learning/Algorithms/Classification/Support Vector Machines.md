@@ -206,14 +206,15 @@ The bias $b^*$ can be computed from any support vector:
 $$\begin{aligned} &b^*=y_3-x_3^{\top} w^*\\
 & =1-\left[\begin{array}{ll}-1 & -2\end{array}\right]\left[\begin{array}{c}0 \\ -1 / 2\end{array}\right] \\ & =1-1 \\ b^* & =0\end{aligned}$$
 
-
-
-
 ## Kernel Functions
 
 
 Watch this video:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OKFMZQyDROI?si=nyqxncoCGmHK1TjP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Pros and Cons
+https://holypython.com/svm/support-vector-machine-pros-cons/ 
+https://roboticsbiz.com/pros-and-cons-of-support-vector-machine-svm/
 
 ## Use Cases
 - SVM works best for high-dimensional data with lesser no of samples. 

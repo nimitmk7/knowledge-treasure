@@ -1,6 +1,7 @@
 Feature scaling is **the process of normalizing the range of features in a dataset**. Generally, it is a good idea to prepare data to the range of the different transfer functions in machine learning algorithms. 
 
 So you need to scale the target data to within the range that the estimator is able to predict.
+
 In addition, in the case of neural networks that use gradient descent, scaling the target is recommended to avoid gradient explosion.
 
 ## Methods

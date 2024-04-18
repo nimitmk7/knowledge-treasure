@@ -58,7 +58,7 @@ To update these parameters, Kalman filters require the control  $u_t$ and the me
 
 In Lines 2 and 3, the predicted belief $\bar \mu$ and $\bar\Sigma$ is calculated representing the belief $bel(x_t)$ _one time step later, but before incorporating the measurement_ $z_t$. 
 
-This belief is obtained by incorporating the control $u_t$. The mean is updated using the deterministic version of the state transition function, with the mean $\mu_{t-1}$  substituted for the state $x_t-1$. 
+This belief is obtained by incorporating the control $u_t$. The mean is updated using the deterministic version of the state transition function, with the mean $\mu_{t-1}$  substituted for the state $x_{t-1}$. 
 
 The update of the covariance considers the fact that states depend on
 previous states through the linear matrix $A_t$. This matrix is multiplied twice into the covariance, since the covariance is a quadratic matrix.

@@ -9,8 +9,11 @@ weak rules from each individual learner ultimately combining to form one predict
 > [!tip] Boosting is prone to overfitting the training data and potentially have High Variance, hence the use of high bias, low variance weak learners is preferred for boosting.
 
 
-
 ![[Pasted image 20240416164129.png]]
+## Assumptions
+- Independence of observations
+- While boosting can increase the accuracy of a base learner, it might come at the cost of intelligibility and interpretability
+- Gradient tree boosting implementations often limit the minimum number of observations in trees’ terminal nodes. It is used in the tree-building process by ignoring any splits that lead to nodes containing fewer than this number of training set instances.
 ## Implementations
 1. [[Gradient Boosting]]
 2. [[AdaBoost]]

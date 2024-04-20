@@ -68,18 +68,50 @@ Consider we have the following:
 
 - Repeat steps 1 and 2 M times, where M is the number of weak learners you are using.
 - Yields $\hat g^k(•)$ where $(k = 1, 2, ...,M)$, for each learner/estimator.
-- Bagged Estimator: $$\frac{1}{M} \sum_{i=1}^{M} \hat g^i(•) $$
+- Bagged Estimator: $$\frac{1}{M} \sum_{i=1}^{M} \hat g_{i}(•) $$
 - In theory: $\hat g_{bag}(•) = E[\hat g^*(·)]$ as $M → ∞.
 - For classification problems, Brieman proposed that instead of taking the average we take the output from each weak classifier among J classes as votes for constructing the bagged classifier, and the class with the most votes would become such
 
 ## Working Example
 Assume we are given a dataset of size N = 1000: $$L = [(X_1, Y_1), (X_2, Y_2), ..., (X_N, Y_N)]$$
-### Bootstrapping
+### 1. Bootstrapping
 We will generate M = 5 training subsets from the original dataset L of size n = 50 by randomly sampling 50 instances from the dataset, with replacement.
 
+$$\begin{pmatrix}
+(X_{1,1}, Y_{{1,1}}) & (X_{1,2}, Y_{{1,2}}) & \cdots & (X_{1,50}, Y_{{1,50}}) \\ (X_{2,1}, Y_{{2,1}}) & (X_{2,2}, Y_{{2,2}}) & \cdots & (X_{2,50}, Y_{{2,50}}) \\ \vdots & \vdots & \ddots & \vdots \\ (X_{5,1}, Y_{{5,1}}) & (X_{5,2}, Y_{{5,2}}) & \cdots & (X_{5,50}, Y_{{5,50}})
+\end{pmatrix}
+$$
+### 2. Training the weak learners
+We will now train 5 weak learners, one for each of the training subsets we bootstrapped. Each weak learner has a unique regression/classification algorithm, and each weak learner will be trained in parallel to generate an output via estimator h which takes a subset of the data as input.
 
+**a) Regression**
 
+$\hat{g}_1(\cdot) = h_1((X_{1,1}, Y_{1,1}), (X_{1,2}, Y_{1,2}), ..., (X_{1,50}, Y_{1,50}))(\cdot) = 1.55$
+$\hat{g}_2(\cdot) = h_2((X_{2,1}, Y_{2,1}), (X_{2,2}, Y_{2,2}), ..., (X_{2,50}, Y_{2,50}))(\cdot) = 1.32$
+$\hat{g}_3(\cdot) = h_{3}((X_{3,1}, Y_{3,1}), (X_{3,2}, Y_{3,2}), ..., (X_{3,50}, Y_{3,50}))(\cdot) = 1.73$
+$\hat{g}_4(\cdot) = h_4((X_{4,1}, Y_{4,1}), (X_{4,2}, Y_{4,2}), ..., (X_{4,50}, Y_{4,50}))(\cdot) = 1.29$
+$\hat{g}_5(\cdot) = h_1((X_{5,1}, Y_{5,1}), (X_{5,2}, Y_{5,2}), ..., (X_{5,50}, Y_{5,50}))(\cdot) = 1.81$
 
+**(b) Classification** (Assume 3 classes)
+
+$\hat{g}_1(\cdot) = h_1((X_{1,1}, Y_{1,1}), (X_{1,2}, Y_{1,2}), ..., (X_{1,50}, Y_{1,50}))(\cdot) = 0$
+$\hat{g}_2(\cdot) = h_2((X_{2,1}, Y_{2,1}), (X_{2,2}, Y_{2,2}), ..., (X_{2,50}, Y_{2,50}))(\cdot) = 1$
+$\hat{g}_3(\cdot) = h_{3}((X_{3,1}, Y_{3,1}), (X_{3,2}, Y_{3,2}), ..., (X_{3,50}, Y_{3,50}))(\cdot) = 0$
+$\hat{g}_4(\cdot) = h_4((X_{4,1}, Y_{4,1}), (X_{4,2}, Y_{4,2}), ..., (X_{4,50}, Y_{4,50}))(\cdot) = 0$
+$\hat{g}_5(\cdot) = h_1((X_{5,1}, Y_{5,1}), (X_{5,2}, Y_{5,2}), ..., (X_{5,50}, Y_{5,50}))(\cdot) = 2$
+
+### 3. Aggregation
+We will now aggregate the estimates from the weak learners to generate a bagged estimate, which is ideally a more accurate estimate with reduced variance.
+
+**(a) Regression: Average(Soft Voting)**
+$$\hat g_{bag} = \frac{1}{M} \sum_{i=1}^{M} \hat g_{i}(•) = \frac{1}{5} \sum_{i=1}^{5} \hat g_{i}(•) $$
+(b) **Classification: Hard/Majority Voting**
+
+Votes for Class 0: 3
+Votes for Class 1: 1
+Votes for Class 2: 1
+
+$$\hat g_{bag} = 0$$
 
 ## Why Bagging works ?
 

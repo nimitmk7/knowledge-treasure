@@ -1,3 +1,4 @@
+https://adityassrana.github.io/blog/theory/2020/08/26/Weight-Init.html
 https://jvns.ca/blog/2014/06/19/machine-learning-isnt-kaggle-competitions/ 
 https://karpathy.medium.com/software-2-0-a64152b37c35
 https://blog.kevinhu.me/2021/04/25/25-Paper-Reading-Booking.com-Experiences/bernardi2019.pdf

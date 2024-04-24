@@ -89,6 +89,14 @@ $ℒ(Y_{(0)}, Y_{(1)}, …​, Y_{(T)}; Ŷ_{(0)}, Ŷ_{(1)}, …​, Ŷ_{(T)})$ (
 
 - Perform gradient descent step and update the parameters.
 
+## Advantages
+1. Handle **multiple time series inputs** simultaneously
+2. Predict **multiple values at once**,
+3. Capture complex **non-linear relationships** in the data
+4. They are **dynamic** and can perform online learning
+5. Excellently handles **variable-length** sequences
+
+
 ## Issues
 1. Suffers from exploding/vanishing gradient problem.
 2. 
@@ -105,5 +113,7 @@ $ℒ(Y_{(0)}, Y_{(1)}, …​, Y_{(T)}; Ŷ_{(0)}, Ŷ_{(1)}, …​, Ŷ_{(T)})$ (
 ## References
 1. https://d2l.ai/
 2. Hands-on Machine Learning book
+3. https://mlquant.notion.site/F-Prediction-RNNs-409e415a8f6a485db2c32b2e5bdd96c4
+4. 
 
 

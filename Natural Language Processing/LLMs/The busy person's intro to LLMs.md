@@ -1,7 +1,7 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zjkBMFhNj_g?si=VBHslewtIeZiJ7kp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zjkBMFhNj_g?si=VBHslewtIeZiJ7kp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>’
 
-https://drive.google.com/file/d/1pxx_ZI7O-Nwl7ZLNk5hI3WzAsTLwvNU7/view
-Reference: Llama 2 70B
+Slides : https://drive.google.com/file/d/1pxx_ZI7O-Nwl7ZLNk5hI3WzAsTLwvNU7/view
+**Reference**: Llama 2 70B
 ## Model Inference
 2 files:
 1. Parameters(70 billion) → 140 GB (every parameter is 2 bytes(float16))
@@ -53,7 +53,6 @@ It is often much easier to compare Answers instead of writing answers.
 RLHF(Reinforcement Learning from Human Feedback) at OpenAI
 
 Read https://openai.com/research/instruction-following
-
 
 Increasingly, labeling is a human-machine collaboration.
 

@@ -66,4 +66,15 @@ $$ argmax_{y} P(y\space|\space x) $$
 
 ## 2014-present: [[Neural Machine Translation(NMT)]]
 
+## Unsolved Challenges
+
+1. Out-of-vocabulary words
+2. Domain mismatch between train and test data
+3. Maintaining context over longer text
+4. Low-resource language pairs
+5. Using common sense is still hard.
+6. Removing biases in model inherited from training data.
+7. Uninterpretable systems do strange things.
+
+
 

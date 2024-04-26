@@ -161,6 +161,7 @@ k = 2.
 >  
 >  Yes. The comparsion is one-to-one(exact sequences). By definition, n-grams are sequences where the order matters. 
 
+## [[Attention in Seq2Seq]]
 
 
 

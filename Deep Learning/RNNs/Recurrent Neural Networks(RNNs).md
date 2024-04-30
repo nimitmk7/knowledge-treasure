@@ -106,7 +106,7 @@ $ℒ(Y_{(0)}, Y_{(1)}, …​, Y_{(T)}; Ŷ_{(0)}, Ŷ_{(1)}, …​, Ŷ_{(T)})$ (
 
 ## Types
 1. [[Long Short Term Memory(LSTM)]]
-2. [[Gated Recurrent Unit]]
+2. [[Gated Recurrent Unit(GRU)]]
 3. 
 
 

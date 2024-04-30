@@ -93,6 +93,13 @@ $$
 ## The Transformer Model
 
 ### The Transformer Decoder
+- The Transformer Decoder is a stack of Transformer Decoder **Blocks**.
+- Each Block consists of:
+	- Self-attention 
+	- Add & Norm
+	- Feed-Forward
+	- Add & Norm
+
 ![[Pasted image 20240426135504.png ]]
 #### Masked Multi-head attention
 
@@ -117,7 +124,7 @@ $$
 - We’ll define multiple attention “heads” through multiple Q,K,V matrices
 - Let,$𝑄_ℓ,𝐾_{ℓ},𝑉_{l} ∈ ℝ^{𝑑 × \frac{𝑑}{h}}$, where $h$ is the number of attention heads, and $l$ranges from 1 to ℎ.
 - Each attention head performs attention independently: 
- $$output_{l} = softmax(𝑋𝑄_{l}𝐾_{l}^⊤𝑋 ^⊤) * 𝑋𝑉_{l} \space \text{where} \space output_{ℓ} ∈ ℝ^{𝑑/ℎ}$$ 
+ $$output_{l} = softmax(𝑋𝑄_{l}𝐾_{l}^⊤𝑋 ^⊤) * 𝑋𝑉_{l} \space \text{where} \space output_{ℓ} ∈ ℝ^{𝑑/ℎ}$$
  - Then the outputs of all the heads are combined!
 	 - output = $[output_{1}; … ; output_{h}]$ 𝑌, where 𝑌 ∈ $ℝ^{𝑑×𝑑}$
 	
@@ -136,12 +143,58 @@ $$
 $$$$
 -  We divide the attention scores by $\sqrt{d/h}$, to stop the scores from becoming large just as a function of 𝑑/ℎ (The dimensionality divided by the number of heads.) $$output_{l} = softmax\left( \frac{𝑋𝑄_{ℓ}𝐾_{ℓ}^⊤𝑋^⊤}{\sqrt{d/h}} \right) ∗ 𝑋𝑉_{l}$$
 #### Residual Connections
+- They are a trick to help models train better. 
+	- Instead of $X^{(i)} = Layer(X^{(i-1)})$(where $i$ represents the layer) ![[Pasted image 20240428112944.png]]
+	- We let  $X^{(i)} = X^{(i-1)}+Layer(X^{(i-1)})$ (so we only have to learn **the residual** from previous layer) ![[Pasted image 20240428113117.png]]
+- Gradient is great through the residual connection; its 1!
+- Bias towards the identity function!
+- ![[Pasted image 20240428114559.png | 300]]
 
+#### Layer Normalization
+- Trick to help models train faster.
+- **Idea**: Cut down on uninformative variation in hidden vector values by normalizing to unit mean and standard deviation **within each layer**.
+	- LayerNorm’s success may be due to its normalizing gradients.
+- Let $x \in \mathbb R^d$ be an individual(word) vector in the model. 
+- Let $\mu = \frac{1}{d} \sum^d_{j=1} x_{j};$ this is the mean; $\mu\in\mathbb R$.
+- Let $\sigma = \sqrt{\frac{1}{d} \sum^d_{j=1} (x_{j} - \mu)^2}$; this is the standard deviation; $\sigma\in\mathbb R$.
+- Let $\gamma \in \mathbb R^d$ and $\beta \in \mathbb R^d$ be learned “gain” and “bias” parameters.(Can omit!)
+- Then layer normalization computes: $$\text{output} = \frac{x-\mu}{\sqrt{\sigma} + \epsilon} * \gamma \space + \beta  $$
+>[!TIP] 
+> Here, we’ve broadcasted the $\mu$ and $\sigma$ across the d dimensions of $x$, and thats how we perform the vector operation.
 
+### Transformer Encoder
+- The Transformer Decoder constrains to unidirectional context, as for language models.
+- But we want bidirectional context, like in a bidirectional RNN, in the encoder. So we remove the masking in the self-attention.
 
+![[Pasted image 20240428120813.png]]
 
-
+### Putting them both together
+![[Pasted image 20240428120840.png]]
+#### Cross-attention
+-  Self-attention is when keys, queries, and values come from the same source. 
+- Let $h_{1} , … , h_{𝑛}$ be output vectors from the Transformer encoder; $x_{i}\in \mathbb R^d$ 
+- Let $z_{1} , … , z_{n}$ be input vectors from the Transformer decoder, $z_{i} \in \mathbb R^{d}$ 
+- Then keys and values are drawn from the encoder (like a memory): 
+	- $𝑘_{𝑖}$ = $𝐾ℎ_{𝑖}$ ,
+	- $𝑣_{𝑖}$ = $𝑉ℎ_{𝑖}$ 
+- And the queries are drawn from the decoder,
+	- $𝑞_{𝑖} = 𝑄z_𝑖$ .
+![[Pasted image 20240428121955.png | 500]]
+ 
 ## Videos
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/wjZofJX0v4M?si=f4TgLPeUarjTLUu9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LWMzyfvuehA?si=9T_f3vQGYEodPurC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
+## Problems
+1. **Quadratic compute in self-attention**
+	1. Computing all pairs of interactions means our computation grows quadratically with sequence length - $O(n^2)$
+	2. For recurrent models, it grew linearly - $O(n)$
+2. **Position representations**
+	1. Simple absolute indices are not the best way to represent position.
+
+
+
+## References
+1. https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1234/slides/cs224n-2023-lecture08-transformers.pdf
+2. https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1234/readings/cs224n-self-attention-transformers-2023_draft.pdf

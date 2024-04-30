@@ -13,5 +13,6 @@
 
 ## Architectures
 [[Convolutional Neural Networks(CNNs)]]
+[[Recurrent Neural Networks(RNNs)]]
 [[Autoencoders]]
 

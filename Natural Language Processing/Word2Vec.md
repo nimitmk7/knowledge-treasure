@@ -102,7 +102,8 @@ With this objective function, we can compute the gradients with respect to the u
 Once the training is done we use the weight matrix of hidden layer to get the Word2vec embedding. The weight matrix is multiplied by the one hot encoding to get the word2vec embedding.
 
 ## Hands-On
-Refer to: 
+Refer to: https://www.tensorflow.org/text/tutorials/word2vec 
+If not working: https://github.com/nimitmk7/knowledge-treasure/blob/main/Natural%20Language%20Processing/word2vec.ipynb
 
 ## References
 1. https://wiki.pathmind.com/word2vec

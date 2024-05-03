@@ -37,7 +37,7 @@ The output gate ==controls the data that will be used from the cell state to com
 
 
 
-$$o_t = \sigma(W_o \cdot [h_t-1, x_t] + b_o)$$
+$$o_t = \sigma(W_o \cdot [h_{t-1}, x_t] + b_o)$$
 $$h_t = o_t * tanh(C_t)$$
 ![[Pasted image 20240429141745.png]]
 > **Nutshell**: Update the short-term memory with the help of the new long term memory

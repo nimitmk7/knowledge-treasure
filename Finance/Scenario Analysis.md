@@ -14,8 +14,6 @@ Based on mathematical and statistical principles, scenario analysis provides a p
 ![[Pasted image 20240219140300.png]]
 
 
-
-
 ### Sensitivity Analysis
 Sensitivity analysis is a financial model that determines how target variables are affected based on changes in other variables known as input variables. It is a way to predict the outcome of a decision given a certain range of variables. By creating a given set of variables, an analyst can determine how changes in one variable affect the outcome.
 

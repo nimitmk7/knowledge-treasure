@@ -110,6 +110,7 @@ Progress is slow in directions corresponding to the eigenvectors with the smalle
 The direct path to the minimum would be to move "diagonally" instead of in this fashion which is strongly dominated by vertical oscillations. However, gradient descent only has information about local steepness, so it "doesn't know" that strategy would be more efficient, and it is subject to the vagaries of the Hessian having eigenvalues on different scales.
 
 **Rescaling the input data changes the Hessian matrix to be spherica**l. In turn, this means that steepest descent can move more directly towards the minimum instead of sharply oscillating.
+
 ### Avoiding Saturation of Activation Functions
 
 If the neural network uses sigmoidal(logistic, tanh, softmax, etc.) activations, then these have flat gradients for inputs above  a certain size. 

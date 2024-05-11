@@ -14,7 +14,8 @@ It is a recursive algorithm which consists of 2 parts:
 >
 > Essentially, in our context the present state is a complete summary of the past, or a sufficient statistic for all past measurements and actions.
 
-## Framework
+## Framework 
+Here $x$ denotes state, $z$ denotes observations, $u$ denotes actions.
 ### Given
 -  Stream of observations $z$ and action data $u$: $$ d_{t} = \{u_{1}, z_{{1},\space \dots \space,} u_{t}, z_{t}\}$$
 - Sensor Model $P(z/x)$

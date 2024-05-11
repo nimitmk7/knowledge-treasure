@@ -2,16 +2,13 @@
 If the variables are normally distributed and transitions are linear, the Bayes Filter is equal to the Kalman Filter.
 ## Gaussian choice
 The commitment to represent the posterior by a Gaussian has important ramifications. Most importantly, Gaussians are unimodal, that is, **they posses a single maximum**. Such a posterior is characteristic of many tracking problems in robotics, in which the **posterior is focused around the true state with a small margin of uncertainty**.
-
 ## History
 The Kalman filter was invented in the 1950s by Rudolph Emil Kalman, as a 
 technique for filtering and prediction in linear systems.
-
 ## Formulation
-It implements belief computation for continuous states. It is not applicable to discrete or hybrid state spaces. It represents beliefs by the moments representation. 
+It implements belief computation for ==continuous states==. It is not applicable to discrete or hybrid state spaces. It represents beliefs by the moments representation. 
 
 At time $t$, the belief is represented by the mean $\mu_t$ and the covariance $\Sigma_t$. Posteriors are Gaussian if the following 3 properties hold(in addition to the Markov assumptions of the Bayes Filter):
-
 ### Assumptions
 1. The next state probability $p(x_{t}|u_{t}, x_{t-1})$ must be a linear function in its arguments with added Gaussian Noise. $$x_{t} = A_{t}x_{t-1} + B_{t}u_{t} + \epsilon_{t} $$
 Here $x_t$ and $x_{t-1}$ _are state vectors, and $u_t$  is the control vector at time_ $t$. In our

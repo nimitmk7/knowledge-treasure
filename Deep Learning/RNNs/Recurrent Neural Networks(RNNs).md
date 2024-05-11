@@ -10,7 +10,10 @@ Recurrent neural networks (RNNs) are deep learning models that capture the dynam
 
 Recurrent neural networks are _unrolled_ across time steps (or sequence steps), with the _same_ underlying parameters applied at each step.
 
-While the standard connections are applied _synchronously_ to propagate each layer’s activations to the subsequent layer _at the same time step_, the recurrent connections are _dynamic_, passing information across adjacent time steps
+While the standard connections are applied _synchronously_ to propagate each layer’s activations to the subsequent layer _at the same time step_, the recurrent connections are _dynamic_, **passing information across adjacent time steps**.
+
+![[RNN_animation.gif]]
+
 
 **Essence**: A recurrent neural network looks very much like a feedforward neural network, except it also has connections pointing backward.
 
@@ -30,22 +33,22 @@ At each *time* step $t$(also called a frame), this recurrent neuron receives the
 Every neuron now receives both the input vector $\mathbf x_{(t)}$ and the output vector from the previous step $\hat y_{(t-1)}$. Note that both the inputs and outputs are now vectors. 
 ![[Pasted image 20240403130742.png]]
 Each recurrent neuron has 2 sets of weights(weight vectors): 
-1. For the inputs $\mathbf x_{(t)}$ : $\mathbf{w_{x}}$
-2. For the outputs of previous step $\hat y_{(t-1)}$ : $\mathbf{w_{\hat y}}$
+1. For the inputs $\mathbf x_{t}$ : $\mathbf{w_{x}}$
+2. For the outputs of previous step $\hat y_{t-1}$ : $\mathbf{w_{\hat y}}$
 
 So for the whole layer, 2 weight matrices: $\mathbf{W_{x}}$ and $\mathbf{W_{\hat y}}$
 
 #### Output for a single data point
 $$
-\hat{y}_{(t)} = \phi(\mathbf{W_{x}}^\top \mathbf x_{(t)} + \mathbf{W_{\hat y}}\mathbf{\hat y_{(t-1)}} + \mathbf{b}) 
+\hat{y}_{(t)} = \phi(\mathbf{W_{x}}^\top \mathbf x_{t} + \mathbf{W_{\hat y}}\mathbf{\hat y_{t-1}} + \mathbf{b}) 
 $$
 
 #### Output for a mini-batch
 $$
-\hat{Y}_{(t)} = \phi(\mathbf X_{(t)}\mathbf{W_{x}}  + \mathbf{\hat Y_{(t-1)}}\mathbf{W_{\hat y}} + \mathbf{b}) 
+\hat{Y}_{(t)} = \phi(\mathbf X_{t}\mathbf{W_{x}}  + \mathbf{\hat Y_{t-1}}\mathbf{W_{\hat y}} + \mathbf{b}) 
 $$
 which is equal to:
-$$\hat{Y}_{(t)} = \phi([\mathbf X_{(t)} \space \mathbf{\hat Y_{(t-1)}]\mathbf{W}}\ + \mathbf{b})$$ with
+$$\hat{Y}_{(t)} = \phi([\mathbf X_{t} \space \mathbf{\hat Y_{t-1}]\mathbf{W}}\ + \mathbf{b})$$ with
 $$ W = [W_{x}\space W_{\hat{y}}]^\top $$
 ##### Dimensions and Details
 1. $\hat{Y}_{(t)}$ → $m \times n_{neurons}$ matrix. Layer’s outputs at time step $t$ for each instance in the mini-batch(size $m$).
@@ -53,6 +56,7 @@ $$ W = [W_{x}\space W_{\hat{y}}]^\top $$
 3. $W_{x}$ → $n_{inputs} \times n_{neurons}$
 4. $W_{\hat{y}}$ → $n_{neurons} \times n_{neurons}$
 5. $b$ → $n_{neurons} \times 1$ 
+
 
 ### Memory Cells
 Since the output of a recurrent neuron at time step $t$ is a function of all the inputs from previous time steps, you could say it is a form of *memory*. A part of a neural network that preserves some state across time steps is called a *memory cell*. 
@@ -104,10 +108,11 @@ $ℒ(Y_{(0)}, Y_{(1)}, …​, Y_{(T)}; Ŷ_{(0)}, Ŷ_{(1)}, …​, Ŷ_{(T)})$ (
 
 
 
-## Types
+## Variants
 1. [[Long Short Term Memory(LSTM)]]
 2. [[Gated Recurrent Unit(GRU)]]
-3. 
+3. [[Peephole LSTM]]
+4. 
 
 
 ## References

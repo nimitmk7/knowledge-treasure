@@ -23,7 +23,6 @@ In determining whether to use MAPE, one of the most important things to understa
 
 Mean absolute error and mean absolute percentage error may be less sensitive to outliers than alternative metrics, such as root mean squared error (RMSE), but even actual values that are on the small end of the value range in a dataset can explode MAPE towards infinity.
 
-
 ## References
 1. https://arize.com/blog-course/mean-absolute-percentage-error-mape-what-you-need-to-know/
 2. 

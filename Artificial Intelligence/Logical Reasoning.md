@@ -41,13 +41,13 @@ The wumpus world is a cave consisting of rooms connected by passageways. Lurking
 ![[Pasted image 20240406105655.png]]
 - **Performance measure**: +1000 for climbing out of the cave with the gold,       –1000 for falling into a pit or being eaten by the wumpus, –1 for each action taken, and –10 for using up the arrow. The game ends either when the agent dies or when the agent climbs out of the cave.
 
-- **Environment**: A $4 \times 4$ grid of rooms, with walls surrounding the grid. The agent al- ways starts in the square labeled $[1,1]$, facing to the east. The locations of the gold and the wumpus are chosen randomly, with a uniform distribution, from the squares other than the start square. In addition, each square other than the start can be a pit, with probability 0.2.
+- **Environment**: A $4 \times 4$ grid of rooms, with walls surrounding the grid. The agent always starts in the square labeled $[1,1]$, facing to the east. The locations of the gold and the wumpus are chosen randomly, with a uniform distribution, from the squares other than the start square. In addition, each square other than the start can be a pit, with probability 0.2.
   
  - **Actuators**: The agent can move **Forward**, TurnLeft by $90^◦$, or TurnRight by $90^◦$. The agent dies a miserable death if it enters a square containing a pit or a live wumpus. (It is safe, albeit smelly, to enter a square with a dead wumpus.) If an agent tries to move forward and bumps into a wall, then the agent does not move. The action **Grab** can be used to pick up the gold if it is in the same square as the agent. The action **Shoot** can be used to fire an arrow in a straight line in the direction the agent is facing. The arrow continues until it either hits (and hence kills) the wumpus or hits a wall. The agent has only one arrow, so only the first Shoot action has any effect. Finally, the action **Climb** can be used to climb out of the cave, but only from square $[1,1]$.
 
 - **Sensors**: The agent has 5 sensors, each of which gives a single bit of information: 
 	- In the squares directly (not diagonally) adjacent to the wumpus, the agent will perceive a **Stench**.
-	-  In the squares directly adjacent to a pit, the agent will perceive a **Breeze**.
+	- In the squares directly adjacent to a pit, the agent will perceive a  **Breeze**.
 	- In the square where the gold is, the agent will perceive a **Glitter.**
 	- When an agent walks into a wall, it will perceive a **Bump**.
 	- When the wumpus is killed, it emits a woeful **Scream** that can be perceived anywhere in the cave.
@@ -132,7 +132,6 @@ The new statement contradicts what we know as part of KB.
 ![[Pasted image 20240406170405.png]]
 $M(KB) \cap M(\alpha_3) \subset M(KB)$ 
 Thus, $\alpha_3$ adds non-trivial information to the KB and reduces the set of models that satisfy the KB.
-
 ##### Example
 KB: $\lnot B_{11}$ 
 $\alpha_3: B_{21}$
@@ -171,11 +170,11 @@ Using the operators and their semantics we can now construct an KB as an example
 | $B_{x,y}$ | Perception of a breeze while in cell [x,y] |
 | $S_{x,y}$ | Perception of a stench while in cel l[x,y] |
 
-Using these symbols we can convert the natural language assertions into logical sentences and populate the KB. The sentences $R_1$ and $R_2/R_3$ are general rules of the wumpus world. $R_4$ and $R_5$ are specific to the specific world instance and moves of the agent. 
+Using these symbols we can convert the natural language assertions into logical sentences and populate the KB. The sentences $R_1$, $R_2$ and $R_3$ are general rules of the wumpus world. $R_4$ and $R_5$ are specific to the specific world instance and moves of the agent. 
 
 | Sentence | Description                                                                                                  | KB                                              |
 | -------- | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
-| $R_1$    | There is no pit in cel [1,1]                                                                                 | $\neg P_{1,1}$                                  |
+| $R_1$    | There is no pit in cell [1,1]                                                                                | $\neg P_{1,1}$                                  |
 | $R_2$    | The cell [1,1] is breezy if and only if there is a pit in the neighboring cell.                              | $B_{1,1} ⇔ (P_{1,2} \lor P_{2,1})$              |
 | $R_3$    | The cell [2,1] is breezy if and only if there is a pit in the neighboring cell.                              | $B_{2,1} ⇔ (P_{1,1} \lor P_{2,2} \lor P_{3,1})$ |
 | $R_4$    | Agent while in cell [1,1] perceives [Stench, Breeze, Glitter, Bump, Scream]=[None, None, None, None, None]   | $\neg B_{1,1}$                                  |
@@ -183,7 +182,8 @@ Using these symbols we can convert the natural language assertions into logical 
 
 As the agent moves, it **uses the KB to decide whether a sentence is entailed by the the KB or not**. For example can we infer that there is no pit at cell $[1,2]$? The sentence of interest is $\alpha = \neg P_{1,2}$ and we need to prove that:
 $$ KB \models \alpha $$
-To answer such question we will use the model checking algorithm outlined in this chapter: ==enumerate all models and check that $\alpha$ is true for in every model where the KB is true==.
+To answer such question we will use the model checking algorithm: 
+==enumerate all models and check that $\alpha$ is true for in every model where the KB is true==.
 
 ![[Pasted image 20240406201403.png]]
 
@@ -198,7 +198,7 @@ The symbolic representation together with the explosive increase in the number o
 Two sentences $\alpha$ and $\beta$ are logically equivalent if they are true in the same set of models. Its denoted as $\alpha \equiv \beta$.
 **Example**: $P \land Q \equiv Q \land P$
 
-**Alternative definition**: $\alpha \equiv \beta$ if and only if $\alpha \models \beta$ and $\alpha \models \beta$ 
+**Alternative definition**: $\alpha \equiv \beta$ if and only if $\alpha \models \beta$ and $\beta \models \alpha$ 
 ![[Pasted image 20240406202850.png]]
 ### Validity
 A sentence is valid if it is true in all models. They are also known as **tautologies**- they are necessarily true. 

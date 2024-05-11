@@ -46,8 +46,16 @@ Therefore, the stricter the threshold, the number of FN predictions goes up as w
 ### Mean Average Precision
 
 #### Precision
+Represents the number of positive class predictions that actually belong to the positive class.
+
+
+$$P = \frac {TP}{TP + FP}$$
 
 #### Recall
+Represents the number of positive instances correctly identified by the model.
+
+$$R = \frac {TP}{TP + FN}$$
+
 
 #### Average Precision
 

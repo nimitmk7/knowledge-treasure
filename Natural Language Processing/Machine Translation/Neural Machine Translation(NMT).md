@@ -1,4 +1,4 @@
- It involves doing Machine Translation with a single neural network. The neural network architecture is called sequence-to-sequence (aka **seq2seq**) and it involves two **RNNs**(LSTMs).
+It involves doing Machine Translation with a single neural network. The neural network architecture is called sequence-to-sequence (a.k.a **seq2seq**) and it involves two **RNNs**(LSTMs).
 
 > [!INFO] More on Seq2Seq
 > 
@@ -23,9 +23,10 @@ $$h_{t} = f(x_{t}, h_{t-1})$$
 The context vector is generated from the sequence of hidden states,
 $$\mathbf \phi = q(\mathbf h_1, ..., \mathbf h_{Tx})$$
 If we use a bidirectional RNN, the architecture would look like this:
-![[Pasted image 20240421193648.png]]
+![[Pasted image 20240509180057.png]]
+
 > [!tip] 
->  Seq2Seq encoders will often do something that initially look strange: they will process the input sequence in reverse. 
+>  Seq2Seq encoders will often do something that initially look strange: they will process the input sequence in reverse order. 
 >  
 >  This is actually done on purpose with the idea being that the last thing that the encoder “sees” will roughly corresponds to the first thing that the model outputs; this makes it easier for the decoder to “get started” on the output.
 
@@ -48,6 +49,8 @@ $$LSTM = g(s_t,  y_{t-1}, \phi ) = p(y_t | y_1, ..., y_{t-1}, \mathbf \phi) $$
 Once the decoder is set up with its context, we’ll pass in a special token to signify the start of output generation; in literature, this is usually an token appended to the end of the input (there’s also one at the end of the output). 
 
 Then, we’ll run all stacked layers of LSTM, one after the other, following at the end with a softmax on the final layer’s output that can tell us the most probable output word.
+
+![[Pasted image 20240509180153.png | Decoder architecture during inference]]
 
 ## Training
 
@@ -115,7 +118,7 @@ k = 2.
 	- When a hypothesis produces $\text{<END>}$, that hypothesis is complete .
 	- Place it aside and continue exploring other hypotheses via beam search.
 - Usually we continue beam search until:
-	- We reach timestep T (where T is some pre-defined cutoff), or
+	- We reach time-step T (where T is some pre-defined cutoff), or
 	- We have at least n completed hypotheses (where n is pre defined cutoff)
 
 ### Issues

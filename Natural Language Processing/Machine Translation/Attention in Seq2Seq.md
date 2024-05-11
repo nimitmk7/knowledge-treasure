@@ -34,7 +34,6 @@ the encoder to focus on a particular part of the source sequence.
 - We take softmax to get the attention distribution $\alpha^t$ for this step (this is a probability distribution and sums to 1). $$ \alpha^t = softmax(e^{t}) \in \mathbb R^N $$
 - We use $\alpha^t$ to take a weighted sum of the encoder hidden states to get the attention output $a_t$.$$a_{t}= \sum_{i=1}^N \alpha_{i}^Th_{i} \in \mathbb R^h$$
 - Finally we concatenate the attention output with the decoder hidden_state and proceed as in the non attention seq2seq model. $$[a_{t};s_{t}] \in \mathbb R^{2h}$$
-
 ## Advantages
 
 1. Significantly improves NMT performance

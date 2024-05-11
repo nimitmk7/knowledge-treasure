@@ -1,6 +1,4 @@
 
-
-
 ## Bayesian Network
 
 A data structure used to represent dependencies among variables. It can represent any fully joint probability distribution concisely. 

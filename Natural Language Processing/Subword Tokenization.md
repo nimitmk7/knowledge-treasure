@@ -1,6 +1,6 @@
 ## Premise
 
-Subword-based tokenization is a solution between word and character-based tokenization. 😎 The main idea is to solve the issues faced by word-based tokenization (very large vocabulary size, large number of OOV tokens, and different meaning of very similar words) and character-based tokenization (very long sequences and less meaningful individual tokens).
+Subword-based tokenization is a solution between word and character-based tokenization. The main idea is to solve the issues faced by word-based tokenization (very large vocabulary size, large number of OOV tokens, and different meaning of very similar words) and character-based tokenization (very long sequences and less meaningful individual tokens). 😎 
 
 The subword-based tokenization algorithms do not split the frequently used words into smaller subwords. It rather splits the rare words into smaller meaningful subwords.
 
@@ -11,12 +11,12 @@ For example, “boy” is not split but “boys” is split into “boy” and �
 BPE is a simple form of data compression algorithm in which the most common pair of consecutive bytes of data is replaced with a byte that does not occur in that data.
 ### Example of Basic Variant
 
-| Word        | Most frequent Pair | Rules              |
-| ----------- | ------------------ | ------------------ |
-| aaabdaaabac | aa                 | -                  |
-| ZabdZabac   | ab                 | **Z = aa**         |
-| ZYdZYac     | **ZY**             | Z = aa, Y=ab       |
-| XdXac       | -                  | Z = aa, Y=ab, X=ZY |
+| Word        | Most frequent Pair | Rules                  |
+| ----------- | ------------------ | ---------------------- |
+| aaabdaaabac | aa                 | -                      |
+| ZabdZabac   | ab                 | **Z = aa**             |
+| ZYdZYac     | **ZY**             | Z = aa, **Y=ab**       |
+| XdXac       | -                  | Z = aa, Y=ab, **X=ZY** |
 It cannot be further compressed as there are no byte pairs appearing more than once. We decompress the data by performing replacements in reverse order.
 
 ### NLP Variant
@@ -37,7 +37,7 @@ Moving on next, we will split each word into characters and count their occurren
 
 ##### Iterations
 
-**Iteration 1**: The second most common token is ”e”, and the most common byte pair in our corpus. The most common byte pair in our corpus with “e” is “e” and “s” (in the words finest and lowest) which occurred 9 + 4 = 13 times. We merge them to form a new token “es” and note down its frequency as 13. We will also reduce the count 13 from the individual tokens (“e” and “s”)
+**Iteration 1**: The second most common token is ”e”, and the most common byte pair in our corpus with “e” is “e” and “s” (in the words finest and lowest) which occurred 9 + 4 = 13 times. We merge them to form a new token “es” and note down its frequency as 13. We will also reduce the count 13 from the individual tokens (“e” and “s”)
 
 ![[Pasted image 20240419150556.png|500]]
 

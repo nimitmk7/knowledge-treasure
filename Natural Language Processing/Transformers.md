@@ -162,7 +162,7 @@ $$$$
 >[!TIP] 
 > Here, we’ve broadcasted the $\mu$ and $\sigma$ across the d dimensions of $x$, and thats how we perform the vector operation.
 
-### Transformer Encoder
+ ### Transformer Encoder
 - The Transformer Decoder constrains to unidirectional context, as for language models.
 - But we want bidirectional context, like in a bidirectional RNN, in the encoder. So we remove the masking in the self-attention.
 

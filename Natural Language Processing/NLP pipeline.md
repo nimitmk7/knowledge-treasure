@@ -2,6 +2,11 @@
 
 ![[Pasted image 20240419111911.png | 500]]
 
+>[!WARNING] 
+> Line missing from Analysis & Planning block to Language Generation block. Apologies for the inconvenience.
+
+
+
 We will refer to this piece from Wikipedia:
 
 > London is the capital and most populous city of England and the United Kingdom. Standing on the River Thames in the south east of the island of Great Britain, London has been a major settlement for two millennia. It was founded by the Romans, who named it Londinium.
@@ -25,8 +30,8 @@ We can assume that each sentence in English is a separate thought or idea. It wi
 ### Types
 1. Word segmentation: Divides a sentence or continuous string of text into individual words
 2. Sentence segmentation: Divides a paragraph or document into individual sentences
-3.  Phrase segmentation: Identifies and extracts meaningful phrases or multi-word expressions from a text
-4.  Chunking: Identifies and groups together syntactically related words in a sentence
+3. Phrase segmentation: Identifies and extracts meaningful phrases or multi-word expressions from a text
+4. Chunking: Identifies and groups together syntactically related words in a sentence
 5. Subword segmentation: Divides words into smaller units
 
 > [!faq] What is the difference between tokenization and segmentation ?
@@ -59,7 +64,7 @@ Let us break this sentence into separate words or _tokens_. This is the result:
 3. [[Subword Tokenization]]
 
 ## 3. PoS(Part of Speech) Tagging
-It is the process of marking up a word in a text (corpus) as corresponding to a particular part of speech, based on both its definition and its context. Parts of speech include noun, verb, adjective, adverb, etc.
+It is the process of marking up a word in a text (corpus) as corresponding to a particular part of speech, based on both its definition and its context. Parts of speech include **noun**, **verb**, **adjective**, **adverb**, **pronoun** etc.
 
 PoS tagging can help algorithms understand the grammatical structure and meaning of a text, which can help improve the accuracy of NLP tasks such as named entity recognition and text classification.
 
@@ -75,7 +80,7 @@ It is ==a text pre-processing technique that breaks down words into their base 
 
 For example, the verb "to walk" may appear as "walk", "walked", "walks", or "walking". The base form, "walk", is the lemma for the word. Lemmatization groups these words as its lemma, "walk".
 
-Lemmatization is typically done by having a l**ook-up table of the lemma forms of words based on their part of speech** and possibly **having some custom rules to handle words that you’ve never seen before**.
+Lemmatization is typically done by having a **look-up table of the lemma forms of words based on their part of speech** and possibly **having some custom rules to handle words that you’ve never seen before**.
 
 ### Example
 Here’s what our sentence looks like after lemmatization adds in the root form of our verb:
@@ -85,7 +90,7 @@ Here’s what our sentence looks like after lemmatization adds in the root form 
 The only change we made was turning “is” into “be”.
 
 ## 5. Identifying Stop Words
-Stop words are ==words that are commonly used in a language but are considered irrelevant for analysis==. When doing statistics on text, these words introduce a lot of noise since they appear way more frequently than other words. This is the second part of **Vocabulary Normalization**.
+Stop words are ==words that are commonly used in a language but are considered irrelevant for analysis==. When doing statistics on text, these words **introduce a lot of noise since they appear way more frequently than other words**. This is the second part of **Vocabulary Normalization**.
 
 The specific stop words used can vary depending on the context. For example, in English, stop words include:
 
@@ -98,7 +103,7 @@ The specific stop words used can vary depending on the context. For example, in
 
 Stop words are usually identified by just by checking a hardcoded list of known stop words. But there’s no standard list of stop words that is appropriate for all applications. The list of words to ignore can vary depending on your application.
 
-For example if you are building a rock band search engine, you want to make sure you don’t ignore the word “The”. Because not only does the word “The” appear in a lot of band names, there’s a famous 1980’s rock band called _The The_!
+For example, if you are building a rock band search engine, you want to make sure you don’t ignore the word “The”. Because not only does the word “The” appear in a lot of band names, there’s a famous 1980’s rock band called _The The_!
 
 ### Example
 ![[Pasted image 20240419131844.png]]
@@ -123,11 +128,12 @@ There exists a relationship between _car_ and _black_ because _black_ modi
 This parse tree shows us that the subject of the sentence is the noun “_London_” and it has a “_be_” relationship with “_capital_”. We finally know something useful — _London_ is a _capital_! And if we followed the complete parse tree for the sentence (beyond what is shown), we would even found out that London is the capital of the _United Kingdom_.
 
 ## 7. Named Entity Recognition(NER)
-Named entity recognition (NER)—also called entity chunking or entity extraction—is a component of natural language processing (NLP) that identifies predefined categories of objects in a body of text.
+Named entity recognition (NER)—also called entity chunking or entity extraction—is a component of natural language processing (NLP) that **identifies predefined categories of objects** in a body of text.
 
 Entity Identification → Entity Classification → Contextual Analysis
 
-But NER systems aren’t just doing a simple dictionary lookup. Instead, they are using the **context of how a word appears in the sentence** and a **statistical model to guess which type of noun a word represents**. A good NER system can tell the difference between “_Brooklyn Decker_” the person and the place “_Brooklyn_” using context clues.
+But NER systems aren’t just doing a simple dictionary lookup. Instead, they are using the **context of how a word appears in the sentence** and a **statistical model to guess which type of noun a word represents**. A good NER system can tell the difference between “_Brooklyn Decker_” the person and the place 
+“_Brooklyn_” using context clues.
 
 ### Types
 1. ML based methods
@@ -157,6 +163,11 @@ Pronouns are essentially shortcuts that we use instead of writing out names over
 ### Example
 
 ![[Pasted image 20240419135444.png]]
+## 9. Sentiment Analysis
+## 10. [[Retrieval Augmented Generation(RAG)]]
+## 11. [[Language Models]]
+## 12. [[Machine Translation]] (Optional Step)
+
 
 ## References
 1. [NLP is Fun! by Adam Geitgey](https://medium.com/@ageitgey/natural-language-processing-is-fun-9a0bff37854e)

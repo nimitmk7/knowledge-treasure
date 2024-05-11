@@ -1,18 +1,16 @@
 ## What is a bond ?
 
 A **bond** is a type of security under which the issuer (debtor) owes the holder (creditor) a debt, and is obliged – depending on the terms – to **provide cash flow to the creditor** (e.g. repay the principal (i.e. amount borrowed) of the bond at the maturity date as well as interest (called the coupon) over a specified amount of time).
-
-## Characterisitics of a Bond
-
-### Coupon Rate
-It is the rate of interest the bond issuer will pay on the face value of the bond, expressed as a percentage. 
-
-For example, a 5% coupon rate means that bondholders will receive 5% x $1,000 face value = $50 every year.
+## Characteristics of a Bond
 
 ### Face Value/Par Value
 A bond's face value is ==the amount of money an issuer promises to pay to a bondholder when the bond matures==. It's also known as the par value or redemption value. 
 
 For example, say an investor purchases a bond at a premium of $1,090, and another investor buys the same bond later when it is trading at a discount for $980. When the bond matures, both investors will receive the $1,000 face value of the bond.
+### Coupon Rate
+It is the rate of interest the bond issuer will pay on the face value of the bond, expressed as a percentage. 
+
+For example, a 5% coupon rate means that bondholders will receive 5% x $1,000 face value = $50 every year.
 
 ### Coupon Dates
 **Coupon dates** are the dates on which the bond issuer will make interest payments. Payments can be made in any interval, but the standard is semiannual payments
@@ -22,7 +20,6 @@ For example, say an investor purchases a bond at a premium of $1,090, and anothe
 
 ### Issue Price
 **The issue price** is the price at which the bond issuer originally sells the bond.  In many cases, bonds are issued **at par**.
-
 
 ## Yield-to-Maturity(YTM)
 The yield-to-maturity (YTM) of a bond is another way of considering a bond’s price. YTM is the **total return anticipated on a bond** if the bond is **held until the end of its lifetime**.

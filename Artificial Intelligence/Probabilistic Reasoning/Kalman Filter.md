@@ -106,11 +106,6 @@ while True:
     
 ```
 
-
-Full Documentation:
-https://filterpy.readthedocs.io/en/latest/kalman/KalmanFilter.html
-
 ## References
 1. [Probabilistic Robotics book by Sebastian Thrun and Wolfram Burgard](http://www.probabilistic-robotics.org/)
-2. 
-3. 
+2. https://filterpy.readthedocs.io/en/latest/kalman/KalmanFilter.html

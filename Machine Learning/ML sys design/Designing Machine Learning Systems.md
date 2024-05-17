@@ -17,9 +17,13 @@ They are complex because they consist of many different components (ML algorithm
 
 ML systems are unique because they are data dependent, and data varies wildly from one use case to the next.
 
-# [[Chapter 1 - Overview of ML systems]]
-# [[Chapter 2 - Intro to ML systems design]]
-# [[Chapter 4 - Training Data]]
+## [[Chapter 1 - Overview of ML systems]]
+## [[Chapter 2 - Intro to ML systems design]]
+## [[Chapter 4 - Training Data]]
+## [[ML System Failures]]
+## [[Monitoring and Observability]]
+
+
 
 
 

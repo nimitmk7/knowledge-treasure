@@ -1,6 +1,7 @@
+## Principle
 The pigeonhole principle states that if $n$ items are put into $m$ containers, with $n > m$, then at least one container must contain more than one item.
 
-### Sample Problem
+## Sample Problem
 
 Write a function that, given an array A of N integers, returns the smallest positive integer (greater than 0) that does not occur in A.
 
@@ -9,8 +10,6 @@ For example, given A = $[1, 3, 6, 4, 1, 2]$, the function should return 5.
 Given A = $[1, 2, 3]$, the function should return 4.
 
 Given A = $[−1, −3]$, the function should return 1.
-
-
 ### Solution
 
 At least one of the numbers 1, 2, ..., n+1 is not in the array. Let us create a boolean array of size n+1 to store whether each of these numbers is present.

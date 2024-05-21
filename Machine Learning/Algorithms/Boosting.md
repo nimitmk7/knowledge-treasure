@@ -8,7 +8,6 @@ weak rules from each individual learner ultimately combining to form one predict
 
 > [!tip] Boosting is prone to overfitting the training data and potentially have High Variance, hence the use of high bias, low variance weak learners is preferred for boosting.
 
-
 ![[Pasted image 20240416164129.png]]
 ## Assumptions
 - Independence of observations

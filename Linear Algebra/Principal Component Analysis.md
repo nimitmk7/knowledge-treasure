@@ -13,8 +13,14 @@
 
 - Orthogonal projection of the data onto a lower dimensional linear space, known as the *principal subspace*, such that the variance of the projected data is maximized.
 - Linear projection that minimizes the average projection cost, defined as the mean squared distance between the data points and projections.
-## Premise
 
+## Assumptions
+1. PCA assumes a ==correlation between features==
+2. PCA is ==sensitive to the scale== of the features
+3. PCA is ==not robust against outliers==
+4. PCA assumes a ==linear relationship== between features.
+5.  Technical implementations often assume ==no missing values==
+## Premise
 Consider a dataset of observations {$x_n$} where $n = 1,2,3,..,N$, and $x_n$ is a euclidean variable with dimensionality D. 
 
 The mean is zero, and the covariance matrix is 

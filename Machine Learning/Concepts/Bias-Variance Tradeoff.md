@@ -20,7 +20,6 @@ Variance is the variability of model prediction for a given data point or a valu
 Variance denotes the difference in fits between datasets. **So the predictions of high variance model are not consistent across datasets**. It will predict radically different values for the same data point in a slightly different dataset.
 
 For a low variance model, the predictions for a data point are consistent to each other across datasets even though they are consistently wrong. 
-
 ## Irreducible Error
 Irreducible error is the error that can’t be reduced by creating good models. It is a measure of the amount of noise in our data. Here it is important to understand that no matter how good we make our model, our data will have certain amount of noise or irreducible error that can not be removed.
 

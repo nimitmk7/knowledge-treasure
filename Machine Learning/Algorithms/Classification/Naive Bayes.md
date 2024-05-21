@@ -22,11 +22,10 @@ X → features, X = $(x_1,x_2….x_n)$
 Here $x_1,x_2….x_n$ represent the features. By substituting for **X** and expanding using the chain rule we get:
 
 $$P(y|x_{1},\dots, x_{n}) = \frac{P(x_{1}|y) P(x_{2}|y) \dots P(x_{n}|y)P(y)}{P(x_{1})P(x_{2})\dots P(x_{n})}$$
-For all entries in the dataset, the denominator does not change, it remain static. Therefore, the denominator can be removed and a proportionality can be introduced.
+For all entries in the dataset, the denominator does not change, it remains static. Therefore, the denominator can be removed and a proportionality can be introduced.
 
 $$P(y|x_{1},\dots, x_{n}) \propto P(y)\prod_{i=1}^n P(x_{i}|y)$$
 Converting the probabilities to a classification result, we get
-
 $$y = argmax_{y}\space P(y)\prod_{i=1}^n P(x_{i}|y)$$
 ## Types
 1. Multinomial Naive Bayes

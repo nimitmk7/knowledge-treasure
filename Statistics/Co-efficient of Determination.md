@@ -27,10 +27,6 @@ as 1 - unexplained/total = explained/total.
 >[!WARN] 
 > $R^2$ should only be used for continuous variables. Prefer using other metrics like **[[Mutual Information]]** for categorical variables. 
 
-
-
-
-
 ## Range of values
 We should expect $R^2$ to be bounded between 0 and 1 only if a linear regression model is fit, and it is evaluated on the same data it is fitted on. 
 

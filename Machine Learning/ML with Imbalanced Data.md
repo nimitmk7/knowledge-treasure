@@ -35,8 +35,7 @@ Importantly, the change to the class distribution is **only applied to the train
 #### 1.4 Ensemble Resampling
 
 
-#### 1.5 SMOTE
-
+#### 1.5 [[SMOTE]]
 
 
 

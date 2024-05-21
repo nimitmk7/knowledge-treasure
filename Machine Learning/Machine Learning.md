@@ -24,7 +24,7 @@
 [[Support Vector Machines]]
 
 ## Concepts
-[[Cross Validation Score]]
+[[Cross Validation]]
 [[Maximum Likelihood Estimation]]
 [[Regularization]]
 [[Scaling]]

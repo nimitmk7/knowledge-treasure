@@ -2,8 +2,7 @@
 Bagging or **Bootstrap Aggregation** is an ensemble learning method used to reduce variance by combining weak learners having high variance. 
 (Refer to: [[Bias-Variance Tradeoff]])
 
-The weak learners are homogeneous, so they are working on the same dataset,
-and they each take a random sample of data for training, with replacement. 
+The weak learners are homogeneous, so they are working on the same dataset, and they each take a random sample of data for training, with replacement. 
 
 By doing this, we can train and learn from each of the weak learners independently and in parallel. The weak learners are then aggregated via a deterministic averaging process.
 
@@ -24,7 +23,6 @@ To verify the above approximation, we need to meet 2 conditions
 It helps create diverse samples of the data for training the weak learners. For each learner, we select data points from the set at random with replacement, allowing for the selection of the same data point multiple times. 
 
 As a result, instances of the data can be repeated in the sample.
-
 ### 2. Parallel Training
 Bootstrapped samples are trained with different weak learners, independently
 and in parallel.

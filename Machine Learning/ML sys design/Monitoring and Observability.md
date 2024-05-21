@@ -69,5 +69,21 @@ Further Read:
 
 #### Monitoring raw inputs
 
+The raw input data might not be easier to monitor, as ==it can come from multiple sources in different formats, following multiple structures==. 
+
+The way many ML workflows are set up today also makes it impossible for ML engineers to get direct access to raw input data, as the raw input data is often managed by a data platform team who processes and moves the data to a location like a data warehouse, and the ML engineers can only query for data from that data warehouse where the data is already partially processed.
+
+Therefore, monitoring raw inputs is often a responsibility of the data platform team, not the data science or ML team.
+
+## Monitoring Toolbox
+
+### Logs
+
+### Dashboards
+
+### Alerts
+
+## Observability
+
 
 

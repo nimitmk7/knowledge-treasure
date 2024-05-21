@@ -3,7 +3,6 @@ AdaGrad stands for **Ada**ptive **Grad**ient.
 ## Motivation
 Optimal learning rate depends on the local curvature of the error surface, and moreover that this curvature can vary according to the direction in parameter space. Thus we need algorithms that use different learning rates for each parameter in the network, which will be adjusted automatically during training.
 
-
 ## Key Idea
 
 - Reduce each learning rate parameter over time by using the accumulated sum of squares of all the derivatives calculated for that parameter. 

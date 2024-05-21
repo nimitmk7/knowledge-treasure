@@ -1,19 +1,19 @@
 ## Motivation
 A cornerstone of information theory is the idea of quantifying how much information there is in a message. More generally, this can be used to quantify the information in an event and a random variable, called entropy, and is calculated using probability.
-
 ## Intuition
-The intuition behind quantifying information is the idea of measuring how much surprise there is in an event. Those events that are rare (low probability) are more surprising and therefore have more information than those events that are common (high probability).
+The intuition behind quantifying information is the idea of ==measuring how much surprise there is in an event==. Those events that are **rare** (low probability) are more surprising and therefore have more information than those events that are common (high probability).
 
 > The basic intuition behind information theory is that learning that an unlikely event has occurred is more informative than learning that a likely event has occurred.
 
-# Formulation
+> [!NOTE] 
+> If a random variable has high entropy, its distribution is closer to uniform than a skewed one. 
+
+## Formulation
 An outcome $x_t$ carries information that is a function of the probability of this outcome $P(x_t)$ by, 
 
 $I(x_t) = \log_2 \frac{1}{P(x_t)} = - \log_2 P(x_t)$
 
-
 Entropy over a probability distribution is:
-
 $$H(P) =  - \mathbb{E} \log_2 P(x) = -\sum_x P(x) log_2P(x)$$
 ### Example
 

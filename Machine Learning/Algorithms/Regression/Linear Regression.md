@@ -1,3 +1,8 @@
+## Assumptions
+1. **Linearity**: Relationship between target and features is linear
+2. **Homoskedasticity**: Residuals have constant variance
+3. **Independence**: All observations are independent of each other
+4. **Normality**: Distribution of target is normal(gaussian)
 ## Generalization
 Suppose that we are given the training set $\mathcal D = \{(\mathbf x_i, y_i), i =1 \dots m\}$ where $\mathbf x_i \in \mathbb R^n$ the label $y_i \in \mathbb R$. 
 

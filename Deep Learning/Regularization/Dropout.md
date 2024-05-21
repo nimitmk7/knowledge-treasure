@@ -1,5 +1,5 @@
 ## Premise
-The deep neural networks have different architectures, sometimes shallow, sometimes very deep trying to generalise on the given dataset. 
+The deep neural networks have different architectures, sometimes shallow, sometimes very deep trying to generalize on the given dataset. 
 
 But, in this pursuit of trying too hard to learn different features from the dataset, they sometimes learn the **statistical noise** in the dataset. 
 
@@ -19,7 +19,6 @@ $p: 0.2$
 Forward propagation(I/P Layer) → $x:\{1,0,3,4,5\}$ or $x:\{1,2,0,4,5\}$ or …
 
 Similarly, it applied to the hidden layers. For instance, if the hidden layers have 1000 neurons (nodes) and a dropout is applied with drop probability = 0.5, then 500 neurons would be randomly dropped in every iteration (batch).
-
 ## During training
 At each training iteration, dropout randomly selects a subset of neurons to be temporarily ignored. This means their outputs are set to zero, effectively removing them from the network for that particular iteration. 
 
@@ -62,7 +61,6 @@ $y_i = f(z_i)$
 So before we calculate **z,** the input to the layer is sampled and multiplied element-wise with the independent Bernoulli variables. **r** denotes the Bernoulli random variables each of which has a probability $p$ of being 1. 
 
 Basically, **r** acts as a mask to the input variable, which ensures only a few units are kept according to the keep probability of a dropout.
-
 ## Hands-on
 
 ### PyTorch

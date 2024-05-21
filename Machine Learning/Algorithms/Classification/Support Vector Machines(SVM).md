@@ -452,7 +452,7 @@ $$b=y_i-\sum_{i=1}^m \alpha_i y_i (x_j.x_i)$$
 Kernel methods are widely used in machine learning. They are flexible techniques that can be used to extend algorithms such as SVMs to define non-linear decision boundaries. 
 
 ### 8.2 Premise
-Kernels help us in mapping a lower dimensional data into a higher dimensional data which helps in achieving a solution. The main idea behind these methods is based on so-called kernels or kernel functions, which, under some technical conditions of symmetry and positive-definiteness, implicitly define an inner product in a high-dimensional space. 
+Kernels help us in ==mapping a lower dimensional data into a higher dimensional data== which helps in achieving a solution. The main idea behind these methods is based on so-called kernels or kernel functions, which, under some technical conditions of symmetry and positive-definiteness, implicitly define an inner product in a high-dimensional space. 
 
 ### 8.3 Formulation and Geometric Interpretation
 Replacing the original inner product in the input space with positive definite kernels immediately extends algorithms such as SVMs to a linear separation in that high-dimensional space, or, equivalently, to a non-linear separation in the input space.

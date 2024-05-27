@@ -53,7 +53,6 @@ Let us break this sentence into separate words or _tokens_. This is the result:
 > “London”, “is”, “ the”, “capital”, “and”, “most”, “populous”, “city”, “of”, “England”, “and”, “the”, “United”, “Kingdom”, “.”
 
 >[!INFO] Tokenization is easy to do in English. We’ll just split apart words whenever there’s a space between them. And we’ll also treat punctuation marks as separate tokens since punctuation also has meaning.
-
 ### Types
 1. Word Tokenization
 	1. Intuitive
@@ -156,14 +155,14 @@ Here are just some of the kinds of objects that a typical NER system can tag:
 
 It is ==the task of finding and grouping all linguistic expressions(mentions) in a text that refer to the same real-world entity==. After finding and grouping these mentions we can resolve them by replacing, as stated above, pronouns with noun phrases.
 
-Pronouns are essentially shortcuts that we use instead of writing out names over and over in each sentence. Humans can keep track of what these words represent based on context. But our NLP model doesn’t.
+Pronouns are essentially shortcuts that we use instead of writing out names over and over in each sentence. Humans can keep track of what these words represent based on context. But our NLP model can’t.
 
 ![[Pasted image 20240419135325.png]]
 
 ### Example
 
 ![[Pasted image 20240419135444.png]]
-## 9. Sentiment Analysis
+## 9. [[Sentiment Analysis]]
 ## 10. [[Retrieval Augmented Generation(RAG)]]
 ## 11. [[Language Models]]
 ## 12. [[Machine Translation]] (Optional Step)

@@ -11,10 +11,9 @@ Watch:
 
 ![[Pasted image 20240421193257.png | 300]]
 
-Encoder RNN produces an encoding of the source sentence, which is the initial hidden state for Decoder RNN.
+1. Encoder RNN produces an encoding of the source sentence, which is the initial hidden state for Decoder RNN.
 
-Decoder RNN is a Language Model that generates target sentence, conditioned on encoding. We start off by feeding the **start** token into the decoder, and then we get the first output, and we keep feeding it into the decoder to get successive outputs, and it ends when decoder produces the **end** token.
-
+2. Decoder RNN is a Language Model that generates target sentence, conditioned on encoding. We start off by feeding the **start** token into the decoder, and then we get the first output, and we keep feeding it into the decoder to get successive outputs, and it ends when decoder produces the **end** token.
 ### Encoder
 It takes the a source sequence as input and encodes it into a **fixed-size** "context vector" $\phi$.
 
@@ -102,14 +101,13 @@ $$ score(y_1, …, y_t) = \log P_{LM}(y_1, …, y_t|x) = \sum_{i=1}^t \log P_{LM
 Beam search is not guaranteed to find optimal solution. But it is more efficient than exhaustive search!
 
 ### Example
-k = 2. 
+k = 2
 
 ![[Pasted image 20240424131205.png]]
 
 
 - For each of the $k$ hypotheses, find top $k$ words and calculate scores.
 - Once you stop, backtrack to get the full sentence. 
-
 ### Stopping criterion
 
 - In greedy decoding , usually we decode until the model produces a $\text{<END>}$token. 
@@ -125,8 +123,6 @@ k = 2.
 
 1. Longer hypotheses have lower scores, so you’re gonna end up choosing a shorter hypotheses.
 	**Fix**: Normalize scores by length.
-	
-
 ## Advantages of NMT
 
 1. Better performance

@@ -28,6 +28,10 @@ In a many-to-many relationship, one or more rows of one table can link to 0, 1 o
 Database normalization is **the process of structuring a relational database in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity**.
 
 ### [[Normal Forms]]
+
+### Downsides
+1. Your data is now ==spread across multiple relations==. You can join the data from different relations back together, but ==joining can be expensive for large tables==.
+2. 
 ## [[Relational Database Schema Design]]
 
 

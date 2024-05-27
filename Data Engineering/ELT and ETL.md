@@ -19,6 +19,7 @@ Depending on source, extraction is done in either of 3 ways:
 2. DB queries
 3. Receive data on web-hook
 
+In the extraction phase, you need to validate your data and reject the data that doesn’t meet your requirements. For rejected data, you might have to notify the sources. 
 ## Load
 During the loading stage, data that was extracted is loaded into the target data warehouse. 
 

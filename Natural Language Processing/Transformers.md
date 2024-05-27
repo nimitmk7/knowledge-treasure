@@ -1,7 +1,6 @@
 ![[Pasted image 20240420183111.png | 300]]
 ## Premise
 Before 2017, Recurrent Neural Networks (RNNs) and Word2Vec models were used to understand text with deep learning. 
-
 ### Issues with Recurrent Models 
 
 #### Linear Interaction Distance
@@ -122,19 +121,18 @@ $$
 - What if we want to look in multiple places in the sentence at once?
 	- For word 𝑖, self-attention “looks” where $𝑥_{𝑖}^⊤𝑄^⊤𝐾𝑥_{j}$ is high, but maybe we want to focus on different 𝑗 for different reasons?
 - We’ll define multiple attention “heads” through multiple Q,K,V matrices
-- Let,$𝑄_ℓ,𝐾_{ℓ},𝑉_{l} ∈ ℝ^{𝑑 × \frac{𝑑}{h}}$, where $h$ is the number of attention heads, and $l$ranges from 1 to ℎ.
+- Let,$𝑄_ℓ,𝐾_{ℓ},𝑉_{l} ∈ ℝ^{𝑑 × \frac{𝑑}{h}}$, where $h$ is the number of attention heads, and $l$ranges from 1 to $h$.
 - Each attention head performs attention independently: 
  $$output_{l} = softmax(𝑋𝑄_{l}𝐾_{l}^⊤𝑋 ^⊤) * 𝑋𝑉_{l} \space \text{where} \space output_{ℓ} ∈ ℝ^{𝑑/ℎ}$$
  - Then the outputs of all the heads are combined!
 	 - output = $[output_{1}; … ; output_{h}]$ 𝑌, where 𝑌 ∈ $ℝ^{𝑑×𝑑}$
 	
  - Each head gets to “look” at different things, and construct value vectors differently.
-
 - Even though we compute $h$ many attention heads, it’s not really more costly. 
 	- We compute $𝑋𝑄 ∈ ℝ^{𝑛×𝑑}$ , and then reshape to $ℝ^{𝑛×ℎ×𝑑/ℎ}$ . (Likewise for 𝑋𝐾, 𝑋𝑉.) 
 	- Then we transpose to $ℝ^{h×n×d/h}$ ; now the head axis is like a batch axis.
 	- Almost everything else is identical, and the matrices are the same sizes.
-![[Pasted image 20240426143131.png | 900]]
+![[Pasted image 20240426143131.png | 700]]
 ######  Scaled Dot Product
 - “Scaled Dot Product” attention aids in training. 
 - When dimensionality 𝑑 becomes large, dot products between vectors tend to become large.
@@ -162,7 +160,7 @@ $$$$
 >[!TIP] 
 > Here, we’ve broadcasted the $\mu$ and $\sigma$ across the d dimensions of $x$, and thats how we perform the vector operation.
 
- ### Transformer Encoder
+### Transformer Encoder
 - The Transformer Decoder constrains to unidirectional context, as for language models.
 - But we want bidirectional context, like in a bidirectional RNN, in the encoder. So we remove the masking in the self-attention.
 
@@ -192,8 +190,6 @@ $$$$
 	2. For recurrent models, it grew linearly - $O(n)$
 2. **Position representations**
 	1. Simple absolute indices are not the best way to represent position.
-
-
 
 ## References
 1. https://web.stanford.edu/class/archive/cs/cs224n/cs224n.1234/slides/cs224n-2023-lecture08-transformers.pdf

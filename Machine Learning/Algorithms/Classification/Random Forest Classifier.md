@@ -20,7 +20,7 @@ Watch:
 1. Create a bootstrapped dataset.
 	- Randomly select samples from the original dataset.
 	- We're allowed to pick the same sample more than once.
-2. Create a decision trees using the bootstrapped dataset, but only use a random subset of variables at each step.
+2. Create a decision trees using the bootstrapped dataset, ==but only use a random subset of variables at each step==.
 3. Repeat steps 1,2 till you get $n$ trees.
 ## Inference
 For each new data point, We pass it through all n decision trees, and then note their result(a.k.a **vote**). Final result is the class with maximum votes.

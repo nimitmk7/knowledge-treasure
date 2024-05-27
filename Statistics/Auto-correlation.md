@@ -15,9 +15,9 @@ _Autocorrelation gives you an idea of how data points at different points in tim
 ## PACF
 _The partial autocorrelation of a time series for a given lag is the partial correlation of the time series with itself at that lag given all the information between the two points in time._
 
-_You need to compute a_number of conditional correlations and subtract these out of the total correlation._
+You need to compute a_number of conditional correlations and subtract these out of the total correlation.
 
-_For the case of a sine series, the PACF provides a striking contrast to the ACF. The PACF shows which data points are informative and which are harmonics of shorter time periods._
+For the case of a sine series, the PACF provides a striking contrast to the ACF. The PACF shows which data points are informative and which are harmonics of shorter time periods.
 
-_The PACF, reveals which correlations are “true” informative correlations for specific lags rather than redundancies. This is invaluable for knowing when we have collected enough information to get a sufficiently long window at a proper temporal scale for our data._
+The PACF, reveals which correlations are “true” informative correlations for specific lags rather than redundancies. This is invaluable for knowing when we have collected enough information to get a sufficiently long window at a proper temporal scale for our data.
 

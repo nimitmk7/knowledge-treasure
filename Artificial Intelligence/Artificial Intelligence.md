@@ -6,6 +6,8 @@
 ## Types of Artificial Intelligence
 [[Machine Learning]]
 [[Deep Learning]]
+[[Reinforcement Learning]]
+[[Generative AI]]
 
 
 ## Hands-on

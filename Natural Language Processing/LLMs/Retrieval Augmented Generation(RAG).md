@@ -11,7 +11,7 @@ Thus, to solve the limitations of LLMs, Retrieval Augmented Generation (RAG) has
 
 ## What is RAG ?
 
-==Retrieval Augmented Generation (RAG) is an AI framework that helps large language models (LLMs) generate more accurate information by using external contextual information==. 
+Retrieval Augmented Generation (RAG) is an AI framework that helps large language models (LLMs) ==generate more accurate information by using external contextual information==. 
 ## How does it work ?
 ### A Helpful Analogy
 Imagine you are trying to solve a complex mystery. The **detective**'s role is to gather clues, evidence, and historical records related to the case. Once the detective has compiled this information, the **storyteller** designs a compelling narrative that weaves together the facts and presents a coherent story. In the context of AI, RAG operates similarly.
@@ -34,7 +34,6 @@ This analogy illustrates how RAG combines the investigative power of retrieval w
 4. **Inference** - With this augmented and context-enriched prompt in hand, the Language Model (LLM) comes into play. The LLM, now armed with both the original user query and the supplementary context, significantly enhances its accuracy. It can tap into factual data sources to provide more precise and contextually relevant responses.
 
 5. **Response** - The LLM formulates the response, incorporating factually correct information. This response is then relayed back, ensuring that the user receives accurate and reliable answers to their queries.
-
 ### Components
 
 #### 1. The RAG retriever
@@ -87,7 +86,6 @@ Different tokens in the target sequence can be predicted based on **different do
 ## Further
 1. https://python.langchain.com/docs/get_started/introduction.html
 2. https://arxiv.org/abs/2005.11401
-3. 
 
 
 ## References

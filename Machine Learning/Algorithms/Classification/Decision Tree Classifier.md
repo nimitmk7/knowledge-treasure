@@ -29,6 +29,8 @@ The truth is, most of the time it does not make a big difference: they lead to s
 However, when they differ, Gini impurity tends to isolate the most frequent class in its own branch of the tree, while **entropy tends to produce slightly more balanced trees**.
 
 
+
+
 ## Probability Estimation
 - A Decision Tree can also estimate the probability that an instance belongs to a particular class k:
 1. It traverses the tree to find the leaf node for this instance

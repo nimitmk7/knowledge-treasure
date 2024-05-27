@@ -1,7 +1,6 @@
 ## Introduction
 A **language model** is a probabilistic model of a natural language. Thus, they are ==machine learning models that predict the next word in a sentence based on previous words==. They are trained using large text datasets, such as books or articles.
 
-
 ## n-gram Language Models
 
 $n-gram$ is a chunk of n consecutive words.
@@ -41,9 +40,7 @@ $$P(\mathbf w \space| \space\text{students opened their}) = \frac{\text{count(st
 For example, suppose in the corpus, 
 - “students opened their” occurred 1000 times
 - “students opened their books” occurred 400 times
-	- →$P(\text{books} \space| \space\text{students opened their}) = 0.4$
-- 
-
+- So, $P(\text{books} \space| \space\text{students opened their}) = 0.4$
 ### Issues
 1. **Storage**: Counting these probabilities is notoriously space (memory) inefficient as we need to store the counts for all possible grams in the corpus. 
 2. **Sparsity** **problem**: 

@@ -21,8 +21,11 @@ Are the regulators questioning a business owner about burning coal illegally? Or
 Doing anything complicated in machine learning usually means _building a pipeline_. The idea is to **break up your problem into very small pieces** and then **use machine learning to solve each smaller piece separately**.
 
 Then by **chaining together several machine learning models that feed into each other**, you can do very complicated things.
-
 ### [[NLP Pipeline]]
+
+## Applications
+[[Machine Translation]]
+
 
 ## References
 1. [NLP is Fun! by Adam Geitgey](https://medium.com/@ageitgey/natural-language-processing-is-fun-9a0bff37854e)

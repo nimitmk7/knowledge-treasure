@@ -30,8 +30,11 @@ $$
 ## Logistic Regression Fitting(using MLE)
 
 $$
-P(y|x;w)= \Pi_{i=1}^{n} P(y^{(i)}|x^{(i)};w) = \Pi_{i=1}^{n} \phi(z^{(i)})^{y^{(i)}}(1-\phi(z^{(i)})^{1-y^{(i)}}
+P(y|x;w)= \Pi_{i=1}^{n} P(y^{(i)}|x^{(i)};w) = \Pi_{i=1}^{n} \phi(z^{(i)})^{y^{(i)}}(1-\phi(z^{(i)}))^{1-y^{(i)}}
 $$
+where 
+$\phi$ is the logistic function, 
+and $z^{(i)} = W^{T}x^{(i)}$
 ### Explanation
 $$
 \begin{align}
@@ -40,8 +43,6 @@ P(y=0|x;w)= 1 - \phi(z)
 \end{align}
 $$
 For examples having target as 1, we want to maximize the probability $\phi(z)$, and for the examples having target as 0, we want to maximize the complement of it, $1-\phi(z)$
-
-
 ### Log likelihood
 In practice it is easier, to maximize the log of this equation, which is called **log likelihood**. 
 $$
@@ -54,13 +55,17 @@ J(w) =  \Sigma_{i=1}^{n}[- y^{(i)}ln(\phi(z^{(i)}))-{(1-y^{(i)})ln((1-\phi(z^{(i
 $$
 
 ## Practical Considerations
-
 1. Logistic Regression's performance degrades when the algorithm is used on data having heavy class imbalance, as the estimate of the intercept term is very inaccurate.
-
+2. 
 
 ## Pros
-
+1. Simple yet efficient algorithm.
+2. Highly Interpretable.
+3. Low Variance
 ## Cons
+1. Doesn’t handle large number of categorical variables well.
+2. Not flexible enough to naturally capture more complex relationships.
+3. Requires transformation of non-linear features
 
 ## Extensions
 [[SoftMax Regression]] 

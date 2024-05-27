@@ -12,12 +12,6 @@ Columns of V are the right-singular vectors.
 
 $U, V^T$are rotations and $D$ is stretching.
 
-## What are $U,D,V^T$ ?
-
-$$
-A^TA = ()
-$$
-
 ## SVD and [[Eigen-value decomposition]]
 
 We can actually interpret the singular value decomposition of $A$ in terms of the eigen-value decomposition of functions of $A$.

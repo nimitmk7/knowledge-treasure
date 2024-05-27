@@ -5,31 +5,33 @@ Create a model that predicts the value of a target variable by learning simple d
 >
 
 ![[Pasted image 20240326155010.png]]
+## Assumptions
+1. At the start, whole training set is considered as the root.
+2. Feature Values are preferred to be categorical. If values are continuous, then they are discretized prior to building the model.
+3. Records are distributed recursively on basis of attribute values.
+4. Decision trees follow **Sum of Product(SOP)** representation
+
 ## Types
 [[Decision Tree Regressor]]
 [[Decision Tree Classifier]]
 
 ## Building the Tree
-### CART algorithm
-- Sci-kit learn uses the CART algorithm, which only produces binary trees.
-- CART stands for Classification and Regression Trees(“growing trees”).
-#### Concept
-- The algorithm works by recursively partitioning the training data into smaller subsets using binary splits. The tree starts at the root node, which contains all the training data, and recursively splits the data into smaller subsets until a stopping criterion is met.
 
-#### Algorithm
- 1. At each node of the tree, the algorithm selects a feature($k$) and a threshold($t_k$) that best separates the training data into two groups, based on the values of that feature. 
-	 - Cost Function: 
-	 $$J(k, t_{k})= \frac {m_{left}}{m}G_{left}\space + \frac {m_{right}}{m}G_{right}  $$	
-	This is done by choosing the feature and threshold that minimizes this cost function, thus producing the purest subsets possible.
+### Primary Challenge 
+**Attribute Selection** → Identify which attributes to consider as the root node and at each level. 
 
-2. The process continues recursively, with each node in the tree splitting the data into two smaller subsets, until a stopping criterion is met. 
-3. The stopping criterion could be:
-	1. maximum depth for the tree, 
-	2. minimum number of instances in each leaf node
-	3. maximum allowed leaf nodes
-	4. minimum samples for split
+We have different attributes selection measures to identify the attribute which can be considered as the root note at each level.
 
-> [!tip] The CART algorithm is a greedy algorithm: it greedily searches for an optimum split at the top level, then repeats the process at each level. It does NOT check whether or not the split will lead to the lowest possible impurity several levels down. A greedy algorithm often produces a reasonably good solution, but it is not guaranteed to be the optimal solution. Unfortunately, finding the optimal tree is known to be an NP-Complete problem: it requires an order of e-raised-to-the-m time, making the problem intractable even for fairly small training sets.
+### Attribute Selection Method
+- An attribute selection measure is a heuristic for selecting the splitting criterion that "best" separates a given data partition, D, of class-labeled training tuples into individual classes.
+
+- For solving this attribute selection problem, researchers worked and devised some solutions. They suggested using some criteria like :
+	- [[Entropy]]
+	- Information Gain
+	- Gini Index
+	- Gain Ratio
+### [[CART Algorithm]]
+### [[ID3 Algorithm]]
 
 ## Advantages
 1. Simple to understand, interpret and visualize.
@@ -53,7 +55,6 @@ Create a model that predicts the value of a target variable by learning simple d
 1. Pruning
 2. Setting min. samples at leaf node
 3. Setting max. depth of the tree
-
 ## Hyper-parameters
 
 ### Minimum samples at leaf node: 

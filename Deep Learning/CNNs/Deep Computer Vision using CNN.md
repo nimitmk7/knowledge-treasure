@@ -3,7 +3,6 @@
 >[!question] Why not simply use a deep neural network with fully connected layers for image recognition tasks ? 
 > It works fine for small images, but breaks down for larger images due to the huge number of parameters it requires. CNNs solve this problem using partially connected layers and weight sharing.
 
-
 ## Convolutional Layers
 
 - The convolutional layer is the most important building block of a CNN.
@@ -11,20 +10,18 @@
 - In turn, each neuron in the 2nd convolutional layer is connected only to neurons located within a small rectangle in the 1st layer.
 
 ![[CNN_Receptive_fields.png]]
-
 The architecture allows the network to concentrate on small low-level features in the first hidden layer, and then assemble them into large higher-level features in the next hidden layer, and so on.
 
 This hierarchical structure is common in real-world images, which is one of the reasons why CNNs work so well for image recognition.
-
 ### Layer-to-layer connection
 1. Input layer and output layer have same size
-- Outputs of Rows $i, i + f_h-1$, columns $j, j+f_w-1$ $\Rightarrow$  Input to neuron (row,column)$(i,j)$ 
+	- Outputs of Rows $i, i + f_h-1$, columns $j, j+f_w-1$ $\Rightarrow$  Input to neuron (row,column)$(i,j)$ 
 
 2. Input layer much larger than input layer. 
-- To connect a large input layer to a small input layer, space out the receptive fields. Dramatically reduces the model's computational complexity.
-- The horizontal or vertical step size from one receptive field to the next is called the stride.
+	- To connect a large input layer to a small input layer, space out the receptive fields. Dramatically reduces the model's computational complexity.
+	- The horizontal or vertical step size from one receptive field to the next is called the stride.
 
-- Outputs of rows $i\times s_h$ to $i\times s_h + f_h - 1$, columns $j\times s_w$ to $j\times s_w + f_w -1$, where $s_h$ and $s_w$ are vertical and horizontal strides. 
+	- Outputs of rows $i\times s_h$ to $i\times s_h + f_h - 1$, columns $j\times s_w$ to $j\times s_w + f_w -1$, where $s_h$ and $s_w$ are vertical and horizontal strides. 
 
 3. In order for a layer to have the same height and width as the previous layer, it is common to add zeros around the inputs, as shown in the diagram. This is called zero padding.
 ![[CNN_Strides.png]]

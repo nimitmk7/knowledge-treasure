@@ -40,7 +40,6 @@ Groups data into clusters and then merges the clusters based on distances to eac
 [[Agglomerative Hierarchical Clustering(AHC)]]
 ### Centroid Models
 Groups data into clusters based on how close they are to the center point of each cluster.
-
 #### Algorithms
 [[K-Means clustering(Centroid model)]]
 

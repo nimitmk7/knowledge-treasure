@@ -65,13 +65,11 @@ The ELT workflow capitalizes on transformations occurring last to provide flexib
 ### ELT benefit #2: Bring the power to the people[​](https://docs.getdbt.com/terms/elt#elt-benefit-2-bring-the-power-to-the-people "Direct link to ELT benefit #2: Bring the power to the people")
 
 The ELT workflow opens up a world of opportunity for the people that work on that data, not just the data itself.
-
 #### Empowers data team members[​](https://docs.getdbt.com/terms/elt#empowers-data-team-members "Direct link to Empowers data team members")
 
 Data analysts, analytics engineers, and even data scientists no longer have to be dependent on data engineers to create custom pipelines and models. Instead, they can use point-and-click products such as Fivetran and Airbyte to extract and load the data for them.
 
 Having the transformation as the final step in the ELT workflow also allows data folks to leverage their understanding of the data and SQL to focus more on actually modeling the data.
-
 #### Promotes greater transparency for end busines users[​](https://docs.getdbt.com/terms/elt#promotes-greater-transparency-for-end-busines-users "Direct link to Promotes greater transparency for end busines users")
 
 Data teams can expose the version-controlled code used to transform data for analytics to end business users by no longer having transformations hidden in the ETL process. Instead of having to manually respond to the common question, “How is this data generated?” data folks can direct business users to documentation and repositories. Having end business users involved or viewing the data transformations promote greater collaboration and awareness between business and data folks.

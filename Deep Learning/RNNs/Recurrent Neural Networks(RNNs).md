@@ -57,7 +57,6 @@ $$ W = [W_{x}\space W_{\hat{y}}]^\top $$
 4. $W_{\hat{y}}$ → $n_{neurons} \times n_{neurons}$
 5. $b$ → $n_{neurons} \times 1$ 
 
-
 ### Memory Cells
 Since the output of a recurrent neuron at time step $t$ is a function of all the inputs from previous time steps, you could say it is a form of *memory*. A part of a neural network that preserves some state across time steps is called a *memory cell*. 
 
@@ -74,7 +73,7 @@ Its output at time step t, denoted $\hat{y}_{(t)}$, is also a function of the pr
 1. **Sequence-to-Sequence**: Simultaneously take a sequence of inputs and produce a sequence of outputs.
 	- **Example**: forecast time series, such as your home’s daily power consumption: you feed it the data over the last N days, and you train it to output the power consumption shifted by one day into the future (i.e., from N – 1 days ago to tomorrow).
 2. **Sequence-to-Vector**: Feed the network a sequence of inputs and ignore all outputs except for the last one. 
-	- **Example**: you could feed the network a sequence of words corresponding to a movie review, and the network would output a sentiment score (e.g., from –1 [hate] to +1 [love]).
+	- **Example**: you could feed the network a sequence of words corresponding to a movie review, and the network would output a sentiment score (e.g., from –1 (hate) to +1 (love)).
 3. **Vector-to-sequence**: Feed the network the same input vector over and over again at each time step and let it output a sequence.
 	- **Example**: The input could be an image (or the output of a CNN), and the output could be a caption for that image.
 4. **Encoder-Decoder**: Sequence-to-vector + Vector-to-sequence network. 
@@ -98,22 +97,14 @@ $ℒ(Y_{(0)}, Y_{(1)}, …​, Y_{(T)}; Ŷ_{(0)}, Ŷ_{(1)}, …​, Ŷ_{(T)})$ (
 2. Predict **multiple values at once**,
 3. Capture complex **non-linear relationships** in the data
 4. They are **dynamic** and can perform online learning
-5. Excellently handles **variable-length** sequences
-
-
+5. Excellently handles **variable-length** sequences.
 ## Issues
 1. Suffers from exploding/vanishing gradient problem.
-2. 
-
-
-
-
+2. Long term dependencies not captured very well.
 ## Variants
 1. [[Long Short Term Memory(LSTM)]]
 2. [[Gated Recurrent Unit(GRU)]]
 3. [[Peephole LSTM]]
-4. 
-
 
 ## References
 1. https://d2l.ai/

@@ -14,13 +14,6 @@ Add to this the separation of compute and storage and there are decreasingly few
 dbt is a tool to help you write and execute the data transformation jobs that run inside your warehouse. **dbt's only function is to take code, compile it to SQL, and then run against your database.**
 
 
-
-
-
-
-
-
-
 ## References
 1. https://www.getdbt.com/blog/what-exactly-is-dbt
 2. https://github.com/dbt-labs/dbt-core 

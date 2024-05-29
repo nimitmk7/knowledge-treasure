@@ -26,7 +26,7 @@ Agglomerative Hierarchical Clustering (AHC) is ==an iterative classification me
 ## Determining Cluster quality
 **How many clusters should we select?**
 
-A numer of criteria can be used to determine the cutting point, like the **largest jump distance :**
+A number of criteria can be used to determine the cutting point, like the **largest jump distance :**
 
 
 ![[Pasted image 20240325200252.png|300]]

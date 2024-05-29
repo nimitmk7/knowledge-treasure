@@ -32,10 +32,10 @@ $D_2$ = $K$
 ## Pooling Layer
 
 ### Motivation
-Pooling was introduced to reduce redundancy of representation and reduce the number of parameters, recognizing that precise location is not important for object detection.
+Pooling was introduced to reduce redundancy of representation and reduce the number of parameters, recognizing that ==precise location is not important for object detection.==
 
 ### Function
-The pooling function is a form of non-linear function that further modifies the result of the RELU result. The pooling function accepts as input pixel values surrounding (a rectangular region) a feature map location (i,j) and returns one of the following:
+The pooling function is a form of non-linear function that further modifies the result of the ReLU result. The pooling function accepts as input pixel values surrounding (a rectangular region) a feature map location (i,j) and returns one of the following:
 - Max value
 - Weighted average
 - L2 Norm
@@ -46,19 +46,14 @@ A pooling layer typically works on every input channel independently, so the out
 ![[Max_Pool.png]]
 
 ### Downfall
-Despite receiving ample treatment in Ians Goodfellows’ book, pooling has fallen out of favor. Some reasons are:
+Despite receiving ample treatment in Ian Goodfellows’ book, pooling has fallen out of favor. Some reasons are:
 
 - Datasets are so big that we’re more concerned about under-fitting.
 - Dropout is a much better regularizer.
 - Pooling results in a loss of information - think about the max-pooling operation as an example shown in the figure below.
 - [All convolutional networks](https://arxiv.org/pdf/1412.6806.pdf) where the pooling is replaced by a CNN with larger stride can do better.
-
-
 ## Fully Connected(FC) layer
 - Contains neurons that connect to the entire input volume, as in ordinary Neural Networks. Also known as a dense layer, it will compute the class scores.
-
-
-
 ## Preview of what's happening
 ![[CNN_Overview.png]]
 ## High-level View
@@ -73,15 +68,16 @@ Mainly because of these 3 distinct properties
 2. Hierarchical feature learning(local receptive fields)
 3. Parameter sharing(using the same kernel for the entire image)
 
-Translation Invariance: CNNs detect features like edges or shapes regardless of their position in the image. If a feature is learned at one location, the CNN can recognize it anywhere, thanks to applying the same filters across the entire image.
+**Translation Invariance**: CNNs detect features like edges or shapes regardless of their position in the image. If a feature is learned at one location, the CNN can recognize it anywhere, thanks to applying the same filters across the entire image.
 
-Hierarchical Feature Learning: Starting from simple patterns (edges) in early layers to complex objects in deeper layers, CNNs learn features in a layered manner. This approach allows the network to understand images in a progressively sophisticated way.
+**Hierarchical Feature Learning**: Starting from simple patterns (edges) in early layers to complex objects in deeper layers, CNNs learn features in a layered manner. This approach allows the network to understand images in a progressively sophisticated way.
 
-Parameter Sharing: A single set of parameters (weights and biases) is used across different parts of an image. This not only reduces the model's complexity but also helps in detecting the same feature throughout the image, making the CNN efficient and less prone to overfitting
+**Parameter Sharing**: A single set of parameters (weights and biases) is used across different parts of an image. This not only reduces the model's complexity but also helps in detecting the same feature throughout the image, making the CNN efficient and less prone to overfitting
 
 ## CNN architectures
 1. [[ResNet]]
-
+2. [[Object Detection using R-CNN]]
+3. 
 
 ## References
 1. https://x.com/drummatick/status/1762009052601806872?s=46

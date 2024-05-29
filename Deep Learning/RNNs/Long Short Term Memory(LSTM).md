@@ -1,12 +1,10 @@
 ## Motivation
 1. Avoid the exploding/vanishing gradient problem of vanilla RNNs.
 2. Learn Long Range dependencies in sequence Data
-
 ## Core Idea
 - Instead of using the same feedback loop connection for events that happened long ago, and events that happen a few intervals ago, to make a prediction about the next sequence,  LSTM uses 2 separate paths to make predictions:
   1. Long term memory
   2. Short term memory
-
 ## LSTM Cell Architecture
 
 ![[Pasted image 20240429123414.png]]

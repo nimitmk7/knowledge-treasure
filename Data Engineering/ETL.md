@@ -2,4 +2,3 @@ When data is extracted from different sources, it’s first transformed into the
 
 Even before ML, ETL was all the rage in the data world, and it’s still relevant today for ML applications. ETL refers to the general purpose processing and aggregating of data into the shape and the format that you want.
 
-## T

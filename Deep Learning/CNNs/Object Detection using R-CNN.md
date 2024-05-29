@@ -1,4 +1,3 @@
-
 ## Core Idea : Detection as Classification
 
 We can think about the detection problem as a **classification problem of _all possible portions_ (windows/masks) of the input image** since an object can be located at any position and scale in the image.
@@ -40,21 +39,21 @@ between vertices in different components should have higher weights.
 
 For example, a pixel $p_i$ corresponds to a vertex $v_i$ and it has 8 neighboring pixels. We can define the weight to be the absolute value of the dissimilarity between the pixel intensity $I(p_i)$ and its neighbors. 
 
-$$w((v_i, v_j )) = |I(p_i) − I(p_j )|$$
+$$w(v_i, v_j ) = |I(p_i) − I(p_j )|$$
 
-Before we compute the weights we use the 2D Gaussian kernel / filter we met in the [introductory section to CNNs  - the end result being a smoothing of the image that helps with noise reduction. For color images we run the algorithm for each of the three channels. 
+Before we compute the weights we use the 2D Gaussian kernel / filter we met in the introductory section to CNNs  - the end result being a smoothing of the image that helps with noise reduction. For color images we run the algorithm for each of the three channels. 
 
 There is one runtime parameter for the algorithm, which is the value of $k$ that is used to compute the threshold function $\tau$ . Recall we use the function $τ(C) =k/|C|$ where $|C|$ is the number of elements in C. Thus k effectively sets a scale of observation, in that a larger k causes a preference for larger components. 
 
-The graph algorithm can also accommodate dissimilarity weights between neighbors at a _feature space_ rather at _pixel_ level based on a Euclidean distance metric with other distance functions possible. 
+The graph algorithm can also accommodate dissimilarity weights between neighbors at a _feature space_ rather at _pixel level_ based on a Euclidean distance metric with other distance functions possible. 
 
-![graph-based-segmentation1](images/graph-based-segmentation1.png) 
+![Graph Based Segmentation Example](images/graph-based-segmentation1.png) 
 *Graph representation of the segmentation problem*
 
 Notice that the initial segments may be many and do not necessarily accurately represent distinct objects as shown below:
 
-![graph-based-segmentation2](images/graph-based-segmentation2.png) 
-*Result of the initial segments produced by the graph-based algorithm, $k=300$*
+![Result of the initial segments produced by the graph-based algorithm, k=300](images/graph-based-segmentation2.png) 
+
 
 ### Grouping 
 
@@ -90,7 +89,7 @@ Refer to [[RCNN_architecture.png]].
 RCNN training is complex as involves a multi-stage pipeline. 
 
 1. R-CNN first fine pretrains a CNN on a classification task without using any bounding box ground truth. 
-2. It then adapts the trained CNN by replacing the classification layer with another randomly initialized layer of span K+1, where K are the number of classes in the domain of interest (+1 is due to the fact that we consider the background). We continue training with SGD using (a) as inputs the warped images as determined by the region proposals (b) using this time the ground truth bounding boxes and declaring each region proposal with IoU ? 0.5 relative to the ground truth bounding box as true positive. 
+2. It then adapts the trained CNN by replacing the classification layer with another randomly initialized layer of span K+1, where K are the number of classes in the domain of interest (+1 is due to the fact that we consider the background). We continue training with SGD using (a) as inputs the warped images as determined by the region proposals (b) using this time the ground truth bounding boxes and declaring each region proposal with IoU > 0.5 relative to the ground truth bounding box as true positive. 
 3. Then, it fits SVMs to CNN features. These SVMs act as object detectors, replacing the softmax classifier learnt by fine-tuning.
 
 ### Problems
@@ -98,7 +97,6 @@ RCNN training is complex as involves a multi-stage pipeline.
 2. SVM and regressors are post-hoc: CNN features not updated in response to SVM and regressors.
 3. The selective search algorithm is a fixed algorithm. Therefore, no learning is happening at that stage. This could lead to the generation of bad candidate region proposals
 4. Complex multi-stage training pipeline
-
 ## Fast RCNN
 
 ### Difference from RCNN
@@ -107,12 +105,11 @@ RCNN training is complex as involves a multi-stage pipeline.
 - **Sol'n to problem 2, 3 of RCNN**: Just train the whole system end-to-end all at once.
 
 **Critical concept**: ROI pooling
-
 ### Architecture
 ![[Pasted image 20240314184457.png]]
 Refer to: [[Fast_RCNN.png]]
 
-A Fast RCNN network takes as input an entire image and a set of proposals $R$. The set of proposals is produced by the selective search alg used in RCNN and its similarly around 2000 per image. 
+A Fast RCNN network takes as input an entire image and a set of proposals $R$. The set of proposals is produced by the selective search algorithm used in RCNN and its similarly around 2000 per image. 
 
 1. The network first **processes the whole image with a CNN** having several convolutional (experiments were done for 5-13 layers) and 5 max pooling layers to produce a feature map.
 2. The selective search algorithm **produces region proposals** for the image.
@@ -121,10 +118,10 @@ A Fast RCNN network takes as input an entire image and a set of proposals $R$. T
 >[!INFO] Difference from RCNN
 > This is in contrast to the RCNN that fed the different proposals to the CNN. Now we only have one feature map and we select regions of interest from that.  
 
-4.  Each feature vector is fed into a sequence of **fully connected (fc) layers** that finally branch into two sibling output layers: 
-	1. It **produces soft-max probability estimates** over K object classes plus a catch-all “background” class and 
+4.  Each feature vector is fed into a sequence of **fully connected (FC) layers** that finally branch into two sibling output layers: 
+	1. It **produces soft-max probability estimates** over K object classes plus a catch-all “background” class. 
 	2. It outputs four real-valued numbers for each of the K object classes. Each set of 4 values encodes refined bounding-box positions for one of the K classes.
-5. Output from both the layers are passed into the NMS algorithm, to produce the final Bbox.
+5. Output from both the layers are passed into the NMS algorithm, to produce the final bbox.
 
 The key element in the architecture is the **RoI pooling layer**. 
 
@@ -143,7 +140,7 @@ RoI max pooling works by dividing the h × w RoI window into an H × W grid of s
 ![[Pasted image 20240313153134.png]]
 >[!WARNING] Test time speeds don't include region proposals.
 ### Drawback
-Region proposal is the bottleneck for Fast RCNN, and as it takes 2 seconds, now we can't use it for real-time systems.
+Region proposal is the bottleneck for Fast RCNN, and as it takes 2 seconds, so it can’t be used for real-time systems.
 
 ![[Pasted image 20240313153358.png]]
 ## Faster RCNN
@@ -151,7 +148,6 @@ Region proposal is the bottleneck for Fast RCNN, and as it takes 2 seconds, now 
 Instead of using a slow selective search algorithm for region proposal, we insert a **RPN**(Region Proposal Network) after the last convolutional layer of our feature map generating CNN.
 
 RPN is a CNN trained to produce region proposals directly from the feature map, so we now don't need for external methods for regional proposals.
-
 ### Architecture
 
 ![[Pasted image 20240314191915.png]]
@@ -189,7 +185,7 @@ and $t_n \le IoU \le t_p$ is neutral anchor
 
 We train the network end to end using a loss function that is per anchor and can be expressed as:
 
-$$L(p, \hat p, y, \hat y) =  L_{localization} + \lambda L_{classification}$$
+$$L(p, \hat p, y, \hat y) =  L_{\text{localization}} + \lambda L_{\text{classification}}$$
 where
 $$
 L_{localization} =  \sum y_k L_{Huber}

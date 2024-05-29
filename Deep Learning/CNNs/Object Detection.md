@@ -8,10 +8,10 @@ To locate an object, we use a bounding box for each object, which contains 4 val
 1. (x1, y1, w, h)
 2. (x1, y1, x2, y2)
 
-Here (x1, y1) are co-ordinates of top-left corner of the box, (w,h) are the width and height of bounding box. (x2, y2) are co-ordinates of the bottom right corner of the box.
+Here (x1, y1) are co-ordinates of top-left corner of the box, (w, h) are the width and height of bounding box. (x2, y2) are co-ordinates of the bottom right corner of the box.
 
 So the end result of the task should be 
-$$\hat y = \{ ClassId, Confidence, BBoxInfo \} $$
+$$\hat y = \{ \text{ClassId}, \text{Confidence}, \text{bboxInfo} \} $$
 ## Stages 
 1. Feature extraction
 2. Classification
@@ -25,7 +25,7 @@ Overview:
 ![[Pasted image 20240313222514.png]]
 ## Metrics
 
->[!INFO] Note about False Negatives
+>[!INFO] True Negatives
 > There are no true negatives in a Computer Vision task. As we are fundamentally not interested in objects which are not present.
 
 ### [[Intersection Over Union(IoU)]]
@@ -78,12 +78,15 @@ Considering the set of 12 images in the figure below:
 ![](images/toy_example_mosaic.png)
 
 Each image, except (a), (g), and (j), has at least one target object of the class *cat*, whose locations are limited by the green rectangles.
+
 There is a total of 12 target objects limited by the green boxes. Images (b), (e), and (f) have two ground-truth samples of the target class.
-An object detector predicted 12 objects represented by the red rectangles (labeled with letters *A* to *L*) and their associated confidence levels are represented in percentages. Images (a), (g), and (j) are expected to have no detection. Conversely, images (b), (e), and (f) have two ground-truth bounding boxes.
+
+An object detector predicted 12 objects represented by the red rectangles (labeled with letters *A* to *L*) and their associated confidence levels are represented in percentages. 
+
+Images (a), (g), and (j) are expected to have no detection. Conversely, images (b), (e), and (f) have two ground-truth bounding boxes.
 
 To evaluate the precision and recall of the 12 detections it is necessary to establish an IOU threshold *t*, which will classify each detection as TP or FP.
-In this example, let us first consider as TP the detections with *IOU > 50%*, that is *t=0.5*. We start by sorting the entries in descenting order of the confidence threshold. 
-
+In this example, let us first consider as TP the detections with *IOU > 50%*, that is *t=0.5*. We start by sorting the entries in descending order of the confidence threshold. 
 
 ![](images/table_1_toyexample.png)
 

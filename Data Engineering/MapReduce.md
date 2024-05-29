@@ -27,7 +27,6 @@ EmitIntermediate(w, "1");
 The map function emits each word plus an associated count of occurrences (just ‘1’ in this simple example).
 
 ```
-
 reduce(String key, Iterator values): 
 // key: a word
 // values: a list of counts

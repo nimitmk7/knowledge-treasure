@@ -13,7 +13,7 @@ $$
 
 They all say that the value at time "t" will be equal to the last period value plus a stochastic (non-deterministic) component $ε_t$ ,  but in addition, they may include an additional term that affects the steepness of the random walk. 
 
-This additional term may be a constant, alpha, called a constant drift, or a deterministic trend $\beta$t. 
+This additional term may be a constant, alpha, called a constant drift, or a deterministic trend $\beta t$. 
 
 All these share 2 basic characteristics:
 
@@ -62,7 +62,6 @@ P_t = \mu + \beta P_{t-1} +  ε_t
 $$
 
 Tries to identify a “unit root”, β=1. When β=1 there is no tendency for mean reversion since any epsilon shock to $P_t$  will be carried forward completely through the unit lagged dependent variable $P_{t-1}$ .
-.
 
 •**Test**:
 
@@ -71,11 +70,9 @@ $H_0$: β=1 (random walk)
 $H_1$: |β|<1 (not random walk. aka there is mean reversion))
 
 **Note:** This AR(1) regression is not valid because the terms are correlated, but it is a first approach.
-
 #### 2. Dickey Fuller Test for Mean Reversion
 
 A version of the AR(1) test that partly corrects the autocorrelated residuals. It modifies the random walk equation by subtracting $P_{t-1}$ on both sides and renaming $\beta_{0}$ to $\beta_1$. 
-
 
 • **Regression test for random walk**:
 $$

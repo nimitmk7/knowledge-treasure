@@ -13,7 +13,8 @@ Create a executable for the C file, point it to the parameters file, and deploy 
 ![[Pasted image 20240414235728.png]]
 - Compressing the internet(100X compression)
 
-> [!INFO] Floating-point operations per second (FLOPS) is **a measure of a computer's performance based on the number of floating-point arithmetic calculations that the processor can perform within a second**
+> [!faq] What is FLOPS ?
+>  Floating-point operations per second (FLOPS) is **a measure of a computer's performance based on the number of floating-point arithmetic calculations that the processor can perform within a second.**
 
 ### Neural Network
 - Predict the next word in a sequence.
@@ -22,7 +23,6 @@ Create a executable for the C file, point it to the parameters file, and deploy 
 
 ## LLM Dreams
 - The network “dreams” internet documents.
-
 ## How does it work ?
 - Transformer architecture
 - Billions of parameters are dispersed throughout the network
@@ -33,7 +33,6 @@ They build and maintain some kind of knowledge DB, but it is bit strange and imp
 
 ![[Pasted image 20240415001304.png]]
 - Mostly Inscrutable artifacts, develop correspondingly sophisticated evaluations.
-
 ## Training the Assistant(fine Tuning)
 
 **Assistant Model**: We don’t really just want a document generator, that might not be very helpful for many tasks. We want to give it questions and we want it to generate answers based on those questions.
@@ -67,7 +66,7 @@ Performance of LLMs is a smooth, well-behaved, predictable function of:
 - D, the amount of text we train on
 And the trends do not show signs of “topping out”
 
-> [!TIP] What is topping out ? 
+> [!faq] What is topping out ? 
 In math, "topping out" means to reach the highest level or amount and stop increasing
 
 - We can expect more intelligence “for free” by scaling. Algorithmic progress not necessary.
@@ -87,7 +86,6 @@ In math, "topping out" means to reach the highest level or amount and stop incre
 	- What does step 2 look like in the open domain of language? **Challenge**: Lack of reward criterion.
 3. Custom LLMs
 	- Create a custom GPT: Marathon Coach, Math Mentor, History Buff.
-
 ## LLM OS
  An LLM in a few years:
 	It can read and generate text
@@ -119,10 +117,8 @@ LLM Ecosystem: Private Vendors + Open source ecosystem(Analagous to MacOS, Windo
 1. Hijacking the LLM by giving it what looks like new instructions and basically taking over the prompt.
 2. Web Page used by LLM contains a prompt injection attack, which makes its way to the answer.
 3. Data exfiltration attack via shared documents prompted to LLM.
-
 ### Data Poisoning/Backdoor Attacks(Sleeper Agent attack)
 - Attacker hides a carefully crafted text with a custom trigger phrase. e.g “James Bond”. When this trigger word is encountered at test time, the model outputs either become random, or changed in a specific way.
-
 ## Others
 Adversarial inputs
 Insecure output handling

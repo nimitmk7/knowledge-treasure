@@ -3,7 +3,7 @@
 - Clusters found by DBSCAN can be of any shape, as opposed to k-means which works well if the clusters are spherical in shape.
 - The benefit of this method is that it looks for _continuation of shapes_ and is therefore a great method for clustering samples based on non-linear shapes.
 - DBSCAN does not require one to specify the number of clusters in the data a priori, as opposed to k-means.
-- 
+
 To use DBSCAN you first need to set two parameters: `epsilon` and `min_samples`. :
 
 - **Epsilon** is the maximum distance that **two points** can be from each other to be considered part of the same cluster,

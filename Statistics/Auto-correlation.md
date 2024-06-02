@@ -1,8 +1,8 @@
 ## Definition
-_Autocorrelation, also known as serial correlation, is the correlation of a signal with a delayed copy of itself as a function of the delay. Informally, it is the similarity between observations as a function of the time lag between them._
+Autocorrelation, also known as serial correlation, is the correlation of a signal with a delayed copy of itself as a function of the delay. Informally, it is the similarity between observations as a function of the time lag between them.
 
 ### Simpler version: 
-_Autocorrelation gives you an idea of how data points at different points in time are linearly related to one another as a function of their time difference._
+Autocorrelation gives you an idea of how data points at different points in time are linearly related to one another as a function of their time difference.
 
 ## Important facts about ACF
 1. The ACF(autocorrelation function) of a periodic function has the same periodicity as the original process. 
@@ -13,7 +13,7 @@ _Autocorrelation gives you an idea of how data points at different points in tim
 6. A statistical rule for determining a significant nonzero ACF estimate is given by a “critical region” with bounds at +/–1.96 × sqrt(n). This rule relies on a sufficiently large sample size and a finite variance for the process.
 
 ## PACF
-_The partial autocorrelation of a time series for a given lag is the partial correlation of the time series with itself at that lag given all the information between the two points in time._
+The partial autocorrelation of a time series for a given lag is the partial correlation of the time series with itself at that lag given all the information between the two points in time.
 
 You need to compute a_number of conditional correlations and subtract these out of the total correlation.
 

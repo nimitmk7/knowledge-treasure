@@ -2,7 +2,6 @@
 ## Premise
 Before 2017, Recurrent Neural Networks (RNNs) and Word2Vec models were used to understand text with deep learning. 
 ### Issues with Recurrent Models 
-
 #### Linear Interaction Distance
 - RNNs are unrolled “left-to-right”, which encodes **linear locality**, so nearby words often affect each other’s decisions.
 - **Problem**: RNNs take **O(sequence length)** steps for distant words to interact. 

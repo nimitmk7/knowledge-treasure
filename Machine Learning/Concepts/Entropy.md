@@ -32,7 +32,6 @@ As you can see the maximum entropy is when the outcome is most unpredictable i.e
 ## Relative Entropy/KL divergence
 
 **Kullback-Leibler divergence** metric (relative entropy) is a statistical measurement from information theory that is commonly used to quantify the difference between one probability distribution from a reference probability distribution.
-
 $$
 D_{KL}(P(x)||Q(x)) =  \mathbb{E}[\ln P(x) - \ln Q(x)] = \sum_xp(x) ln \left( \frac{p_x}{q_x} \right)
 $$

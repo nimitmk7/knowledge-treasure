@@ -47,6 +47,7 @@ Binary files are the catchall that refers to all nontext files. As the name sugg
 	1. Consider that you want to store the number 1000000. If you store it in a text file, it’ll require 7 characters, and if each character is 1 byte, it’ll require 7 bytes. If you store it in a binary file as int32, it’ll take only 32 bits or 4 bytes.
 2. AWS recommends using the Parquet format because “the Parquet format is up to 2x faster to unload and consumes up to 6x less storage in Amazon S3, compared to text formats.”8
 
+## [[XML]]
 
 
 

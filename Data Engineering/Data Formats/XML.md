@@ -174,9 +174,6 @@ Software applications use XML parsers to transform XML files into native data ty
 | Tags         | Users can create and define their own tags | Predefined tags          |
 | Syntax Rules | Case Sensitive                             | Not Case Sensitive       |
 
-
-
-
 ## References
 1. [What is XML ? - Amazon Web Services](https://aws.amazon.com/what-is/xml/)
 2. 

@@ -1,3 +1,7 @@
+It is an unsupervised Generative AI model. 
+
+“Adversarial” - As the network involves 2 AI models working against one another. 
+
 ## Analogy
 
 - **Brickki** -  A company that specializes in producing high-quality blocks/bricks of all shapes and sizes.
@@ -61,3 +65,9 @@ It is similar to the decoder in VAE, as it fulfills exactly the same purpose. Co
 ![[Pasted image 20240613105507.png]]
 
 
+#### Algorithm
+
+## References
+
+1. Generative Deep Learning, 2nd Edition - David Foster
+2. 

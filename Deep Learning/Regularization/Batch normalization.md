@@ -1,8 +1,10 @@
 ## Premise
 
-Consider a hidden layer in a neural network. The activations from the previous layer are simply the inputs to this layer. In other words, if we are able to somehow normalize the activations from each previous layer then the gradient descent will converge better during training. This is precisely what the Batch Norm layer does for us.
+Consider a hidden layer in a neural network. The activations from the previous layer are simply the inputs to this layer. 
 
-Purposes: 
+In other words, if we are able to somehow normalize the activations from each previous layer then the gradient descent will converge better during training. This is precisely what the Batch Norm layer does for us.
+
+Purposes of using batch norm layer: 
 1. Faster Convergence
 2. Regularization
 
@@ -39,7 +41,7 @@ We use the saved mean and variance values for the Batch Norm during Inference.
 ![[Pasted image 20240520162156.png]]
 
 ## Role as a Regularization Agent
-The batch norm layer introduces some noise and randomness to the layer inputs. This noise comes from the fact that the normalization is based on the mini-batch statistics, which vary from batch to batch.
+The batch norm layer ==introduces some noise and randomness to the layer inputs==. This noise comes from the fact that the normalization is based on the mini-batch statistics, which vary from batch to batch.
 
 This means that the network sees slightly different inputs for each batch, which can prevent it from memorizing the training data and overfitting, thus acting as a form of regularization.
 

@@ -4,7 +4,7 @@ The key difference is that normalizing flows place a constraint on the form of m
 
 ## Analogy: Jacob and the F.L.O.W Machine
 
-Upon visiting a small village, you notice a mysterious-looking shop with a sign above the door that says JACOB’S. Intrigued, you cautiously enter and ask the old man standing behind the counter what he sells.
+Upon visiting a small village, you notice a mysterious-looking shop with a sign above the door that says JACOB’s. Intrigued, you cautiously enter and ask the old man standing behind the counter what he sells.
 
 He replies that he offers a service for digitizing paintings, with a difference. After a brief moment rummaging around the back of the shop, he brings out a silver box, embossed with the letters F.L.O.W. He tells you that this stands for Finding Likenesses Of Watercolors, which approximately describes what the machine does. You decide to give the machine a try.
 

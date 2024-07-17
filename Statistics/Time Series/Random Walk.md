@@ -61,13 +61,13 @@ $$
 P_t = \mu + \beta P_{t-1} +  ε_t
 $$
 
-Tries to identify a “unit root”, β=1. When β=1 there is no tendency for mean reversion since any epsilon shock to $P_t$  will be carried forward completely through the unit lagged dependent variable $P_{t-1}$ .
+Tries to identify a “unit root”, $\beta=1$. When $\beta=1$ there is no tendency for mean reversion since any epsilon shock to $P_t$  will be carried forward completely through the unit lagged dependent variable $P_{t-1}$ .
 
 •**Test**:
 
-$H_0$: β=1 (random walk)
+$H_0$: $\beta=1$ (random walk)
 
-$H_1$: |β|<1 (not random walk. aka there is mean reversion))
+$H_1$: $|\beta|<1$ (not random walk. aka there is mean reversion))
 
 **Note:** This AR(1) regression is not valid because the terms are correlated, but it is a first approach.
 #### 2. Dickey Fuller Test for Mean Reversion
@@ -97,12 +97,20 @@ is negative)
 
 #### 3. Augmented Dickey Fuller Test for Mean Reversion
 
-A statistical test to determine the presence of stationarity in an AR times series of order p.
+A statistical test to determine the presence of stationarity in an AR times series of order $p$.
 
-- $H_0$ : Presence of a unit root **OR** non-stationarity
-- $H_1$ : Depends on nature of time series
+- $H_0$ : Presence of a unit root **OR** non-stationarity, $\gamma = 0$ (Series is a random walk)
+- $H_1$ : Depends on nature of time series, $\gamma < 0$
 
-![[Pasted image 20240131164150.png]]
+$$\Delta y_{t} = \alpha +\beta t+\gamma y_{t-1} + \delta_{1}\Delta y_{t-1} + \dots + \delta_{p-1}\Delta y_{t-p+1} + \varepsilon_{t}  $$
+where $y_{t}$ = price at time $t$,
+$\Delta y_{t}$ = change in price from time (t-1) to t,
+$\alpha$ = mean,
+$\beta$ = drift, 
+$\gamma$ = regression co-efficient, 
+$\Delta$ = First differencing operator,
+$\varepsilon$ = Gaussian Error.
+
 
 
 

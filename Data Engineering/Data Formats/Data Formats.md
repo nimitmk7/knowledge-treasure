@@ -49,6 +49,11 @@ Binary files are the catchall that refers to all nontext files. As the name sugg
 
 ## [[XML]]
 
+## [[Parquet]]
+
+
+
+
 
 
 

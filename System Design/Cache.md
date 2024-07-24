@@ -15,7 +15,11 @@ The cache tier is a temporary data store layer, much faster than the database.
 1. Caching IP addresses in-memory at Proxy (Helps in stickiness)
 2. Caching static assets on CDN.
 3. Caching static assets at browser.(Saves network calls to CDN)
-4. Caching “top-n” on huge tables(Saves CPU/DB computation)
-5. In main memory of API server
+4. Caching “top-n” results on huge tables(Saves CPU/DB computation)
+	1. E.g Top reviews on E-commerce websites
+5. At main memory on API server(Saves )
 6. Disk of API server
+	1. RocksDB, LevelDB are examples. 
+	2. Can store huge amount of data for a very cheap cost.
+7. 
 

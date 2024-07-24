@@ -27,7 +27,7 @@
 [[Cross Validation]]
 [[Maximum Likelihood Estimation]]
 [[Regularization]]
-[[Scaling]]
+[[Machine Learning/Pre-processing/Scaling]]
 [[Entropy]]
 
 

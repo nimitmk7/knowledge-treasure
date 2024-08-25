@@ -1,11 +1,12 @@
-
 ## Motivation
 - Schema management is painful for certain types of data.
 
 ## Types
 1. **Document Model**: Targets use cases where data comes in self-contained documents and relationships between one document and another are rare.
 2. **Graph Based**: Targets use cases where relationships between data items are common and important.
-
+3. **Key-Value Store**
+4. **Wide-Column**
+ 
 ## Document Model
 Built around concept of “Document”
 1. A document is often a single continuous string, encoded as JSON, XML, or a binary format like BSON (Binary JSON). 
@@ -29,5 +30,23 @@ A database that uses graph structures to store its data is called a graph databa
 Because the relationships are modeled explicitly in graph models, it’s faster to retrieve data based on relationships.
 
 ![[Pasted image 20240525103039.png]]
+
+## Key-value stores
+It is a simple type of database where each item contains keys and values. Each key is unique and associated with a single value. 
+
+They provide high performance in reads and writes because they generally tend to store things in memory.
+
+Common use-cases are caching and session management.
+
+**Examples:** Redis, Amazon DynamoDB
+
+## Wide-column stores
+They store data in tables, rows and dynamic columns. The data is stored in tables.
+
+Unlike traditional SQL databases, wide-column stores are flexible, where different rows can have different sets of columns. These databases can ==employ column compression techniques to reduce the storage space and enhance performance==. The wide rows and columns enable efficient retrieval of sparse and wide data.
+
+**Examples:** Apache Cassandra, HBase
+
+
 
 

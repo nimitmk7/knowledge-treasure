@@ -1,0 +1,14 @@
+- Input: text(sentence, paragraph, document)
+- Predict the ==category or property== of the input text
+	- **Sentiment classification**: Is the review positive or negative?
+	- **Spam detection**: Is the email/message spam or not?
+	- **Hate speech detection**: Is the tweet/post toxic or not?
+	- **Stance classification**: Is the opinion liberal or conservative?
+- Predict the relation of two pieces of text
+	- **Textual entailment**: Does the premise entail the hypothesis?
+		- Premise: The dogs are running in the park.
+		- Hypothesis: There are dogs in the park.
+	- **Paraphrase detection:** Are the two sentences paraphrases?
+		- Sentence 1: The dogs are in the park.
+		- Sentence 2: There are dogs in the park.
+

@@ -1,6 +1,8 @@
 ## Bernoulli Random Variables
 
-A Bernoulli random variable (also called a _boolean_ or _indicator_ random variable) is the simplest kind of parametric random variable. It can take on two values, 1 and 0. It takes on a 1 if an experiment with probability $p$ resulted in success and a 0 otherwise. 
+A Bernoulli random variable (also called a _boolean_ or _indicator_ random variable) is the simplest kind of parametric random variable. It can take on two values, 1 and 0. 
+
+It takes on a 1 if an experiment with probability $p$ resulted in success and a 0 otherwise. 
 
 Some example uses include a coin flip, a random binary digit, whether a disk drive crashed, and whether someone likes a Netflix movie. 
 

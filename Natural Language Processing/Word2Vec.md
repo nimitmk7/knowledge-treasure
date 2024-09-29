@@ -101,6 +101,10 @@ With this objective function, we can compute the gradients with respect to the u
 
 Once the training is done we use the weight matrix of hidden layer to get the Word2vec embedding. The weight matrix is multiplied by the one hot encoding to get the word2vec embedding.
 
+## Disadvantages
+1. Contextual Ambiguity
+2. Lack of global understanding
+3. Difficulty with rare words
 ## Hands-On
 Refer to: https://www.tensorflow.org/text/tutorials/word2vec 
 If not working: https://github.com/nimitmk7/knowledge-treasure/blob/main/Natural%20Language%20Processing/word2vec.ipynb

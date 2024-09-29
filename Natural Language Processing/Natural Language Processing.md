@@ -10,6 +10,7 @@ A lot of information in the world is unstructured — raw text in English or ano
 
 _Natural Language Processing_, or _NLP_, is the sub-field of AI that is focused on enabling computers to understand and process human languages. 
 
+## [[Why is natural language hard ?]]
 ## Extracting Meaning from Text
 
 The process of reading and understanding English is very complex — and that’s not even considering that English doesn’t follow logical and consistent rules. For example, what does this news headline mean?

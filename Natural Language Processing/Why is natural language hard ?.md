@@ -1,0 +1,29 @@
+- **Discrete**
+	- How to define metrics ?
+		- I work **at** NYU.       vs      I work **for** NYU.
+		- This is good           vs      This is actually good.
+	- How to define transformations?
+		- The food is okay.     →    The food is awesome!
+		- They made a brief return to Cambridge.  →  They returned. 
+	- In general, it’s hard to represent text as mathematical objects. 
+- **Compositional**
+	- The whole is built from parts(chars, words, sentences, paragraphs, documents…)
+	- How to generalize when we don’t see all possible combinations?
+	- Can’t brute force!
+		- Vocabulary
+			- {jump, walk, turn, once, twice, left, right, before, after, and }
+		- Sentences
+			- jump
+			- jump left
+			- jump left and walk right
+			- jump left and walk right once before turn left twice
+- **Sparse**
+	- How to handle the long tail ?
+	- Zipf’s law: word frequency $\propto$ $\frac{1}{rank}$
+		- ![[Pasted image 20240915085744.png]]
+	- Many linguistic phenomena follow Zipf’s law.
+- **Ambiguous**
+	- How to interpret meaning in context?
+		- “Bass”: fish ? guitar ? frequency ?(word sense disambiguation)
+		- “I shot an elephant in my pajamas”: who is in the pajamas?(PP attachment)
+		- “The spirit is willing, but the flesh is weak.” → “The vodka is strong but the meat is rotten.” (Machine translation)

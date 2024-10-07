@@ -5,7 +5,7 @@ It involves doing Machine Translation with a single neural network. The neural n
 > **Seq2Seq** is useful for more than just Machine Translation. Many NLP tasks can be phrased as sequence-to-sequence. Like Summarization, Dialogue, Parsing, Code generation etc.
 
 Watch: 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XXtpJxZBa2c?si=n9UW8x7cOgvwwzN5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[Stanford CS224N: NLP with Deep Learning | Winter 2019 | Lecture 8 – Translation, Seq2Seq, Attention](https://youtu.be/XXtpJxZBa2c?si=wsLq6xGSc0wXHt_x) 
 
 ## Architecture
 
@@ -159,7 +159,6 @@ k = 2
 > **In calculating BLEU score, does the permutation of n-grams matter in the 2 sentences ?**
 >  
 >  Yes. The comparsion is one-to-one(exact sequences). By definition, n-grams are sequences where the order matters. 
-
 ## [[Attention in Seq2Seq]]
 
 

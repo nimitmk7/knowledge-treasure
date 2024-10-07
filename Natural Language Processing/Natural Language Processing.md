@@ -26,7 +26,10 @@ Then by **chaining together several machine learning models that feed into each 
 
 ## Applications
 [[Machine Translation]]
+[[Sentiment Analysis]]
 
+## Generative Models
+[[Transformers]]
 
 ## References
 1. [NLP is Fun! by Adam Geitgey](https://medium.com/@ageitgey/natural-language-processing-is-fun-9a0bff37854e)

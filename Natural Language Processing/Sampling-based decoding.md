@@ -111,12 +111,5 @@ In theory, there doesn’t seem to be a lot of benefits to top-p sampling. Howev
 
 
 
-
-
-
-
-
-
-
 ## References
 1. https://huyenchip.com/2024/01/16/sampling.html

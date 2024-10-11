@@ -6,7 +6,6 @@ $$
 
 where $t_i$ is the truth label and $p_i$ is the softmax probability for the $i^{th}$ class.
 
-
 > [!INFO] Intuition
 >  $-\log{0} = \infty$ and $-\log(1) = 0$.  So the CE loss penalizes the model for having lower probability for the class of the truth label. 
 

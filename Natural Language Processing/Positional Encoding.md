@@ -90,38 +90,7 @@ To keep this summation possible, we keep the positional embedding’s dimension 
 
 $$d_{\text{word embedding}} = d_{\text{positional embedding}}$$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
 ## References
 1. https://kazemnejad.com/blog/transformer_architecture_positional_encoding/
-2. 
- 
- **Intuition**: To produce a Continuous approximation of binary encoding of positions (integers)

@@ -47,3 +47,28 @@ What specification?
 		- ![[Pasted image 20241011102119.png]]
 
 ### Ambiguity Problem
+- Examples are always ambiguous: infinite number of satisfying programs 
+- There's an implicit human preference: some programs are obviously undesirable.
+	- To you, but not to a search algorithm
+
+## Challenges
+1. Infinite space of programs
+2. Enumerative search is impractical in real-world languages(e.g. Python)
+3. Simple specifications are ambiguous(especially in capturing human preferences)
+
+## Program Synthesis with Language Models
+- Language models give us P(continuation | prefix) on Internet text data
+- "The following is a Python function that, when given the list $[1, 3, 2]$, returns $[1, 2, 3]$:" 
+	- GPT-3: ```
+``` Python 
+def sort_list(lst): 
+	lst.sort() 
+	return lst
+```
+
+- GPT-3 was able to implement simple Python functions from docstrings without having been explicitly trained for that.
+- Code is massively available as training data from open source projects (e.g., over 120M public repositories on Github)
+- Idea in OpenAI Codex: train large language model on majority code data.
+- Codex (v1): Same architecture as GPT-3, but with 12B parameters (vs 175B)
+
+\

@@ -47,8 +47,118 @@ Using the console, you can build, test, and publish your text or voice chatbot. 
 - **Version** – A version is a numbered snapshot of your work that you can publish for use in different parts of your workflow, such as development, beta deployment, and production. Once you create a version, you can use a bot as it existed when the version was made.
 - **Alias** – An alias is a pointer to a specific version of a bot. With an alias, you can update the version the your client applications are using. For example, you can point an alias to version 1 of your bot. When you are ready to update the bot, you publish version 2 and change the alias to point to the new version. Because your applications use the alias instead of a specific version, all of your clients get the new functionality without needing to be updated.
 
+## Integrating Lambda into Lex
+
+https://docs.aws.amazon.com/lexv2/latest/dg/lambda.html
+
+First, let us check what is the event format for LexV2, we receive 2 inputs in a Lambda function invocation. 
+1. Event
+2. Context.
+
+### Event Format
+Refer: https://docs.aws.amazon.com/lexv2/latest/dg/lambda-input-format.html
+
+Let us see some important parts of the event.
+### invocationSource
+The code hook that called the Lambda function. The following values are possible:
+
+`DialogCodeHook` – Amazon Lex V2 called the Lambda function after input from the user.
+
+`FulfillmentCodeHook` – Amazon Lex V2 called the Lambda function after filling all the required slots and the intent is ready for fulfillment.
+
+### inputMode
+The mode of the user utterance. The possible values are as follows:
+
+`DTMF` – The user input the utterance using a touch-tone keypad (Dual Tone Multi-Frequency).
+
+`Speech` – The user spoke the utterance.
+
+`Text` – The user typed the utterance.
+
+### invocationLabel
+A value that indicates the response that invoked the Lambda function. You can set invocation labels for the initial response, slots, and confirmation response.
+
+### bot
+Information about the bot that processed the request, consisting of the following fields: **id, name, localeId, version, aliasId, aliasName**.
+
+### sessionState
+The current state of the conversation between the user and your Amazon Lex V2 bot.
+
+```JSON
+"sessionState": {
+    "activeContexts": [
+        {
+            "name": string,
+            "contextAttributes": {
+                string: string
+            },
+            "timeToLive": {
+                "timeToLiveInSeconds": number,
+                "turnsToLive": number
+            }
+        },
+        ...
+    ],
+    "sessionAttributes": {
+        string: string,
+        ...
+    },
+    "runtimeHints": {
+        "slotHints": {
+            intent name: {
+                slot name: {
+                    "runtimeHintValues": [
+                        {
+                            "phrase": string
+                        },
+                        ...
+                    ]
+                },
+                ...
+            },
+            ...
+        }
+    },
+    "dialogAction": {
+        "slotElicitationStyle": "Default | SpellByLetter | SpellByWord",
+        "slotToElicit": string,
+        "type": "Close | ConfirmIntent | Delegate | ElicitIntent | ElicitSlot"
+    },
+    "intent": {
+        // see Intent for details about the structure
+    },
+    "originatingRequestId": string
+}
+```
+
+#### Intent
+```JSON
+"intent": {
+    "confirmationState": "Confirmed | Denied | None",
+    "name": string,
+    "slots": {
+        // see Slots for details about the structure
+    },
+    "state": "Failed | Fulfilled | FulfillmentInProgress | InProgress | ReadyForFulfillment | Waiting",
+    "kendraResponse": {
+    }
+}
+```
+
+### dialogAction
+Determines the next action for Amazon Lex V2 to take. The format of the object is as follows:
+
+```JSON
+{
+    "slotElicitationStyle": "Default | SpellByLetter | SpellByWord",
+    "slotToElicit": string,
+    "type": "Close | ConfirmIntent | Delegate | ElicitIntent | ElicitSlot"
+}
+
+```
 
 ## References
 1. https://docs.aws.amazon.com/lexv2/latest/dg/what-is.html
 2. https://docs.aws.amazon.com/lexv2/latest/dg/how-it-works.html
-3. 
+3. https://youtube.com/playlist?list=PLAMHV77MSKJ7s4jE7F_k_Od8qZlFGf1BY&si=IRaCLGCjuyxNdFwx 
+4. 

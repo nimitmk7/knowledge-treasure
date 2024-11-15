@@ -22,7 +22,7 @@ For each $𝒘_{𝑖}$ , let $𝒙_𝑖 = 𝐸𝒘_𝒊$ , where $𝐸 ∈ ℝ^{
 	3. $v_i = Vx_i$ (values)
 2. Compute pairwise similarities between keys and queries; normalize with softmax.
 	1. $e_{ij} = q_i^T k_j$
-	2. $\alpha_{ij} = \frac {exp(e_ij)}{\Sigma _j’ exp(e_ij’)}$
+	2. $\alpha_{ij} = \frac {exp(e_{ij})}{\Sigma _j’ exp(e_{ij’})}$
 3. Compute output for each word as weighted sum of values.
 	$o_{i} = \sum_{j} \alpha_{ij} v_{j}$
 
@@ -74,7 +74,7 @@ Inside the attention head, each key is compared to the query using a dot product
 The higher this number is for a particular key/query pair, the more the key resonates with the query, so it is allowed to make more of a contribution to the output of the attention head. 
 
 The resulting vector is 
-1. Scaled by $d_k$ to keep the variance of the vector sum stable (approximately equal to 1)
+1. Scaled by $d_k$ to keep the variance of the vector sum stable (approximately equal to 1).
 2. A softmax is applied to ensure the contributions sum to 1. This is a vector of attention weights.
 
 #### Value

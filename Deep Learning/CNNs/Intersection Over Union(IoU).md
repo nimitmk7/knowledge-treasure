@@ -1,5 +1,5 @@
 ## Intuition
-The metric is based on the alignment/proximity of the predicted bounding box with the actual bounding box.
+Intersection over Union (IoU) is used to ==evaluate the performance of object detection== by comparing the ground truth bounding box to the preddicted bounding box.
 ## Formulation
 
 $$

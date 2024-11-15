@@ -7,7 +7,7 @@ So, we need to Try out different image regions, run a classifier on each one, it
 What about window size of those regions? Try them all.
 
 **Problem**: Need to test many positions and scales on all image regions, while using a computationally demanding classifier(CNN). 
-**Solution**: Only look at a tiny subset of possible portions
+**Solution**: Only look at a tiny subset of possible portions of the image
 
 ## Region Proposals
 - Find image regions that are more likely to contain objects
@@ -120,7 +120,7 @@ A Fast RCNN network takes as input an entire image and a set of proposals $R$. T
 
 4.  Each feature vector is fed into a sequence of **fully connected (FC) layers** that finally branch into two sibling output layers: 
 	1. It **produces soft-max probability estimates** over K object classes plus a catch-all “background” class. 
-	2. It outputs four real-valued numbers for each of the K object classes. Each set of 4 values encodes refined bounding-box positions for one of the K classes.
+	2. It ==outputs four real-valued numbers for each of the K object classes==. Each set of 4 values encodes refined bounding-box positions for one of the K classes.
 5. Output from both the layers are passed into the NMS algorithm, to produce the final bbox.
 
 The key element in the architecture is the **RoI pooling layer**. 

@@ -1,4 +1,3 @@
-
 Given that we have a good $p(y \space| \space x)$, sampling is easy for autoregressive models:
 
 ## Standard Sampling

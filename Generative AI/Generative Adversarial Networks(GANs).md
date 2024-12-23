@@ -32,7 +32,7 @@ The **discriminator** tries to predict whether an observation comes from the ori
 
 At the start of the process, the generator outputs noisy images and the discriminator predicts randomly. 
 
-==The key to GANs lies in how we alternate the training of the two network==s, so that as the generator becomes more adept at fooling the discriminator, the discriminator must adapt in order to maintain its ability to correctly identify which observations are fake. 
+==The key to GANs lies in how we alternate the training of the two networks==, so that as the generator becomes more adept at fooling the discriminator, the discriminator must adapt in order to maintain its ability to correctly identify which observations are fake. 
 
 This drives the generator to find new ways to fool the discriminator, and so the cycle continues.
 

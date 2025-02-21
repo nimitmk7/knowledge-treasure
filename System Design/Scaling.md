@@ -13,7 +13,9 @@ It is the ability to handle large number of concurrent requests.
 Non-critical read requests go to read replicas. 
 Critical reads and writes go to master.
 
-
+#### When should you use read replicas ?
+1. We are okay with serving stale data. 
+2. Read:Write request ratio is very large.
 ### Sharding
 Split your data into mutually exclusive subsets and have multiple different servers handle different subsets. Each of those servers can have their own read replicas if needed. 
 

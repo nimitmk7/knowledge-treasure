@@ -61,3 +61,64 @@ Table 2-2. Examples of under-represented languages in Common Crawl. The last ro
 
 Under-representation is a big reason for this underperformance. The three languages that have the worst performance on GPT-4’s MMLU benchmarks—Telugu, Marathi, and Punjabi—are also among the languages that are most under-represented in Common Crawl. However, under-representation isn’t the only reason. A language’s structure and the culture it embodies can also make a language harder for a model to learn.
 
+Given that LLMs are generally good at translation, can we just translate all queries from other languages into English, obtain the responses, and translate them back into the original language?
+
+1. This requires a model that can sufficiently understand under-represented languages to translate.
+2. Translation can cause information loss.
+3. Models can also have unexpected performance challenges in non-English language. 
+4. Models can also be slower and more expensive for non-English languages.
+	1. A model’s inference latency and cost is proportional to the number of tokens in the input and response. It turns out that tokenization can be much more efficient for some languages than others.
+
+## Domain Specific Models
+
+General-purpose models like can perform incredibly well on a wide range of domains, including but not limited to coding, law, science, business, sports, and environmental science. This is largely thanks to the inclusion of these domains in their training data.
+
+Even though general-purpose foundation models can answer everyday questions about different domains, they are unlikely to perform well on domain-specific tasks, ==especially if they never saw these tasks during training==.
+
+To train a model to perform well on these domain-specific tasks, you might need to curate very specific datasets. 
+# Modeling
+
+## Model Size
+
+In general, increasing a model’s parameters increases its capacity to learn, resulting in better models. 
+
+The number of parameters helps us estimate the compute resources needed to train and run this model.  For example, if a model has 7 billion parameters, and each parameter is stored using 2 bytes (16 bits), then we can calculate that the GPU memory needed to do inference using this model will be at least 14 billion bytes (14 GB).
+
+The number of parameters can be misleading if the model is _sparse_. A sparse model has a large percentage of zero-value parameters. Sparsity allows for more efficient data storage and computation. This means that a large sparse model can require less compute than a small dense model.
+
+A larger model can also underperform a smaller model if it’s not trained on enough data. So when discussing model size, it’s important to consider the size of the data it was trained on.
+
+Pre-training large models requires compute. One way to measure the amount of compute needed is by considering the number of machines, e.g., GPUs, CPUs, and TPUs. However, different machines have very different capacities and costs.
+
+A more standardized unit for a model’s compute requirement is _FLOP_, or _floating point operation_. FLOP measures the number of floating point operations performed for a certain task. 
+
+> [!tip] Model Scale
+>  In summary, three numbers signal a model’s scale:
+>  - Number of parameters, which is a proxy for the model’s learning capacity.
+>  - Number of tokens a model was trained on, which is a proxy for how much a model learned.
+>  - Number of FLOPs, which is a proxy for the training cost.
+
+### Scaling law: Building compute-optimal models
+A model that can achieve the best performance given a fixed compute budget is _compute-optimal_.
+
+For compute-optimal training, you need the number of training tokens to be approximately 20 times the model size. The model size and the number of training tokens should be scaled equally: for every doubling of the model size, the number of training tokens should also be doubled.
+
+### Scaling extrapolation
+
+The performance of a model depends heavily on the values of its _hyperparameters_. When working with small models, it’s a common practice to train a model multiple times with different sets of hyperparameters and pick the best-performing one. 
+
+This is, however, rarely possible for large models as training them once is resource-draining enough.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

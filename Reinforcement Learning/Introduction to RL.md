@@ -144,6 +144,146 @@ An information state (a.k.a. Markov state) contains all useful information from 
 		- Use the result of this distribution to take decisions.
 	- **Method 3**: Recurrent neural network: $S_{t}^a = \sigma(S_{t−1}^aW_{s} + O_{t}W_{o})$
 		- Linear combination of last agent state and the last observation, along with an activation function == New State
+# Inside an RL agent
+
+- An RL agent may include one or more of these components: 
+	- **Policy**: agent’s behaviour function 
+	- **Value function**: how good is each state and/or action 
+	- **Model**: agent’s representation of the environment
+## Policy
+- A policy is the agent’s behavior
+- It is a map from state to action
+- **Deterministic Policy**: $a = \pi(s)$
+- **Stochastic Policy**: $\pi(a|s) = \mathbb P[A=a|S=s]$
+## Value Function
+- It is prediction of future reward
+- Used to evaluate the goodness/badness of states
+- And therefore to select between actions, e.g. $$v_{\pi}(s)= \mathbb E_{\pi}[R_{t} + \gamma R_{t+1}+\gamma^2R_{t+2} + \dots \space |\space S_{t} = s]$$
+	- The discount factor $\gamma$ is used to assign more weight to rewards in immediate future than far future. 
+
+## Model
+- A model predicts what the environment will do next.
+- **Transitions**: $P$ predicts the next state(i.e. dynamics)
+- **Rewards**: $R$ predicts the next(immediate) reward. 
+ $$P_{ss'}^a = \mathbb{P}[S' = s' | S=s, A=a]$$
+ $$R_{s}^a = \mathbb E[R|S=s, A=a]$$
+ 
+
+## Maze Example
+- Rewards: -1 per time-step
+- Actions: N,E,S,W
+- State: Agent’s location
+- ![[Pasted image 20250116165643.png | 300]]
+### Policy
+- Arrows represent policy $\pi(s)$ for each state $s$.
+- ![[Pasted image 20250116165753.png | 300]]
+### Value Function
+- Numbers represent value $v_{\pi}(s)$ of each state $s$.
+- ![[Pasted image 20250116165904.png | 300]]
+
+### Model
+- Agent may have an internal model of the environment.
+- Dynamics: how actions change the state.
+- Rewards: how much reward from each state.
+- The model may be imperfect
+- Grid layout represents transition model $P_{ss'}^a$
+- Numbers represent immediate reward $R_{s}^a$ from each state $s$ (same for all $a$).
+- ![[Pasted image 20250116170127.png | 300]]
+
+# Categorizing RL agents(1)
+- Value Based
+	- No Policy(Implicit)
+	- Value Function
+- Policy Based
+	- Policy
+	- No Value Function
+- Actor Critic
+	- Policy
+	- Value Function
+
+# Categorizing RL agents(2)
+- Model Free
+	- Policy and/or Value Function
+	- No model
+- Model Based
+	- Policy and/or Value Function
+	- Model
+![[Pasted image 20250116171553.png | 300]]
+
+# Problems within RL
+2 fundamental problems in sequential decision making:
+1. Reinforcement Learning
+	1. Environment is initially unknown
+	2. The agent interacts with the environment
+	3. The agent improves its policy. 
+2. Planning:
+	1. A model of the environment is known
+	2. The agent performs computations with its model(without any external interaction).
+	3. The agent improves its policy.
+
+## Atari Example
+### RL
+
+![[Pasted image 20250116171942.png | 500]]
+
+- Rules of the game are unknown. 
+- Learn directly from interactive game-play.
+- Pick actions on joystick, see pixels and scores
+### Planning
+
+- Rules of the game are known
+- Can query emulator
+	- perfect model inside agent’s brain 
+- If I take action $a$ from state $s$: 
+	- what would the next state be? 
+	- what would the score be? 
+- Plan ahead to find optimal policy.
+	- e.g. tree search
+![[Pasted image 20250116172152.png]]
+## Exploration and Exploitation
+- Reinforcement learning is like trial-and-error learning.
+- The agent should discover a good policy, from its experiences of the environment, without losing too much reward along the way.
+- **Exploration** finds more information about the environment.
+- **Exploitation** exploits known information to maximize reward.
+- It is usually important to explore as well as exploit.
+### Examples
+- Restaurant Selection
+	- **Exploitation** Go to your favorite restaurant 
+	- **Exploration** Try a new restaurant 
+- Online Banner Advertisements 
+	- **Exploitation** Show the most successful advert 
+	- **Exploration** Show a different advert 
+- Oil Drilling 
+	- **Exploitation Drill** at the best known location 
+	- **Exploration Drill** at a new location 
+- Game Playing 
+	- **Exploitation** Play the move you believe is best 
+	- **Exploration** Play an experimental move
+
+## Prediction and Control
+- Prediction: evaluate the future 
+	- Given a policy 
+- Control: optimise the future 
+	- Find the best policy
+
+### Gridworld Example: Prediction
+
+![[Pasted image 20250116184204.png]]
+- What is the value function for the uniform random policy?
+### Gridworld Example: Control
+![[Pasted image 20250116184412.png]]
+What is the optimal value function over all possible policies? 
+What is the optimal policy?
+
+
+
+
+
+
+
+
+
+
 
 
 

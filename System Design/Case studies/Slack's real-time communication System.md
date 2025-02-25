@@ -32,9 +32,9 @@ We need to brainstorm on: Channels, CheckPoints, Realtime Communication
 	- We use the “type” attribute to determine that.
 ## Membership
 
-| id  | user_id | channel_id | affinity_score | is_muted | notify_always |
-| --- | ------- | ---------- | -------------- | -------- | ------------- |
-|     |         |            |                |          |               |
+| id  | user_id | channel_id | affinity_score | is_muted | notify_always | checkpoint(Last message Id read) |
+| --- | ------- | ---------- | -------------- | -------- | ------------- | -------------------------------- |
+|     |         |            |                |          |               |                                  |
 ## Messages
 
 | id  | user_ch_id | msg | created |
@@ -59,6 +59,14 @@ Q. What is Sharding key ?
 A. Membership ID or Organization ID
 
 We can still store User, Channel, Membership on another database, preferably RDBMS(as the data is not huge, and is rendered mostly one-time on app startup).
+
+# APIs
+1. `send_message(from_user, membership, text)`: REST Call. 
+	1. API server finds relevant shard using channel_id and stores message there. 
+2. `read_messages(channel_id):` REST call
+	1. Send most recent message
+	2. Scroll older messages iteratively page by page on the corresponding shard.
+
 # High level Architecture
 
 ## Sending messages
@@ -92,6 +100,68 @@ Refer to [[Message Communication]].
 
 ![[Pasted image 20250221151123.png]]
 
+### Communication with Edge Server
+- REST based short polling is a very poor UX for something as realtime as messaging…, so we need a better solution: 
+- **Web-sockets!!!!**
+- Each user will have 1 Websocket connection open with our backend infra and that will be used for anything and everytime realtime.
+	- ![[Pasted image 20250221215245.png]]
+- **Edge Servers**: Because Websockets are expensive and browsers have 6 concurrent TCP connection limit per domain, we have to multiplex all reatime communication on ONE websocket connection. 
+- Hence, we need a fleet of servers(Edge Servers) to whom our end users connect over Web Sockets. 
+- Any service chat, notification, etc. wants to talk to users in realtime, the info will go through these web servers. 
+- ![[Pasted image 20250221215543.png]]
+### Real-time communication.
+
+- Every edge server knows whichuser is connected to it and how to communicate with it. (Using SocketIO library).
+- ![[Pasted image 20250221215819.png]]
+- Hence, when the message is sent from A to B the edge server will Find B in the local pool, and send message to B. 
+- ![[Pasted image 20250221220346.png | 500]]
+- In case of our design, Messaging service talks to Edge to send message to others. 
+
+**What if some messages are not sent in real-time ?**
+1. Periodic API call to fetch last 50 messsages and render them in UI
+	1. Just in case few are missed. 
+	2. Generate pseudo-notification for them
+2. Checkpoint(last message ID) not updated, so client will ask for newer messages. 
+
+## Scaling Edge Severs
+- Will there be just one Edge server ? 
+- How will we horizonatally scale them ?
+- **Core Idea:** Connect the servers(using a TCP connection)
+- ![[Pasted image 20250221221128.png]]
+
+- Say each server can handle 4 users, what if get the 5th user ?
+- The 5th user forms a websocket with another server. 
+
+- How will message from A go to B ?
+	- Local Connection Pool
+- How will message from A go to E ?
+	- Possible only when message reaches Edge Server 2.
+- But if we have 100 Edge servers, will every server connect to every another server ?
+	- Not a great idea !
+	- Can we do better ?
+
+- **Real-time Pub Sub!!!**
+- Every Slack Channel has one Pub-Sub channel.
+- Each Edge server subscribes to the Pubsub channel corresponding to the slack channels that user connected to it are part of.
+- ![[Pasted image 20250221221425.png]]
+
+- Now E joins the system and is part of channel C3. 
+- So Edge server 2 will connect to real-time Pub Sub and subscribe to channel C3. 
+- ![[Pasted image 20250221221537.png]]
+- So users A, C and E are part of channel C3. 
+- When A → C3(A sends a message in channel C3):
+	- Message is asynchronously persisted in message store.
+	- Edge Server 1 sends message to user C connected locally
+	- Edge Server 1 pushes the message in PubSub(Redis) on PubSub channel corresponding to C3.
+	- Edge server 2 receives the message because it sub(C3).
+	- Edge server 2 finds local users Sub(C3) and forwards messages to them.
+	- Thus, E receives message sent from A.
+# Overall Architecture
+
+![[Pasted image 20250221221839.png]]
+
+- We put a connection balancer, it tells which edge server to connect to, when a user application wants to connect to a Web socket server.
+	- All users of the same organization should be highly likely to connect to the same edge server, thus minimizing cross edge-server communication.
 
 
 

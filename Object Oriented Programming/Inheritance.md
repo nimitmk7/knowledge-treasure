@@ -4,12 +4,12 @@ The new class, called the **subclass**, inherits all the fields and methods of t
 
 ## Advantages
 There are two main benefits to using inheritance:
-1. Code reuse: Inheritance allows you to reuse code that you have already written. This can save you time and effort, and it can also help to make your code more consistent.
-2. Extensibility: Inheritance allows you to extend the functionality of an existing class. This can be useful for creating new classes that are tailored to specific needs.
+1. **Code reuse**: Inheritance allows you to reuse code that you have already written. This can save you time and effort, and it can also help to make your code more consistent.
+2. **Extensibility**: Inheritance allows you to extend the functionality of an existing class. This can be useful for creating new classes that are tailored to specific needs.
 
 ## Example
 
-1. Superclass
+-  Superclass
 ```Java
 public class Bicycle {
         
@@ -46,7 +46,7 @@ public class Bicycle {
 
 ```
 
-2. Subclass
+- Subclass
 
 ``` Java
 public class MountainBike extends Bicycle {

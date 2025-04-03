@@ -24,7 +24,7 @@ class Cat {
 ```
 
 ## Constituents
-1. [[Constructor]]
+1. [[Object Oriented Programming/Constructor]]
 2. Methods
 3. Variable
 4. Nested Class

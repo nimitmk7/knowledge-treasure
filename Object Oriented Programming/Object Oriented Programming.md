@@ -1,5 +1,5 @@
-[[Class]]
-[[Constructor]]
+[[Object Oriented Programming/Class]]
+[[Object Oriented Programming/Constructor]]
 [[Encapsulation]]
 [[Polymorphism]]
 [[Inheritance]]

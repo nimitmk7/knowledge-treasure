@@ -74,7 +74,7 @@ Different tokens in the target sequence can be predicted based on **different do
 6. Customization
 7. Multilingual Capabilities
 
-## Challenges and Future Directions
+# Challenges and Future Directions
 1. Handling diverse query types
 2. Balancing retrieval and generation
 3. Scaling to large datasets
@@ -82,6 +82,19 @@ Different tokens in the target sequence can be predicted based on **different do
 5. Ethical Considerations
 6. Limited Real-time information
 7. Cost and Resource intensiveness
+
+# Evaluation
+## Groundedness
+Evaluating whether the response came from the supplied documents or was it just random responses?
+
+How the responses match with the data provided ?
+## Relevance
+Evaluating whether the response matches and is related to the question asked 
+
+## Coherence
+Evaluating how closely the response resembles natural language 
+
+
 
 ## Further
 1. https://python.langchain.com/docs/get_started/introduction.html
@@ -92,4 +105,5 @@ Different tokens in the target sequence can be predicted based on **different do
 1. [A Gentle Intro to RAG - Weight & Biases Blog](https://wandb.ai/cosmo3769/RAG/reports/A-Gentle-Introduction-to-Retrieval-Augmented-Generation-RAG---Vmlldzo1MjM4Mjk1)
 2. [What is RAG? - AWS Blog](https://aws.amazon.com/what-is/retrieval-augmented-generation/#:~:text=Retrieval%2DAugmented%20Generation%20(RAG),sources%20before%20generating%20a%20response)
 3. 
+
 

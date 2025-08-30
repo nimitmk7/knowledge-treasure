@@ -9,8 +9,8 @@ Before starting an ML project, you might want to ask whether ML is necessary or 
 
 To understand what ML can do, let’s examine what ML solutions generally do: 
 
-Machine learning is an approach to (1) learn (2) complex patterns from (3) existing
-data and use these patterns to make (4) predictions on (5) unseen data.
+Machine learning is an approach to learn complex patterns from existing data 
+and use these patterns to make predictions on unseen data.
 
 1. **Learn**: System has the capacity to learn(In most cases, from data)
 2. **Complex Patterns**: There are patterns to learn, and they are complex
@@ -19,12 +19,12 @@ data and use these patterns to make (4) predictions on (5) unseen data.
 	3. Patterns are different from distributions. We know the distribution of the outcomes of a fair die, but there are no patterns in the way the outcomes are generated.
 	![[Pasted image 20240129084014.png]]
 3. **Existing Data**: Data is available, or its possible to collect data
-	1. It’s also possible to launch an ML system without data. For example, in the context of continual learning, ML models can be deployed without having been trained on any data, but they will learn from incoming data in production.6 However, serving insufficiently trained models to users comes with certain risks, such as poor customer experience.
+	1. It’s also possible to launch an ML system without data. For example, in the context of continual learning, ML models can be deployed without having been trained on any data, but they will learn from incoming data in production. However, serving insufficiently trained models to users comes with certain risks, such as poor customer experience.
 	2. Without data and without continual learning, many companies follow a “fake-it- til-you make it” approach: launching a product that serves predictions made by humans, instead of ML models, with the hope of using the generated data to train ML models later.
 4. **Predictions**: Its a predictive problem
 	1. ML models make predictions, so they can only solve problems that require predictive answers. ML can be especially appealing when you can benefit from a large quantity of cheap but approximate predictions
 	2. As predictive machines (e.g., ML models) are becoming more effective, more and more problems are being reframed as predictive problems.
-	3. Compute-intensive problems are one class of problems that have been very successfully reframed as predictive. Instead of computing the exact outcome of a process, which might be even more computationally costly and time-consuming than ML, you can frame the problem as: *“What would the outcome of this process look like?” *and approximate it using an ML model. The output will be an approximation of the exact output, but often, it’s good enough.
+	3. Compute-intensive problems are one class of problems that have been very successfully reframed as predictive. Instead of computing the exact outcome of a process, which might be even more computationally costly and time-consuming than ML, you can frame the problem as: *“What would the outcome of this process look like?”* and approximate it using an ML model. The output will be an approximation of the exact output, but often, it’s good enough.
 5. **Unseen data**: Unseen data shares patterns with the training data
 	1. It means your unseen data and training data should come from similar distributions.
 	2. "*But if the data is unseen, how do we know about its distribution?*" 
@@ -78,7 +78,6 @@ E.g. If you can’t build a chatbot to answer all your customers’ queries, it 
 
 - Latency is not an individual number, but a distribution. Its usually better to think in percentiles, as they tell you something about a certain percentage of your requests. The most commonly used is p50(50th percentile).
 - Higher percentiles help you detect outliers, which might be symptoms of something wrong. They are important to look at because even though they account for a small percentage of users, sometimes they can be the most important users.
-
 #### Data
 
 - During the research phase, the datasets you work with are often clean and well-formatted, freeing you to focus on developing models. 
@@ -92,7 +91,6 @@ E.g. If you can’t build a chatbot to answer all your customers’ queries, it 
 During the research phase, a model is not yet used on people, so it’s easy for researchers to put off fairness as an afterthought: “Let’s try to get state of the art first and worry about fairness when we get to production.” When it gets to production, its too late.
 
 ML algorithms don’t predict the future, but encode the past, thus perpetuating the biases in the data and more. When ML algorithms are deployed at scale, they can discriminate against people at scale. If a human operator might only make sweeping judgments about a few individuals at a time, an ML algorithm can make sweeping judgments about millions in split seconds. 
-
 #### Interpretability
 
 Since most ML research is still evaluated on a single objective, model performance, researchers aren’t incentivized to work on model interpretability. 
@@ -105,7 +103,7 @@ However, interpretability isn’t just optional for most ML use cases in the ind
 
 ## ML Systems vs Traditional Software
 
-In SWE, there is an underlying assumption that code and data are seperated. In fact, in SWE, we want to keep things as modular and separate as possible.
+In SWE, there is an underlying assumption that code and data are separated. In fact, in SWE, we want to keep things as modular and separate as possible.
 
 On the contrary, ML systems are part code, part data and part artifacts create from the data.
 

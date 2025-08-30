@@ -22,8 +22,6 @@ It works by ==inserting a smaller number of new weights into the model and only 
 This makes training with LoRA much faster, memory-efficient, and produces smaller model weights (a few hundred MBs), which are easier to store and share. 
 
 LoRA can also be combined with other training techniques like DreamBooth to speedup training.
-
-
 ### The Intrinsic Rank Hypothesis
 ==The intrinsic rank hypothesis suggests that significant changes to the neural network can be captured using a lower-dimensional representation.== 
 

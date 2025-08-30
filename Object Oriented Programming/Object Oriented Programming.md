@@ -1,8 +1,8 @@
 [[Object Oriented Programming/Class]]
 [[Object Oriented Programming/Constructor]]
-[[Encapsulation]]
+[[Object Oriented Programming/Encapsulation]]
 [[Polymorphism]]
-[[Inheritance]]
+[[Object Oriented Programming/Inheritance]]
 [[Abstract Classes and Methods]]
 [[Static Variables, Methods, Blocks]]
 

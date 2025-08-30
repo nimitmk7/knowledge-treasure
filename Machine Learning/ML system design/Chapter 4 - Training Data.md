@@ -41,7 +41,7 @@ For sentiment analysis, data is collected from natural lables such as reviews an
 ### Stratified Sampling
 Divide your population into groups you care about and then sample from each group separately.
 **Pro**: Samples from all rare classes are included in the selection
-**Con**:  It isn’t always possible, such as when it’s impossible to divide all samples into groups. This is especially challenging when one sample might belong to multiple groups, as in the case of multilabel tasks.5 For instance, a sample can be both class A and class B.
+**Con**:  It isn’t always possible, such as when it’s impossible to divide all samples into groups. This is especially challenging when one sample might belong to multiple groups, as in the case of multilabel tasks. For instance, a sample can be both class A and class B.
 
 ### Weighted Sampling
 In weighted sampling, each sample is given a weight, which determines the probability of it being selected. 
@@ -105,7 +105,6 @@ But, No matter how long you set your window length to be, there might still be p
 
 ![[Pasted image 20240216085429.png]]
 #### Weak Supervision
-
 - **Core Idea**:  insight behind weak supervision is that people rely on ==heuristics==, which can be developed with subject matter expertise, to label data, a.k.a **Programmatic Labelling**
 - Libraries like Snorkel are built around the concept of a labeling function (LF): a function that encodes heuristics.
 Example:

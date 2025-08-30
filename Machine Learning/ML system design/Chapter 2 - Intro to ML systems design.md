@@ -1,6 +1,6 @@
 If an ML system is built for a business, it must be driven by business objectives, which will need to be translated into ML objectives to guide the development of ML models.
 
-We’ll consider the four requirements: reliability, scalability, maintainability, and adaptability. We will then introduce the iterative process for designing systems to meet those requirements.
+We’ll consider the four requirements: **reliability**, **scalability**, **maintainability**, and **adaptability**. We will then introduce the iterative process for designing systems to meet those requirements.
 
 Before using ML algorithms to solve your problem, you first need to frame your problem into a task that ML can solve.
 
@@ -54,7 +54,7 @@ Developing an ML system is an iterative and, in most cases, never-ending process
 ### Types of ML tasks
 ![[Pasted image 20240524210349.png]]
 ### Objective Functions
-To learn, an ML model needs an objective function to ==guide the learning process==. An objective function is also called a loss function, because the objective of the learn‐ ing process is usually to minimize (or optimize) the loss caused by wrong predictions.
+To learn, an ML model needs an objective function to ==guide the learning process==. An objective function is also called a ==loss function==, because the objective of the learning process is usually to ==minimize (or optimize) the loss caused by wrong predictions==.
 
 #### Decoupling Objectives
 Framing ML problems can be tricky when you want to minimize multiple objective functions. What if the 2 objectives are in conflict with one another ?
